@@ -1,0 +1,40 @@
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+	clear: both;
+}
+
+	.footer-links {
+
+		ul {
+
+			li {}
+
+		}
+
+	} /* end .footer-links */
+
+
+	.copyright {}
+
+
+/**** LARGER MOBILE SCREENS *****/
+
+@include breakpoint( palm ) {
+	
+}
+
+/**** TABLET AND UP ****/
+
+@include breakpoint( tablet ){
+	
+}
+
+/**** DESKTOP AND UP ****/
+
+@include breakpoint( laptop ){
+	
+}

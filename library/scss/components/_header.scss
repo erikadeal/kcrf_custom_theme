@@ -1,0 +1,25 @@
+/*********************
+HEADER STYLES
+*********************/
+
+.header {}
+
+	#logo {}
+
+/**** LARGER MOBILE SCREENS *****/
+
+@include breakpoint( palm ) {
+	
+}
+
+/**** TABLET AND UP ****/
+
+@include breakpoint( tablet ){
+	
+}
+
+/**** DESKTOP AND UP ****/
+
+@include breakpoint( laptop ){
+	
+}

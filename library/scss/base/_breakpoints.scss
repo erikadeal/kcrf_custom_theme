@@ -1,0 +1,43 @@
+/***************************
+BREAKPOINTS & MEDIA QUERIES
+***************************/
+
+//Define breakpoint variables 
+
+$palm:          481px;
+$tablet:        768px;
+$laptop:        1140px;
+$palm-end:      $tablet - 1px;
+$tablet-end:    $laptop - 1px;
+
+
+//This mixing defines a series of breakpoints that you can call anyplace.
+
+@mixin breakpoint($media-query){
+
+    @if $media-query == palm{
+
+        @media only screen and (min-width:$palm) { @content; }
+
+    }
+
+    @if $media-query == palm-end{
+
+        @media only screen and (max-width:$palm-end) { @content; }
+
+    }
+
+    @if $media-query == tablet{
+
+        @media only screen and (min-width: $tablet) { @content; }
+    }
+
+    @if $media-query == mobile{
+        @media only screen and (max-width: $tablet-end) { @content; }
+    }
+
+    @if $media-query == laptop{
+
+        @media only screen and (min-width: $laptop) { @content; }
+    }
+}
