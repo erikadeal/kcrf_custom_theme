@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Custom Page Example
+Template Name: Service Category Page
 */
 ?>
 
@@ -30,13 +30,6 @@ Template Name: Custom Page Example
 									<?php the_content(); ?>
 								</section>
 
-								<footer class="article-footer">
-									<p class="clearfix"><?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?></p>
-
-								</footer>
-
-								<?php comments_template(); ?>
-
 							</article>
 
 							<?php endwhile; else : ?>
@@ -48,9 +41,6 @@ Template Name: Custom Page Example
 											<section class="entry-content">
 												<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
 										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the page-custom.php template.', 'bonestheme' ); ?></p>
-										</footer>
 									</article>
 
 							<?php endif; ?>

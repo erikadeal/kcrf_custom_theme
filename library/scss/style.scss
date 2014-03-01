@@ -46,7 +46,7 @@ and more resource-intensive styles */
 @media only screen and (min-width: 768px) {
 
 	// import grids
-	@import "grid";
+	@import "base/grid";
 
 } // end of media query
 
@@ -54,3 +54,7 @@ and more resource-intensive styles */
 @media print {
 	@import "print";
 }
+
+/* Import views */
+
+@import "views/meetings";
