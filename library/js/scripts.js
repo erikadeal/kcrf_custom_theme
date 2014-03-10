@@ -66,8 +66,19 @@ jQuery(document).ready(function($) {
 	}
 	
 	
-	// add all your scripts here
-	
+	/* Left Nav Flyout */
+
+	  $('body').addClass('js');
+	  
+	  var $menu = $('#menu'),
+	    $menulink = $('#menu-link'),
+	    $wrap = $('#container');
+	  
+	  $menulink.click(function() {
+	    $menulink.toggleClass('active');
+	    $wrap.toggleClass('active');
+	    return false;
+		});
  
 }); /* end of as page load scripts */
 

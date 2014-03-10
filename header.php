@@ -37,6 +37,8 @@
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
 
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -47,14 +49,18 @@
 
 				<div id="inner-header" class="wrap clearfix">
 
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
+					<a id="menu-link">&#8801;</a>
+
 					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
 
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<?php // bloginfo('description'); ?>
+					<form id="searchform-top" class="search-form" action="http://localhost:8888/king_county_refugee_forum/" method="get" role="search">
+						<input id="s" class="search-field" type="search" placeholder="Search" name="s" value="">
+						<button type="submit">
+							<i class="fa fa-search"></i>
+						</button>
+					</form>
 
-
-					<nav role="navigation">
+					<nav id="menu" role="navigation">
 						<?php bones_main_nav(); ?>
 					</nav>
 

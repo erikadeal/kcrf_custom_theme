@@ -3,15 +3,10 @@ NAVIGATION STYLES
 *********************/
 
 /*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
+Basic nav styling
 */
 
 .nav {
-	border: 1px solid #ccc;
 	border-bottom: 0;
 
 	ul {
@@ -25,6 +20,7 @@ and more scalable.
 			text-decoration: none;
 			padding: 10px 10px;
 			border-bottom: 1px solid $gray;
+			color: $white;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -84,6 +80,77 @@ and more scalable.
 
 } /* end .nav */
 
+/* Flyout nav */
+
+#container {
+  position: relative;
+  left: 0;
+  transition: all 0.5s ease 0s;
+
+  &.active {
+	left: 16em;
+  }
+}
+
+#menu-link {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    font-size: 3em;
+    margin-top: -.2em;
+}
+
+#menu {
+  clear: both;
+  overflow: hidden;
+  background: #333;
+}
+
+.js #menu {
+  width: 16em;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -16em;
+}
+
+#searchform-mobile {
+	padding-top: 1em;
+}
+
+#searchform-top {
+
+	position: absolute;
+	right: .3em;
+	top: .3em;
+
+	button {
+		display: none;
+	}
+
+	.search-field {
+		background: #ededed url(../images/search.png) no-repeat 9px center;
+		background-size: 20px;
+		padding: 9px 10px 9px 10px;
+		border: 1px solid #ccc;
+		border-radius: 10em;
+		color: rgba(0,0,0,0);
+		width: 20px;
+		transition: all 0.5s ease 0s;
+
+		&:focus {
+			background-color: $white;
+			color:  #565656;
+			width: 250px;
+			padding-left: 32px;
+			border-color: #6DCFF6;
+			box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+
+		}
+	}
+}
+
+
 /**** LARGER MOBILE SCREENS *****/
 
 @include breakpoint( palm ) {
@@ -104,6 +171,7 @@ and more scalable.
 
 		a {
 			border-bottom: 0;
+			color: $link-color;
 
 			/*
 			you can use hover styles here even though this size
@@ -187,6 +255,56 @@ and more scalable.
 	}  /* end current highlighters */
 
 } /* end .nav */
+
+/* Larger device menu */
+
+#container {
+  position: relative;
+  left: 0;
+  transition: all 0.5s ease 0s;
+
+  &.active {
+	left: 0;
+  }
+}
+
+#menu-link {
+    display: none;
+}
+
+#menu {
+  clear: both;
+  overflow: hidden;
+  background: #fff;
+}
+
+.js #menu {
+  max-width: none;
+  position: static;
+  width: auto;
+}
+
+#searchform-top {
+
+	position: absolute;
+	right: .3em;
+	top: 3em;
+
+	button {
+		display: none;
+	}
+
+	.search-field {
+		width: 75px;
+		color: #565656;
+		padding-left: 32px;
+
+		&:focus {
+			width: 130px;
+
+		}
+	}
+}
 	
 }
 

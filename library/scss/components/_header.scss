@@ -2,9 +2,15 @@
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+	border-bottom: 1px solid #ccc;
+}
 
-	#logo {}
+#logo {
+	font-size: 1em;
+	text-align: center;
+}
+
 
 /**** LARGER MOBILE SCREENS *****/
 
@@ -15,7 +21,10 @@ HEADER STYLES
 /**** TABLET AND UP ****/
 
 @include breakpoint( tablet ){
-	
+	#logo {
+		font-size: 2.5em;
+		text-align: left;
+	}
 }
 
 /**** DESKTOP AND UP ****/

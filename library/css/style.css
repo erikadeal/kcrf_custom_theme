@@ -816,32 +816,45 @@ BUTTONS
 /*********************
 HEADER STYLES
 *********************/
+/* line 5, ../scss/components/_header.scss */
+.header {
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 9, ../scss/components/_header.scss */
+#logo {
+  font-size: 1em;
+  text-align: center;
+}
+
 /**** LARGER MOBILE SCREENS *****/
 /**** TABLET AND UP ****/
+@media only screen and (min-width: 768px) {
+  /* line 24, ../scss/components/_header.scss */
+  #logo {
+    font-size: 2.5em;
+    text-align: left;
+  }
+}
 /**** DESKTOP AND UP ****/
 /*********************
 NAVIGATION STYLES
 *********************/
 /*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
+Basic nav styling
 */
-/* line 13, ../scss/components/_navigation.scss */
+/* line 9, ../scss/components/_navigation.scss */
 .nav {
-  border: 1px solid #ccc;
   border-bottom: 0;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 17, ../scss/components/_navigation.scss */
+/* line 12, ../scss/components/_navigation.scss */
 .nav ul {
   margin-top: 0;
 }
-/* line 21, ../scss/components/_navigation.scss */
+/* line 16, ../scss/components/_navigation.scss */
 .nav li {
   /*
   so you really have to rethink your dropdowns for mobile.
@@ -851,12 +864,13 @@ and more scalable.
   http://www.alistapart.com/articles/organizing-mobile/
   */
 }
-/* line 23, ../scss/components/_navigation.scss */
+/* line 18, ../scss/components/_navigation.scss */
 .nav li a {
   display: block;
   text-decoration: none;
   padding: 10px 10px;
   border-bottom: 1px solid #cccccc;
+  color: white;
   /*
   remember this is for mobile ONLY, so there's no need
   to even declare hover styles here, you can do it in
@@ -864,28 +878,101 @@ and more scalable.
   keep this file as small as possible!
   */
 }
-/* line 56, ../scss/components/_navigation.scss */
+/* line 52, ../scss/components/_navigation.scss */
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding-left: 30px;
 }
 
 /* end .nav */
+/* Flyout nav */
+/* line 85, ../scss/components/_navigation.scss */
+#container {
+  position: relative;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}
+/* line 90, ../scss/components/_navigation.scss */
+#container.active {
+  left: 16em;
+}
+
+/* line 95, ../scss/components/_navigation.scss */
+#menu-link {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  font-size: 3em;
+  margin-top: -.2em;
+}
+
+/* line 103, ../scss/components/_navigation.scss */
+#menu {
+  clear: both;
+  overflow: hidden;
+  background: #333;
+}
+
+/* line 109, ../scss/components/_navigation.scss */
+.js #menu {
+  width: 16em;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -16em;
+}
+
+/* line 117, ../scss/components/_navigation.scss */
+#searchform-mobile {
+  padding-top: 1em;
+}
+
+/* line 121, ../scss/components/_navigation.scss */
+#searchform-top {
+  position: absolute;
+  right: .3em;
+  top: .3em;
+}
+/* line 127, ../scss/components/_navigation.scss */
+#searchform-top button {
+  display: none;
+}
+/* line 131, ../scss/components/_navigation.scss */
+#searchform-top .search-field {
+  background: #ededed url(../images/search.png) no-repeat 9px center;
+  background-size: 20px;
+  padding: 9px 10px 9px 10px;
+  border: 1px solid #ccc;
+  border-radius: 10em;
+  color: rgba(0, 0, 0, 0);
+  width: 20px;
+  transition: all 0.5s ease 0s;
+}
+/* line 141, ../scss/components/_navigation.scss */
+#searchform-top .search-field:focus {
+  background-color: white;
+  color: #565656;
+  width: 250px;
+  padding-left: 32px;
+  border-color: #6DCFF6;
+  box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+}
+
 /**** LARGER MOBILE SCREENS *****/
 /**** TABLET AND UP ****/
 @media only screen and (min-width: 768px) {
-  /* line 96, ../scss/components/_navigation.scss */
+  /* line 163, ../scss/components/_navigation.scss */
   .nav {
     border: 0;
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */
   }
-  /* line 98, ../scss/components/_navigation.scss */
+  /* line 165, ../scss/components/_navigation.scss */
   .nav ul {
     margin-top: 0;
   }
-  /* line 101, ../scss/components/_navigation.scss */
+  /* line 168, ../scss/components/_navigation.scss */
   .nav li {
     float: left;
     position: relative;
@@ -894,19 +981,20 @@ and more scalable.
     */
     /* showing sub-menus */
   }
-  /* line 105, ../scss/components/_navigation.scss */
+  /* line 172, ../scss/components/_navigation.scss */
   .nav li a {
     border-bottom: 0;
+    color: #e74c3c;
     /*
     you can use hover styles here even though this size
     has the possibility of being a mobile device.
     */
   }
-  /* line 112, ../scss/components/_navigation.scss */
+  /* line 180, ../scss/components/_navigation.scss */
   .nav li a:hover, .nav li a:focus {
     background-color: #dedede;
   }
-  /* line 124, ../scss/components/_navigation.scss */
+  /* line 192, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu,
   .nav li ul.children {
     margin-top: 0;
@@ -918,7 +1006,7 @@ and more scalable.
     z-index: 8999;
     /* highlight sub-menu current page */
   }
-  /* line 133, ../scss/components/_navigation.scss */
+  /* line 201, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu li,
   .nav li ul.children li {
     /*
@@ -927,7 +1015,7 @@ and more scalable.
     for usability. k, bai.
     */
   }
-  /* line 135, ../scss/components/_navigation.scss */
+  /* line 203, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu li a,
   .nav li ul.children li a {
     padding-left: 10px;
@@ -936,12 +1024,12 @@ and more scalable.
     width: 180px;
     border-bottom: 1px solid #ccc;
   }
-  /* line 152, ../scss/components/_navigation.scss */
+  /* line 220, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu li:last-child a,
   .nav li ul.children li:last-child a {
     border-bottom: 0;
   }
-  /* line 174, ../scss/components/_navigation.scss */
+  /* line 242, ../scss/components/_navigation.scss */
   .nav li:hover ul {
     top: auto;
     overflow: visible;
@@ -949,6 +1037,57 @@ and more scalable.
   }
 
   /* end .nav */
+  /* Larger device menu */
+  /* line 261, ../scss/components/_navigation.scss */
+  #container {
+    position: relative;
+    left: 0;
+    transition: all 0.5s ease 0s;
+  }
+  /* line 266, ../scss/components/_navigation.scss */
+  #container.active {
+    left: 0;
+  }
+
+  /* line 271, ../scss/components/_navigation.scss */
+  #menu-link {
+    display: none;
+  }
+
+  /* line 275, ../scss/components/_navigation.scss */
+  #menu {
+    clear: both;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  /* line 281, ../scss/components/_navigation.scss */
+  .js #menu {
+    max-width: none;
+    position: static;
+    width: auto;
+  }
+
+  /* line 287, ../scss/components/_navigation.scss */
+  #searchform-top {
+    position: absolute;
+    right: .3em;
+    top: 3em;
+  }
+  /* line 293, ../scss/components/_navigation.scss */
+  #searchform-top button {
+    display: none;
+  }
+  /* line 297, ../scss/components/_navigation.scss */
+  #searchform-top .search-field {
+    width: 75px;
+    color: #565656;
+    padding-left: 32px;
+  }
+  /* line 302, ../scss/components/_navigation.scss */
+  #searchform-top .search-field:focus {
+    width: 130px;
+  }
 }
 /**** DESKTOP AND UP ****/
 /*********************
