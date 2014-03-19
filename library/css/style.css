@@ -533,7 +533,7 @@ H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 /* line 48, ../scss/base/_typography.scss */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   font-weight: 500;
   /*
@@ -692,10 +692,11 @@ GENERAL STYLES
 *********************/
 /* line 5, ../scss/base/_base.scss */
 body {
-  font-family: "Georgia", Cambria, Times New Roman, Times, serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #565656;
+  background: #fefefe;
 }
 
 /*********************
@@ -712,23 +713,14 @@ LINK STYLES
 *********************/
 /* line 5, ../scss/components/_links.scss */
 a, a:visited {
-  color: #e74c3c;
+  color: #e9942f;
   /* on hover */
   /* on click */
   /* mobile tap color */
 }
 /* line 9, ../scss/components/_links.scss */
 a:hover, a:focus, a:visited:hover, a:visited:focus {
-  color: #da2d1b;
-}
-/* line 19, ../scss/components/_links.scss */
-a:link, a:visited:link {
-  /*
-  this highlights links on iPhones/iPads.
-  so it basically works like the :hover selector
-  for mobile devices.
-  */
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+  color: #d47d16;
 }
 
 /*********************
@@ -736,12 +728,12 @@ BUTTONS
 *********************/
 /* line 5, ../scss/components/_buttons.scss */
 .button, .button:visited {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  border: 1px solid #c82919;
-  border-top-color: #e32f1c;
-  border-left-color: #e32f1c;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  border: 1px solid #c17214;
+  border-top-color: #dd8317;
+  border-left-color: #dd8317;
   padding: 4px 12px;
-  color: white;
+  color: #fefefe;
   display: inline-block;
   font-size: 11px;
   font-weight: bold;
@@ -751,66 +743,66 @@ BUTTONS
   margin-bottom: 20px;
   line-height: 21px;
   border-radius: 4px;
-  background-color: #e43725;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e74c3c), to(#e43725));
-  background-image: -webkit-linear-gradient(top, #e74c3c, #e43725);
-  background-image: -moz-linear-gradient(top, #e74c3c, #e43725);
-  background-image: -o-linear-gradient(top, #e74c3c, #e43725);
-  background-image: linear-gradient(to bottom, #e74c3c, #e43725);
+  background-color: #e68818;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e9942f), to(#e68818));
+  background-image: -webkit-linear-gradient(top, #e9942f, #e68818);
+  background-image: -moz-linear-gradient(top, #e9942f, #e68818);
+  background-image: -o-linear-gradient(top, #e9942f, #e68818);
+  background-image: linear-gradient(to bottom, #e9942f, #e68818);
 }
 /* line 24, ../scss/components/_buttons.scss */
 .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
-  color: white;
-  border: 1px solid #c82919;
-  border-top-color: #a82315;
-  border-left-color: #a82315;
-  background-color: #d62c1a;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e43725), to(#d62c1a));
-  background-image: -webkit-linear-gradient(top, #e43725, #d62c1a);
-  background-image: -moz-linear-gradient(top, #e43725, #d62c1a);
-  background-image: -o-linear-gradient(top, #e43725, #d62c1a);
-  background-image: linear-gradient(to bottom, #e43725, #d62c1a);
+  color: #fefefe;
+  border: 1px solid #c17214;
+  border-top-color: #a15f11;
+  border-left-color: #a15f11;
+  background-color: #cf7a16;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e68818), to(#cf7a16));
+  background-image: -webkit-linear-gradient(top, #e68818, #cf7a16);
+  background-image: -moz-linear-gradient(top, #e68818, #cf7a16);
+  background-image: -o-linear-gradient(top, #e68818, #cf7a16);
+  background-image: linear-gradient(to bottom, #e68818, #cf7a16);
 }
 /* line 32, ../scss/components/_buttons.scss */
 .button:active, .button:visited:active {
-  background-color: #e74c3c;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e43725), to(#e74c3c));
-  background-image: -webkit-linear-gradient(top, #e43725, #e74c3c);
-  background-image: -moz-linear-gradient(top, #e43725, #e74c3c);
-  background-image: -o-linear-gradient(top, #e43725, #e74c3c);
-  background-image: linear-gradient(to bottom, #e43725, #e74c3c);
+  background-color: #e9942f;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e68818), to(#e9942f));
+  background-image: -webkit-linear-gradient(top, #e68818, #e9942f);
+  background-image: -moz-linear-gradient(top, #e68818, #e9942f);
+  background-image: -o-linear-gradient(top, #e68818, #e9942f);
+  background-image: linear-gradient(to bottom, #e68818, #e9942f);
 }
 
 /* line 37, ../scss/components/_buttons.scss */
 .blue-button, .blue-button:visited {
-  border-color: #20638f;
-  text-shadow: 0 1px 1px #20638f;
-  background-color: #2472a4;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2980b9), to(#2472a4));
-  background-image: -webkit-linear-gradient(top, #2980b9, #2472a4);
-  background-image: -moz-linear-gradient(top, #2980b9, #2472a4);
-  background-image: -o-linear-gradient(top, #2980b9, #2472a4);
-  background-image: linear-gradient(to bottom, #2980b9, #2472a4);
-  box-shadow: inset 0 0 3px #59a7da;
+  border-color: #f0a708;
+  text-shadow: 0 1px 1px #f0a708;
+  background-color: #f7b21a;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f8ba33), to(#f7b21a));
+  background-image: -webkit-linear-gradient(top, #f8ba33, #f7b21a);
+  background-image: -moz-linear-gradient(top, #f8ba33, #f7b21a);
+  background-image: -o-linear-gradient(top, #f8ba33, #f7b21a);
+  background-image: linear-gradient(to bottom, #f8ba33, #f7b21a);
+  box-shadow: inset 0 0 3px #fbd582;
 }
 /* line 43, ../scss/components/_buttons.scss */
 .blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
-  border-color: #1b557a;
-  background-color: #20638f;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2574a8), to(#20638f));
-  background-image: -webkit-linear-gradient(top, #2574a8, #20638f);
-  background-image: -moz-linear-gradient(top, #2574a8, #20638f);
-  background-image: -o-linear-gradient(top, #2574a8, #20638f);
-  background-image: linear-gradient(to bottom, #2574a8, #20638f);
+  border-color: #d79607;
+  background-color: #f0a708;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7b31f), to(#f0a708));
+  background-image: -webkit-linear-gradient(top, #f7b31f, #f0a708);
+  background-image: -moz-linear-gradient(top, #f7b31f, #f0a708);
+  background-image: -o-linear-gradient(top, #f7b31f, #f0a708);
+  background-image: linear-gradient(to bottom, #f7b31f, #f0a708);
 }
 /* line 47, ../scss/components/_buttons.scss */
 .blue-button:active, .blue-button:visited:active {
-  background-color: #2980b9;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2472a4), to(#2980b9));
-  background-image: -webkit-linear-gradient(top, #2472a4, #2980b9);
-  background-image: -moz-linear-gradient(top, #2472a4, #2980b9);
-  background-image: -o-linear-gradient(top, #2472a4, #2980b9);
-  background-image: linear-gradient(to bottom, #2472a4, #2980b9);
+  background-color: #f8ba33;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7b21a), to(#f8ba33));
+  background-image: -webkit-linear-gradient(top, #f7b21a, #f8ba33);
+  background-image: -moz-linear-gradient(top, #f7b21a, #f8ba33);
+  background-image: -o-linear-gradient(top, #f7b21a, #f8ba33);
+  background-image: linear-gradient(to bottom, #f7b21a, #f8ba33);
 }
 
 /*********************
@@ -830,10 +822,18 @@ HEADER STYLES
 /**** LARGER MOBILE SCREENS *****/
 /**** TABLET AND UP ****/
 @media only screen and (min-width: 768px) {
-  /* line 24, ../scss/components/_header.scss */
+  /* line 25, ../scss/components/_header.scss */
+  .header {
+    border-bottom: 0;
+  }
+
+  /* line 29, ../scss/components/_header.scss */
   #logo {
-    font-size: 2.5em;
-    text-align: left;
+    text-indent: -9999px;
+    background: url(../images/logo4.png) no-repeat 5em center;
+    width: 270px;
+    height: 160px;
+    margin-top: -7em;
   }
 }
 /**** DESKTOP AND UP ****/
@@ -852,7 +852,7 @@ Basic nav styling
 }
 /* line 12, ../scss/components/_navigation.scss */
 .nav ul {
-  margin-top: 0;
+  margin: 0;
 }
 /* line 16, ../scss/components/_navigation.scss */
 .nav li {
@@ -869,8 +869,8 @@ Basic nav styling
   display: block;
   text-decoration: none;
   padding: 10px 10px;
-  border-bottom: 1px solid #cccccc;
-  color: white;
+  border-bottom: 1px solid #767268;
+  color: #fefefe;
   /*
   remember this is for mobile ONLY, so there's no need
   to even declare hover styles here, you can do it in
@@ -878,42 +878,57 @@ Basic nav styling
   keep this file as small as possible!
   */
 }
-/* line 52, ../scss/components/_navigation.scss */
+/* line 31, ../scss/components/_navigation.scss */
+.nav li a:hover, .nav li a:focus {
+  color: #e9942f;
+}
+/* line 54, ../scss/components/_navigation.scss */
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding-left: 30px;
 }
 
 /* end .nav */
+/* Secondary top nav */
+/* line 87, ../scss/components/_navigation.scss */
+.secondary-nav {
+  display: none;
+}
+
+/* line 91, ../scss/components/_navigation.scss */
+ul.mobile-nav {
+  margin-top: 0;
+}
+
 /* Flyout nav */
-/* line 85, ../scss/components/_navigation.scss */
+/* line 97, ../scss/components/_navigation.scss */
 #container {
   position: relative;
   left: 0;
   transition: all 0.5s ease 0s;
 }
-/* line 90, ../scss/components/_navigation.scss */
+/* line 102, ../scss/components/_navigation.scss */
 #container.active {
   left: 16em;
 }
 
-/* line 95, ../scss/components/_navigation.scss */
+/* line 107, ../scss/components/_navigation.scss */
 #menu-link {
   position: absolute;
   display: block;
   cursor: pointer;
-  font-size: 3em;
-  margin-top: -.2em;
+  font-size: 2em;
+  left: .2em;
 }
 
-/* line 103, ../scss/components/_navigation.scss */
+/* line 115, ../scss/components/_navigation.scss */
 #menu {
   clear: both;
   overflow: hidden;
   background: #333;
 }
 
-/* line 109, ../scss/components/_navigation.scss */
+/* line 121, ../scss/components/_navigation.scss */
 .js #menu {
   width: 16em;
   height: 100%;
@@ -922,57 +937,21 @@ Basic nav styling
   left: -16em;
 }
 
-/* line 117, ../scss/components/_navigation.scss */
-#searchform-mobile {
-  padding-top: 1em;
-}
-
-/* line 121, ../scss/components/_navigation.scss */
-#searchform-top {
-  position: absolute;
-  right: .3em;
-  top: .3em;
-}
-/* line 127, ../scss/components/_navigation.scss */
-#searchform-top button {
-  display: none;
-}
-/* line 131, ../scss/components/_navigation.scss */
-#searchform-top .search-field {
-  background: #ededed url(../images/search.png) no-repeat 9px center;
-  background-size: 20px;
-  padding: 9px 10px 9px 10px;
-  border: 1px solid #ccc;
-  border-radius: 10em;
-  color: rgba(0, 0, 0, 0);
-  width: 20px;
-  transition: all 0.5s ease 0s;
-}
-/* line 141, ../scss/components/_navigation.scss */
-#searchform-top .search-field:focus {
-  background-color: white;
-  color: #565656;
-  width: 250px;
-  padding-left: 32px;
-  border-color: #6DCFF6;
-  box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
-}
-
 /**** LARGER MOBILE SCREENS *****/
 /**** TABLET AND UP ****/
 @media only screen and (min-width: 768px) {
-  /* line 163, ../scss/components/_navigation.scss */
+  /* line 138, ../scss/components/_navigation.scss */
   .nav {
     border: 0;
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */
   }
-  /* line 165, ../scss/components/_navigation.scss */
+  /* line 140, ../scss/components/_navigation.scss */
   .nav ul {
     margin-top: 0;
   }
-  /* line 168, ../scss/components/_navigation.scss */
+  /* line 143, ../scss/components/_navigation.scss */
   .nav li {
     float: left;
     position: relative;
@@ -981,20 +960,20 @@ Basic nav styling
     */
     /* showing sub-menus */
   }
-  /* line 172, ../scss/components/_navigation.scss */
+  /* line 147, ../scss/components/_navigation.scss */
   .nav li a {
     border-bottom: 0;
-    color: #e74c3c;
+    color: #e9942f;
     /*
     you can use hover styles here even though this size
     has the possibility of being a mobile device.
     */
   }
-  /* line 180, ../scss/components/_navigation.scss */
+  /* line 155, ../scss/components/_navigation.scss */
   .nav li a:hover, .nav li a:focus {
-    background-color: #dedede;
+    color: #f8ba33;
   }
-  /* line 192, ../scss/components/_navigation.scss */
+  /* line 167, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu,
   .nav li ul.children {
     margin-top: 0;
@@ -1006,7 +985,7 @@ Basic nav styling
     z-index: 8999;
     /* highlight sub-menu current page */
   }
-  /* line 201, ../scss/components/_navigation.scss */
+  /* line 176, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu li,
   .nav li ul.children li {
     /*
@@ -1015,7 +994,7 @@ Basic nav styling
     for usability. k, bai.
     */
   }
-  /* line 203, ../scss/components/_navigation.scss */
+  /* line 178, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu li a,
   .nav li ul.children li a {
     padding-left: 10px;
@@ -1024,12 +1003,12 @@ Basic nav styling
     width: 180px;
     border-bottom: 1px solid #ccc;
   }
-  /* line 220, ../scss/components/_navigation.scss */
+  /* line 195, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu li:last-child a,
   .nav li ul.children li:last-child a {
     border-bottom: 0;
   }
-  /* line 242, ../scss/components/_navigation.scss */
+  /* line 217, ../scss/components/_navigation.scss */
   .nav li:hover ul {
     top: auto;
     overflow: visible;
@@ -1037,56 +1016,146 @@ Basic nav styling
   }
 
   /* end .nav */
+  /* Secondary top nav */
+  /* line 236, ../scss/components/_navigation.scss */
+  .secondary-nav {
+    display: block;
+    margin: 0;
+  }
+  /* line 240, ../scss/components/_navigation.scss */
+  .secondary-nav li {
+    display: inline;
+    padding: .8em;
+    font-size: .8em;
+    float: right;
+  }
+
+  /* line 248, ../scss/components/_navigation.scss */
+  .mobile-nav {
+    display: none;
+  }
+
+  /* line 252, ../scss/components/_navigation.scss */
+  .top-bar.tencol, .top-bar.twocol {
+    margin-left: 0;
+  }
+
   /* Larger device menu */
-  /* line 261, ../scss/components/_navigation.scss */
+  /* line 258, ../scss/components/_navigation.scss */
   #container {
     position: relative;
     left: 0;
-    transition: all 0.5s ease 0s;
   }
-  /* line 266, ../scss/components/_navigation.scss */
+  /* line 262, ../scss/components/_navigation.scss */
   #container.active {
     left: 0;
   }
 
-  /* line 271, ../scss/components/_navigation.scss */
+  /* line 267, ../scss/components/_navigation.scss */
   #menu-link {
     display: none;
   }
 
-  /* line 275, ../scss/components/_navigation.scss */
+  /* line 271, ../scss/components/_navigation.scss */
   #menu {
     clear: both;
-    overflow: hidden;
-    background: #fff;
+    background: #f2ece5;
+    margin-top: 3em;
+  }
+  /* line 276, ../scss/components/_navigation.scss */
+  #menu ul {
+    margin: .5em;
+    float: right;
+  }
+  /* line 280, ../scss/components/_navigation.scss */
+  #menu ul li {
+    padding: 0 1em;
   }
 
-  /* line 281, ../scss/components/_navigation.scss */
+  /* line 286, ../scss/components/_navigation.scss */
   .js #menu {
     max-width: none;
     position: static;
     width: auto;
   }
+}
+/**** DESKTOP AND UP ****/
+/*********************
+SEARCH BOX STYLES
+*********************/
+/* line 6, ../scss/components/_search.scss */
+#searchform-mobile {
+  padding-top: 1em;
+}
 
-  /* line 287, ../scss/components/_navigation.scss */
+/* line 10, ../scss/components/_search.scss */
+#searchform-top {
+  position: absolute;
+  right: .3em;
+  top: .3em;
+}
+/* line 16, ../scss/components/_search.scss */
+#searchform-top button {
+  display: none;
+}
+/* line 20, ../scss/components/_search.scss */
+#searchform-top .search-field {
+  background: #ededed url(../images/search.png) no-repeat 7px center;
+  background-size: 15px;
+  padding: 4px 5px 4px 5px;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 10em;
+  -moz-border-radius: 10em;
+  border-radius: 10em;
+  color: rgba(0, 0, 0, 0);
+  width: 20px;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+/* line 33, ../scss/components/_search.scss */
+#searchform-top .search-field::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+/* line 37, ../scss/components/_search.scss */
+#searchform-top .search-field:focus, #searchform-top .search-field:hover {
+  background-color: #fefefe;
+  color: #565656;
+  width: 250px;
+  padding-left: 32px;
+  border-color: #6DCFF6;
+  box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+}
+/* line 45, ../scss/components/_search.scss */
+#searchform-top .search-field:focus::-webkit-input-placeholder, #searchform-top .search-field:hover::-webkit-input-placeholder {
+  color: #565656;
+}
+
+/**** LARGER MOBILE SCREENS *****/
+/**** TABLET AND UP ****/
+@media only screen and (min-width: 768px) {
+  /* line 64, ../scss/components/_search.scss */
   #searchform-top {
-    position: absolute;
-    right: .3em;
-    top: 3em;
+    position: relative;
   }
-  /* line 293, ../scss/components/_navigation.scss */
+  /* line 67, ../scss/components/_search.scss */
   #searchform-top button {
     display: none;
   }
-  /* line 297, ../scss/components/_navigation.scss */
+  /* line 71, ../scss/components/_search.scss */
   #searchform-top .search-field {
-    width: 75px;
+    width: 50%;
     color: #565656;
+    padding: 5px;
     padding-left: 32px;
+    font-size: .8em;
   }
-  /* line 302, ../scss/components/_navigation.scss */
-  #searchform-top .search-field:focus {
-    width: 130px;
+  /* line 78, ../scss/components/_search.scss */
+  #searchform-top .search-field::-webkit-input-placeholder {
+    color: #565656;
+  }
+  /* line 82, ../scss/components/_search.scss */
+  #searchform-top .search-field:hover, #searchform-top .search-field:focus {
+    width: 55%;
   }
 }
 /**** DESKTOP AND UP ****/
@@ -1111,7 +1180,7 @@ CONTENT STYLES
 /* post meta */
 /* line 37, ../scss/components/_content.scss */
 .byline {
-  color: #cccccc;
+  color: #767268;
 }
 
 /* entry content */

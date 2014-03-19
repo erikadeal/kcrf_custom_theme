@@ -10,7 +10,7 @@ Basic nav styling
 	border-bottom: 0;
 
 	ul {
-		margin-top: 0;
+		margin: 0;
 	}
 
 	li {
@@ -19,7 +19,7 @@ Basic nav styling
 			display: block;
 			text-decoration: none;
 			padding: 10px 10px;
-			border-bottom: 1px solid $gray;
+			border-bottom: 1px solid $light-gray;
 			color: $white;
 
 			/*
@@ -29,6 +29,8 @@ Basic nav styling
 			keep this file as small as possible!
 			*/
 			&:hover, &:focus {
+
+				color: $link-color;
 
 			}
 		}
@@ -80,6 +82,16 @@ Basic nav styling
 
 } /* end .nav */
 
+/* Secondary top nav */
+
+.secondary-nav {
+	display: none;
+}
+
+ul.mobile-nav {
+	margin-top: 0;
+}
+
 /* Flyout nav */
 
 #container {
@@ -96,8 +108,8 @@ Basic nav styling
     position: absolute;
     display: block;
     cursor: pointer;
-    font-size: 3em;
-    margin-top: -.2em;
+    font-size: 2em;
+    left: .2em;
 }
 
 #menu {
@@ -113,43 +125,6 @@ Basic nav styling
   top: 0;
   left: -16em;
 }
-
-#searchform-mobile {
-	padding-top: 1em;
-}
-
-#searchform-top {
-
-	position: absolute;
-	right: .3em;
-	top: .3em;
-
-	button {
-		display: none;
-	}
-
-	.search-field {
-		background: #ededed url(../images/search.png) no-repeat 9px center;
-		background-size: 20px;
-		padding: 9px 10px 9px 10px;
-		border: 1px solid #ccc;
-		border-radius: 10em;
-		color: rgba(0,0,0,0);
-		width: 20px;
-		transition: all 0.5s ease 0s;
-
-		&:focus {
-			background-color: $white;
-			color:  #565656;
-			width: 250px;
-			padding-left: 32px;
-			border-color: #6DCFF6;
-			box-shadow: 0 0 5px rgba(109, 207, 246, .5);
-
-		}
-	}
-}
-
 
 /**** LARGER MOBILE SCREENS *****/
 
@@ -178,7 +153,7 @@ Basic nav styling
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				background-color: #dedede;
+				color: $accent-color;
 			}
 		}
 
@@ -256,12 +231,33 @@ Basic nav styling
 
 } /* end .nav */
 
+/* Secondary top nav */
+
+.secondary-nav {
+	display: block;
+	margin: 0;
+
+	li {
+		display: inline;
+		padding: .8em;
+		font-size: .8em;
+		float: right;
+	}
+}
+
+.mobile-nav {
+	display: none;
+}
+
+.top-bar.tencol, .top-bar.twocol {
+	margin-left: 0;
+} 
+
 /* Larger device menu */
 
 #container {
   position: relative;
   left: 0;
-  transition: all 0.5s ease 0s;
 
   &.active {
 	left: 0;
@@ -274,8 +270,17 @@ Basic nav styling
 
 #menu {
   clear: both;
-  overflow: hidden;
-  background: #fff;
+  background: $beige;
+  margin-top: 3em;
+
+  ul {
+  	margin: .5em;
+  	float: right;
+
+  	li {
+  		padding: 0 1em;
+  	}
+  }
 }
 
 .js #menu {
@@ -283,33 +288,7 @@ Basic nav styling
   position: static;
   width: auto;
 }
-
-#searchform-top {
-
-	position: absolute;
-	right: .3em;
-	top: 3em;
-
-	button {
-		display: none;
-	}
-
-	.search-field {
-		width: 75px;
-		color: #565656;
-		padding-left: 32px;
-
-		&:focus {
-			width: 130px;
-
-		}
-	}
-}
 	
 }
 
 /**** DESKTOP AND UP ****/
-
-@include breakpoint( laptop ){
-	
-}

@@ -1,0 +1,91 @@
+/*********************
+SEARCH BOX STYLES
+*********************/
+
+
+#searchform-mobile {
+	padding-top: 1em;
+}
+
+#searchform-top {
+
+	position: absolute;
+	right: .3em;
+	top: .3em;
+
+	button {
+		display: none;
+	}
+
+	.search-field {
+		background: #ededed url(../images/search.png) no-repeat 7px center;
+		background-size: 15px;
+		padding: 4px 5px 4px 5px;
+		border: 1px solid #ccc;
+		-webkit-border-radius: 10em;
+		-moz-border-radius: 10em;
+		border-radius: 10em;
+		color: rgba(0,0,0,0);
+		width: 20px;
+		-webkit-transition: all 0.5s ease 0s;
+		transition: all 0.5s ease 0s;
+
+		&::-webkit-input-placeholder {
+			color: rgba(0,0,0,0);
+		}
+
+		&:focus, &:hover {
+			background-color: $white;
+			color:  #565656;
+			width: 250px;
+			padding-left: 32px;
+			border-color: #6DCFF6;
+			box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+
+			&::-webkit-input-placeholder {
+				color: #565656;
+			}
+
+		}
+	}
+}
+
+
+/**** LARGER MOBILE SCREENS *****/
+
+@include breakpoint( palm ) {
+	
+}
+
+/**** TABLET AND UP ****/
+
+@include breakpoint( tablet ){
+
+	#searchform-top {
+		position: relative;
+
+		button {
+			display: none;
+		}
+
+		.search-field {
+			width: 50%;
+			color: #565656;
+			padding: 5px;
+			padding-left: 32px;
+			font-size: .8em;
+
+			&::-webkit-input-placeholder {
+				color: #565656;
+			}
+
+			&:hover, &:focus {
+				width: 55%;
+
+			}
+		}
+	}
+	
+}
+
+/**** DESKTOP AND UP ****/

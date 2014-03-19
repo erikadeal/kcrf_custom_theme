@@ -21,9 +21,17 @@ HEADER STYLES
 /**** TABLET AND UP ****/
 
 @include breakpoint( tablet ){
+
+	.header {
+		border-bottom: 0;
+	}
+
 	#logo {
-		font-size: 2.5em;
-		text-align: left;
+		text-indent: -9999px;
+		background: url(../images/logo4.png) no-repeat 5em center;
+		width: 270px;
+		height: 160px;
+		margin-top: -7em;
 	}
 }
 

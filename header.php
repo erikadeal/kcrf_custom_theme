@@ -37,7 +37,9 @@
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
 
+		<?php // Icon fonts and web fonts ?>
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
 
 	</head>
 
@@ -47,22 +49,32 @@
 
 			<header class="header" role="banner">
 
-				<div id="inner-header" class="wrap clearfix">
+				<div id="inner-header" class="clearfix">
+
+					<div class="twelvecol wrap top-bar clearfix">
+						<ul class="tencol first clearfix secondary-nav">
+							<li><a href="index.php">Contact</a></li>
+							<li><a href="index.php">Member Login</a></li>
+						</ul>
+						<form id="searchform-top" class="search-form twocol last clearfix" action="<?php echo home_url(); ?>" method="get" role="search">
+							<input id="s" class="search-field" type="search" placeholder="Search" name="s" value="">
+							<button type="submit">
+								<i class="fa fa-search"></i>
+							</button>
+						</form>
+					</div>
 
 					<a id="menu-link">&#8801;</a>
 
-					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-
-					<form id="searchform-top" class="search-form" action="http://localhost:8888/king_county_refugee_forum/" method="get" role="search">
-						<input id="s" class="search-field" type="search" placeholder="Search" name="s" value="">
-						<button type="submit">
-							<i class="fa fa-search"></i>
-						</button>
-					</form>
-
 					<nav id="menu" role="navigation">
 						<?php bones_main_nav(); ?>
+						<ul class="nav mobile-nav">
+							<li><a href="index.php">Contact</a></li>
+							<li><a href="index.php">Member Login</a></li>
+						</ul>
 					</nav>
+
+					<h1 id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h1>
 
 				</div>
 
