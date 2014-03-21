@@ -3,6 +3,22 @@
 FOOTER STYLES
 *********************/
 
+/* Sticky footer solution */
+
+html, body {
+height: 100%;
+}
+#container {
+display: table;
+height: 100%;
+width: 100%;
+}
+.footer {
+display: table-row;
+height: 1px;
+}
+
+
 .footer {
 	clear: both;
 	color: $white;

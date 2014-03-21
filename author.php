@@ -16,9 +16,10 @@ Template Name: Member Directory
 						    $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
 						    ?>
 
-						    <h2><?php echo $curauth->first_name; ?></h2>
+						    <h2><?php echo $curauth->organization_name; ?></h2>
 						    <div class="org-info">
 						        <p><strong>Website:</strong> <a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></p>
+						        <p><strong>Contact:</strong> <a href="<?php echo $curauth->user_email; ?>"><?php echo $curauth->first_name; ?> <?php echo $curauth->last_name; ?></a></p>
 						        <p><strong>About:</strong></p>
 						        <p><?php echo $curauth->user_description; ?></p>
 						    </div>

@@ -1397,20 +1397,39 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 6, ../scss/components/_footer.scss */
+/* Sticky footer solution */
+/* line 8, ../scss/components/_footer.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 11, ../scss/components/_footer.scss */
+#container {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 16, ../scss/components/_footer.scss */
+.footer {
+  display: table-row;
+  height: 1px;
+}
+
+/* line 22, ../scss/components/_footer.scss */
 .footer {
   clear: both;
   color: #fefefe;
   background: #333333;
 }
 
-/* line 12, ../scss/components/_footer.scss */
+/* line 28, ../scss/components/_footer.scss */
 #footer-widgets {
   background: #767268;
 }
 
 /* end .footer-links */
-/* line 27, ../scss/components/_footer.scss */
+/* line 43, ../scss/components/_footer.scss */
 .copyright {
   padding-left: 1%;
 }
