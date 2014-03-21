@@ -2,6 +2,10 @@
 CONTENT STYLES
 *********************/
 
+#content {
+	padding-top: 4.2em;
+}
+
 #main {
 	margin-left: 2%;
 	margin-right: 2%;
@@ -16,7 +20,9 @@ CONTENT STYLES
 } /* end .hentry */
 
 .single-title,
-.page-title {}
+.page-title {
+	margin-bottom: 0;
+}
 
 .single-title {}
 

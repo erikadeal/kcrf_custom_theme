@@ -6,7 +6,7 @@ Template Name: Static Front Page
 
 <?php get_header(); ?>
 
-			<div id="content">
+			<div id="home-content">
 
 				<div id="inner-content" class="wrap clearfix">
 

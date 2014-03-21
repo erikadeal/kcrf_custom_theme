@@ -1167,12 +1167,23 @@ SEARCH BOX STYLES
 CONTENT STYLES
 *********************/
 /* line 5, ../scss/components/_content.scss */
+#content {
+  padding-top: 4.2em;
+}
+
+/* line 9, ../scss/components/_content.scss */
 #main {
   margin-left: 2%;
   margin-right: 2%;
 }
 
 /* end .hentry */
+/* line 23, ../scss/components/_content.scss */
+.single-title,
+.page-title {
+  margin-bottom: 0;
+}
+
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
 /* general post style */
@@ -1183,13 +1194,13 @@ CONTENT STYLES
 /* style by category (i.e. category-videos) */
 /* style by tag (i.e. tag-news) */
 /* post meta */
-/* line 38, ../scss/components/_content.scss */
+/* line 44, ../scss/components/_content.scss */
 .byline {
   color: #767268;
 }
 
 /* entry content */
-/* line 45, ../scss/components/_content.scss */
+/* line 51, ../scss/components/_content.scss */
 .entry-content {
   /*
   image alignment on a screen this size may be
@@ -1198,25 +1209,25 @@ CONTENT STYLES
   but it's up to you. Feel free to change it up.
   */
 }
-/* line 80, ../scss/components/_content.scss */
+/* line 86, ../scss/components/_content.scss */
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-/* line 87, ../scss/components/_content.scss */
+/* line 93, ../scss/components/_content.scss */
 .entry-content img {
   margin: 0 0 1.5em 0;
   max-width: 100%;
   height: auto;
 }
-/* line 103, ../scss/components/_content.scss */
+/* line 109, ../scss/components/_content.scss */
 .entry-content video, .entry-content object {
   max-width: 100%;
   height: auto;
 }
-/* line 108, ../scss/components/_content.scss */
+/* line 114, ../scss/components/_content.scss */
 .entry-content pre {
   background: #eee;
   border: 1px solid #cecece;
@@ -1224,20 +1235,20 @@ CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 116, ../scss/components/_content.scss */
+/* line 122, ../scss/components/_content.scss */
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 122, ../scss/components/_content.scss */
+/* line 128, ../scss/components/_content.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 128, ../scss/components/_content.scss */
+/* line 134, ../scss/components/_content.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;
@@ -1250,23 +1261,23 @@ CONTENT STYLES
 /* gallery caption styles */
 /**** LARGER MOBILE SCREENS *****/
 @media only screen and (min-width: 481px) {
-  /* line 164, ../scss/components/_content.scss */
+  /* line 170, ../scss/components/_content.scss */
   .entry-content {
     /* at this larger size, we can start to align images */
   }
-  /* line 167, ../scss/components/_content.scss */
+  /* line 173, ../scss/components/_content.scss */
   .entry-content .alignleft, .entry-content img.alignleft {
     margin-right: 1.5em;
     display: inline;
     float: left;
   }
-  /* line 172, ../scss/components/_content.scss */
+  /* line 178, ../scss/components/_content.scss */
   .entry-content .alignright, .entry-content img.alignright {
     margin-left: 1.5em;
     display: inline;
     float: right;
   }
-  /* line 177, ../scss/components/_content.scss */
+  /* line 183, ../scss/components/_content.scss */
   .entry-content .aligncenter, .entry-content img.aligncenter {
     margin-right: auto;
     margin-left: auto;
@@ -1276,7 +1287,7 @@ CONTENT STYLES
 }
 /**** TABLET AND UP ****/
 @media only screen and (min-width: 768px) {
-  /* line 191, ../scss/components/_content.scss */
+  /* line 197, ../scss/components/_content.scss */
   #main {
     margin: 0;
   }
@@ -1390,17 +1401,20 @@ FOOTER STYLES
 .footer {
   clear: both;
   color: #fefefe;
-}
-/* line 10, ../scss/components/_footer.scss */
-.footer #footer-widgets {
-  background: #767268;
-}
-/* line 14, ../scss/components/_footer.scss */
-.footer #inner-footer {
   background: #333333;
 }
 
+/* line 12, ../scss/components/_footer.scss */
+#footer-widgets {
+  background: #767268;
+}
+
 /* end .footer-links */
+/* line 27, ../scss/components/_footer.scss */
+.copyright {
+  padding-left: 1%;
+}
+
 /**** LARGER MOBILE SCREENS *****/
 /**** TABLET AND UP ****/
 /**** DESKTOP AND UP ****/

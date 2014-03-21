@@ -1,15 +1,60 @@
 			<footer class="footer" role="contentinfo">
 
-				<div id="footer-widgets">
-					<div class="fourcol first clearfix">
-					</div>
-					<div class="fourcol clearfix">
-					</div>
-					<div class="fourcol last clearfix">
-					</div>
-				</div>
-
 				<div id="inner-footer" class="clearfix">
+
+					<div id="footer-widgets" class="clearfix">
+
+				<!-- Left footer area -->
+						<div class="fourcol first clearfix">
+							<?php if ( is_active_sidebar( 'footer_1' ) ) : ?>
+
+								<?php dynamic_sidebar( 'footer_1' ); ?>
+
+							<?php else : ?>
+
+								<?php // This content shows up if there are no widgets defined in the backend. ?>
+
+								<div class="alert alert-help">
+									<p><?php _e( 'Please activate some Widgets.', 'bonestheme' );  ?></p>
+								</div>
+
+							<?php endif; ?>
+						</div>
+
+				<!-- Center footer area -->
+						<div class="fourcol clearfix">
+							<?php if ( is_active_sidebar( 'footer_2' ) ) : ?>
+
+								<?php dynamic_sidebar( 'footer_2' ); ?>
+
+							<?php else : ?>
+
+								<?php // This content shows up if there are no widgets defined in the backend. ?>
+
+								<div class="alert alert-help">
+									<p><?php _e( 'Please activate some Widgets.', 'bonestheme' );  ?></p>
+								</div>
+
+							<?php endif; ?>
+						</div>
+
+				<!-- Right footer area -->
+						<div class="fourcol last clearfix">
+							<?php if ( is_active_sidebar( 'footer_3' ) ) : ?>
+
+								<?php dynamic_sidebar( 'footer_3' ); ?>
+
+							<?php else : ?>
+
+								<?php // This content shows up if there are no widgets defined in the backend. ?>
+
+								<div class="alert alert-help">
+									<p><?php _e( 'Please activate some Widgets.', 'bonestheme' );  ?></p>
+								</div>
+
+							<?php endif; ?>
+						</div>
+					</div>
 
 					<nav role="navigation">
 							<?php bones_footer_links(); ?>
