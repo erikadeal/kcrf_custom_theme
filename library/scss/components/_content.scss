@@ -2,8 +2,9 @@
 CONTENT STYLES
 *********************/
 
-#content {
-	margin-top: 2.2em;
+#main {
+	margin-left: 2%;
+	margin-right: 2%;
 }
 
 .hentry {
@@ -186,6 +187,10 @@ dd {}
 /**** TABLET AND UP ****/
 
 @include breakpoint( tablet ){
+
+#main {
+	margin: 0;
+}
 	
 }
 

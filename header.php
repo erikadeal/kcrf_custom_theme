@@ -49,7 +49,12 @@
 
 			<header class="header" role="banner">
 
-				<div id="inner-header" class="clearfix">
+				<div id="inner-header" class="wrap clearfix">
+
+					<h1 id="logo" class="h1">
+						<a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a>
+						<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo home_url();?>/wp-content/themes/kcrf_custom_theme/library/images/logo4.png"></a>
+					</h1>
 
 					<div class="twelvecol wrap top-bar clearfix">
 						<ul class="tencol first clearfix secondary-nav">
@@ -63,19 +68,17 @@
 							</button>
 						</form>
 					</div>
+				</div>
 
 					<a id="menu-link">&#8801;</a>
 
-					<nav id="menu" role="navigation">
+				<div id="menu">
+					<nav role="navigation">
 						<?php bones_main_nav(); ?>
 						<ul class="nav mobile-nav">
 							<li><a href="index.php">Contact</a></li>
 							<li><a href="index.php">Member Login</a></li>
 						</ul>
 					</nav>
-
-					<h1 id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h1>
-
 				</div>
-
 			</header>

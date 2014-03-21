@@ -9,6 +9,9 @@ HEADER STYLES
 #logo {
 	font-size: 1em;
 	text-align: center;
+	z-index: 3000;
+
+	img { display: none; }
 }
 
 
@@ -27,12 +30,15 @@ HEADER STYLES
 	}
 
 	#logo {
+		position: absolute;
 		text-indent: -9999px;
-		background: url(../images/logo4.png) no-repeat 5em center;
-		width: 270px;
-		height: 160px;
-		margin-top: -7em;
+
+		img {
+			display: block;
+			margin-top: -2em;
+		}
 	}
+
 }
 
 /**** DESKTOP AND UP ****/

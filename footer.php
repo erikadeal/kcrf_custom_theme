@@ -1,6 +1,15 @@
 			<footer class="footer" role="contentinfo">
 
-				<div id="inner-footer" class="wrap clearfix">
+				<div id="footer-widgets">
+					<div class="fourcol first clearfix">
+					</div>
+					<div class="fourcol clearfix">
+					</div>
+					<div class="fourcol last clearfix">
+					</div>
+				</div>
+
+				<div id="inner-footer" class="clearfix">
 
 					<nav role="navigation">
 							<?php bones_footer_links(); ?>

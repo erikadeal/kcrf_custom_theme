@@ -110,6 +110,7 @@ ul.mobile-nav {
     cursor: pointer;
     font-size: 2em;
     left: .2em;
+    margin-top: -1.4em;
 }
 
 #menu {
@@ -135,25 +136,27 @@ ul.mobile-nav {
 /**** TABLET AND UP ****/
 
 @include breakpoint( tablet ){
-	.nav {
+
+.nav {
 		border: 0;
-	ul {
-		margin-top:0;
-	}
+		margin: 0;
+		float: right;
+		padding-right: 7%;
+
 	li {
 		float: left;
 		position: relative;
 
 		a {
 			border-bottom: 0;
-			color: $link-color;
+			color: $white;
+			margin-left: 1em;
+			padding: .8em 1em;
+			text-transform: uppercase;
 
-			/*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
-			*/
 			&:hover, &:focus {
-				color: $accent-color;
+				background: $accent-color;
+				color: $white;
 			}
 		}
 
@@ -270,17 +273,7 @@ ul.mobile-nav {
 
 #menu {
   clear: both;
-  background: $beige;
-  margin-top: 3em;
-
-  ul {
-  	margin: .5em;
-  	float: right;
-
-  	li {
-  		padding: 0 1em;
-  	}
-  }
+  background: $brand-color;
 }
 
 .js #menu {
@@ -292,3 +285,8 @@ ul.mobile-nav {
 }
 
 /**** DESKTOP AND UP ****/
+
+@include breakpoint( laptop ){
+
+
+}

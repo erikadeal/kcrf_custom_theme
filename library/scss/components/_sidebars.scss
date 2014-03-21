@@ -46,8 +46,8 @@ SIDEBARS & ASIDES
 	}
 
 	.widget {
-		padding: 0 10px;
-		margin: 2.2em 0;
+		margin: 1em 0;
+		padding-left: 10px;
 
 		ul {
 			li {
@@ -62,6 +62,14 @@ SIDEBARS & ASIDES
 					margin-top: 0.75em;
 					padding-left: 1em;
 				}
+			}
+		}
+
+		ol {
+			margin-top: 0;
+
+			h4 {
+				margin-top: 0;
 			}
 		}
 	}

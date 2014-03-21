@@ -5,6 +5,15 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
+	color: $white;
+
+	#footer-widgets {
+		background: $light-gray;
+	}
+
+	#inner-footer {
+		background: $dark-gray;
+	}
 }
 
 	.footer-links {

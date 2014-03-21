@@ -39,6 +39,9 @@ of the styles inside media queries.
 @import "components/footer";
 @import "components/comments";
 
+//import specific views
+@import "views/frontpage";
+
 
 /* Import grid. This is the average size of large mobile or
 small desktop devices; at this point, we can start using columns

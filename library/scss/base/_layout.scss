@@ -3,12 +3,13 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 96%;
+	width: 100%;
 	margin: 0 auto;
 }
 
-@include breakpoint( $tablet ){
+@include breakpoint( tablet ){
 	.wrap {
+		width: 86%;
 		max-width: 1140px;
 	}
 }
