@@ -76,7 +76,9 @@ Basic nav styling
 	li.current_page_item,
 	li.current-page-ancestor {
 
-		a {}
+		a {
+			background-color: $accent-color;
+		}
 
 	}  /* end current highlighters */
 
