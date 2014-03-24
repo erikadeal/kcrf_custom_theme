@@ -1353,7 +1353,7 @@ SIDEBARS & ASIDES
 
   /* line 43, ../scss/components/_sidebars.scss */
   .widgettitle {
-    border-bottom: 2px solid #444;
+    border-bottom: 1px solid #fefefe;
     margin-bottom: 0.75em;
   }
 

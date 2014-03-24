@@ -45,40 +45,47 @@ Template Name: Services Page
 
 							<div class="categories-grid">
 
-							<?php
-								$field_key = "field_53025fd551115";
-								$field = get_field_object($field_key);
+								<?php
+									$field_key = "field_53025fd551115";
+									$field = get_field_object($field_key);
 
-								if( $field )
-								{
-								   foreach( $field['choices'] as $k => $v )
-								        {
-								        	echo '<div class="fourcol clearfix">';
-								            echo '<h2 class="cat-title">' . $v . '</h2>';
+									if( $field )
+									{
+									   foreach( $field['choices'] as $k => $v )
+									        {
+									        	echo '<div class="fourcol clearfix">';
+									            echo '<h2 class="cat-title">' . $v . '</h2>';
 
-								            $args = array(
-													'role' => 'forum_member',
-													'meta_query' => array(
-														array(
-															'key' => 'member_services',
-															'value' =>  $v, //Remember the double quotes!
-															'compare' => 'LIKE')
-														)
-													);
+									            $args = array(
+														'role' => 'forum_member',
+														'meta_query' => array(
+															array(
+																'key' => 'member_services',
+																'value' =>  $v, //Remember the double quotes!
+																'compare' => 'LIKE')
+															)
+														);
 
-												$user_query = new WP_User_Query( $args );
-												// User Loop
+													$user_query = new WP_User_Query( $args );
+													// User Loop
 
-												foreach ( $user_query->results as $user ) 
-													{
-													echo '<p><a href="' . home_url() . '/?author=' . $user->ID . '">' . $user->first_name . '</a></p>';
-													//echo '<p><a href="' . $user->user_url . '">Visit website</a></p>';
-												}
+													foreach ( $user_query->results as $user ) 
+														{
+														echo '<div class="member-excerpt"><p><a href="' . home_url() . '/?author=' . $user->ID . '">' . $user->organization_name . '</a></p>';
 
-								           echo '</div>';
-								        }
-								}
-							?>
+														//if ($user->user_url){
+														//	echo '<p>Website: <a href="' . $user->user_url . '">' . $user->user_url . '</a></p>';
+														//}
+
+														//echo '<p>Contact: <a href="mailto:' . $user->user_email . '">' . $user->first_name . '&nbsp;' . $user->last_name . '</a></p>';
+
+														echo '</div>';
+													}
+
+									           echo '</div>';
+									        }
+									}
+								?>
 
 							</div>
 
