@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: Member Directory
-*/
-?>
-
 <?php get_header(); ?>
 
 			<div id="content">
@@ -46,7 +40,7 @@ Template Name: Member Directory
 						    </ul>
 						</div>
 
-					<div class="fourcol last clearfix">
+					<div class="sidebar fourcol last clearfix" role="complimentary">
 
 						<h4>All Members</h4>
 							<?php
@@ -94,7 +88,5 @@ Template Name: Member Directory
 					</div>
 
 				</div>
-
-			</div>
 
 <?php get_footer(); ?>
