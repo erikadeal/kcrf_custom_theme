@@ -252,4 +252,40 @@ function of_get_option($name, $default = false) {
 }
 }
 
+//Custom excerpt lenth
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+//Move to plugin
+  function custom_post_menu_label() {
+     global $menu;
+     global $submenu;
+     $menu[5][0] = 'News';
+     $submenu['edit.php'][5][0] = 'News';
+     $submenu['edit.php'][10][0] = 'Add News';         
+  }
+
+ //Change Posts labels in other admin area
+  function custom_post_object_label() {
+    global $wp_post_types;
+    $labels = &$wp_post_types['post']->labels;
+    $labels->name = 'News';
+    $labels->singular_name = 'News';
+    $labels->add_new = 'Add News';
+    $labels->add_new_item = 'Add News';
+    $labels->edit_item = 'Edit News';
+    $labels->new_item = 'News';
+    $labels->view_item = 'View News';
+    $labels->search_items = 'Search News';
+    $labels->not_found = 'No results on News';
+    $labels->not_found_in_trash = 'No News in Trash';
+    $labels->name_admin_bar = 'Add News';       
+
+   }
+
+ add_action( 'init', 'custom_post_object_label' );
+ add_action( 'admin_menu', 'custom_post_menu_label' );
+
 ?>

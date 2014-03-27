@@ -53,7 +53,10 @@ Template Name: Services Page
 									{
 									   foreach( $field['choices'] as $k => $v )
 									        {
-									        	echo '<div class="fourcol clearfix">';
+									        	$id = strtolower($v);
+												$id = str_replace(' ', '_', $id);
+
+									        	echo '<div id="'. $id .'" class="fourcol clearfix">';
 									            echo '<h2 class="cat-title">' . $v . '</h2>';
 
 									            $args = array(

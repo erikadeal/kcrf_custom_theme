@@ -43,7 +43,7 @@
 					<div class="sidebar fourcol last clearfix" role="complimentary">
 
 						<h4>All Members</h4>
-						
+
 							<?php
 							    $blogusers = get_users('role=forum_member');
 							    foreach ($blogusers as $user) {

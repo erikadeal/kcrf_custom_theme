@@ -1717,7 +1717,7 @@ SERVICES PAGE STYLES
 /* line 7, ../scss/views/_services.scss */
 .categories-grid .fourcol {
   margin: 0 1% 0 0;
-  min-height: 300px;
+  min-height: 200px;
 }
 
 /* line 13, ../scss/views/_services.scss */
@@ -1729,6 +1729,25 @@ SERVICES PAGE STYLES
   text-align: center;
 }
 
+/***********************
+ARCHIVE STYLES 
+***********************/
+/* line 5, ../scss/views/_archives.scss */
+.recent-archives {
+  width: 100%;
+  display: table-row;
+}
+/* line 9, ../scss/views/_archives.scss */
+.recent-archives .fourcol:first-child {
+  margin-left: 0;
+}
+
+/***********************
+Stylesheet: Meetings
+***********************/
+/*--------------------
+Meetings Archives
+---------------------*/
 /* Import grid. This is the average size of large mobile or
 small desktop devices; at this point, we can start using columns
 and more resource-intensive styles */
