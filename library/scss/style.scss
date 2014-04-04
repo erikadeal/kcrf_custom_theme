@@ -38,6 +38,7 @@ of the styles inside media queries.
 @import "components/sidebars";
 @import "components/footer";
 @import "components/comments";
+@import "components/forms";
 
 //import specific views
 @import "views/frontpage";
@@ -45,6 +46,7 @@ of the styles inside media queries.
 @import "views/archives";
 @import "views/meetings";
 @import "views/newsposts";
+@import "views/profile";
 
 
 /* Import grid. This is the average size of large mobile or

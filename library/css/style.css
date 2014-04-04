@@ -562,16 +562,17 @@ h2, .h2 {
 
 /* line 74, ../scss/base/_typography.scss */
 h3, .h3 {
-  font-size: 1.125em;
+  font-size: 1.25em;
+  margin: .5em 0;
 }
 
-/* line 78, ../scss/base/_typography.scss */
+/* line 79, ../scss/base/_typography.scss */
 h4, .h4 {
   font-size: 1.1em;
   font-weight: 700;
 }
 
-/* line 83, ../scss/base/_typography.scss */
+/* line 84, ../scss/base/_typography.scss */
 h5, .h5 {
   font-size: 0.846em;
   line-height: 2.09em;
@@ -736,41 +737,21 @@ BUTTONS
 /* line 5, ../scss/components/_buttons.scss */
 .button, .button:visited {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  border: 1px solid #c17214;
-  border-top-color: #dd8317;
-  border-left-color: #dd8317;
-  padding: 4px 12px;
+  padding: .2em .7em;
   color: #fefefe;
+  background: #e9942f;
   display: inline-block;
-  font-size: 11px;
-  font-weight: bold;
-  text-decoration: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
   cursor: pointer;
-  margin-bottom: 20px;
-  line-height: 21px;
-  border-radius: 4px;
-  background-color: #e68818;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e9942f), to(#e68818));
-  background-image: -webkit-linear-gradient(top, #e9942f, #e68818);
-  background-image: -moz-linear-gradient(top, #e9942f, #e68818);
-  background-image: -o-linear-gradient(top, #e9942f, #e68818);
-  background-image: linear-gradient(to bottom, #e9942f, #e68818);
+  border-radius: 6px;
+  transition: .2s ease-in-out;
+  text-decoration: none;
 }
-/* line 24, ../scss/components/_buttons.scss */
+/* line 17, ../scss/components/_buttons.scss */
 .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
   color: #fefefe;
-  border: 1px solid #c17214;
-  border-top-color: #a15f11;
-  border-left-color: #a15f11;
-  background-color: #cf7a16;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e68818), to(#cf7a16));
-  background-image: -webkit-linear-gradient(top, #e68818, #cf7a16);
-  background-image: -moz-linear-gradient(top, #e68818, #cf7a16);
-  background-image: -o-linear-gradient(top, #e68818, #cf7a16);
-  background-image: linear-gradient(to bottom, #e68818, #cf7a16);
+  background: #f8ba33;
 }
-/* line 32, ../scss/components/_buttons.scss */
+/* line 22, ../scss/components/_buttons.scss */
 .button:active, .button:visited:active {
   background-color: #e9942f;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e68818), to(#e9942f));
@@ -780,7 +761,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #e68818, #e9942f);
 }
 
-/* line 37, ../scss/components/_buttons.scss */
+/* line 27, ../scss/components/_buttons.scss */
 .blue-button, .blue-button:visited {
   border-color: #f0a708;
   text-shadow: 0 1px 1px #f0a708;
@@ -792,7 +773,7 @@ BUTTONS
   background-image: linear-gradient(to bottom, #f8ba33, #f7b21a);
   box-shadow: inset 0 0 3px #fbd582;
 }
-/* line 43, ../scss/components/_buttons.scss */
+/* line 33, ../scss/components/_buttons.scss */
 .blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
   border-color: #d79607;
   background-color: #f0a708;
@@ -802,7 +783,7 @@ BUTTONS
   background-image: -o-linear-gradient(top, #f7b31f, #f0a708);
   background-image: linear-gradient(to bottom, #f7b31f, #f0a708);
 }
-/* line 47, ../scss/components/_buttons.scss */
+/* line 37, ../scss/components/_buttons.scss */
 .blue-button:active, .blue-button:visited:active {
   background-color: #f8ba33;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f7b21a), to(#f8ba33));
@@ -984,16 +965,15 @@ ul.mobile-nav {
   .nav li a {
     border-bottom: 0;
     color: #fefefe;
-    margin-left: 1em;
     padding: .8em 1em;
     text-transform: uppercase;
   }
-  /* line 159, ../scss/components/_navigation.scss */
+  /* line 158, ../scss/components/_navigation.scss */
   .nav li a:hover, .nav li a:focus {
     background: #f8ba33;
     color: #fefefe;
   }
-  /* line 172, ../scss/components/_navigation.scss */
+  /* line 171, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu,
   .nav li ul.children {
     margin-top: 0;
@@ -1005,7 +985,7 @@ ul.mobile-nav {
     z-index: 8999;
     /* highlight sub-menu current page */
   }
-  /* line 181, ../scss/components/_navigation.scss */
+  /* line 180, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu li,
   .nav li ul.children li {
     /*
@@ -1014,7 +994,7 @@ ul.mobile-nav {
     for usability. k, bai.
     */
   }
-  /* line 183, ../scss/components/_navigation.scss */
+  /* line 182, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu li a,
   .nav li ul.children li a {
     padding-left: 10px;
@@ -1023,12 +1003,12 @@ ul.mobile-nav {
     width: 180px;
     border-bottom: 1px solid #ccc;
   }
-  /* line 200, ../scss/components/_navigation.scss */
+  /* line 199, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu li:last-child a,
   .nav li ul.children li:last-child a {
     border-bottom: 0;
   }
-  /* line 222, ../scss/components/_navigation.scss */
+  /* line 221, ../scss/components/_navigation.scss */
   .nav li:hover ul {
     top: auto;
     overflow: visible;
@@ -1037,12 +1017,12 @@ ul.mobile-nav {
 
   /* end .nav */
   /* Secondary top nav */
-  /* line 241, ../scss/components/_navigation.scss */
+  /* line 240, ../scss/components/_navigation.scss */
   .secondary-nav {
     display: block;
     margin: 0;
   }
-  /* line 245, ../scss/components/_navigation.scss */
+  /* line 244, ../scss/components/_navigation.scss */
   .secondary-nav li {
     display: inline;
     padding: .8em;
@@ -1050,39 +1030,39 @@ ul.mobile-nav {
     float: right;
   }
 
-  /* line 253, ../scss/components/_navigation.scss */
+  /* line 252, ../scss/components/_navigation.scss */
   .mobile-nav {
     display: none;
   }
 
-  /* line 257, ../scss/components/_navigation.scss */
+  /* line 256, ../scss/components/_navigation.scss */
   .top-bar.tencol, .top-bar.twocol {
     margin-left: 0;
   }
 
   /* Larger device menu */
-  /* line 263, ../scss/components/_navigation.scss */
+  /* line 262, ../scss/components/_navigation.scss */
   #container {
     position: relative;
     left: 0;
   }
-  /* line 267, ../scss/components/_navigation.scss */
+  /* line 266, ../scss/components/_navigation.scss */
   #container.active {
     left: 0;
   }
 
-  /* line 272, ../scss/components/_navigation.scss */
+  /* line 271, ../scss/components/_navigation.scss */
   #menu-link {
     display: none;
   }
 
-  /* line 276, ../scss/components/_navigation.scss */
+  /* line 275, ../scss/components/_navigation.scss */
   #menu {
     clear: both;
     background: #e9942f;
   }
 
-  /* line 281, ../scss/components/_navigation.scss */
+  /* line 280, ../scss/components/_navigation.scss */
   .js #menu {
     max-width: none;
     position: static;
@@ -1093,27 +1073,53 @@ ul.mobile-nav {
 /*********************
 SEARCH BOX STYLES
 *********************/
-/* line 6, ../scss/components/_search.scss */
+/* line 5, ../scss/components/_search.scss */
+input[type=SEARCH] {
+  border: 1px solid #c0bdb7;
+  padding: .2em .3em .2em .5em;
+  border-radius: 10em;
+  background: #eee;
+  transition: .2s ease-in-out;
+}
+/* line 12, ../scss/components/_search.scss */
+input[type=SEARCH]:hover, input[type=SEARCH]:focus {
+  background: #fefefe;
+  border-color: #e9942f;
+}
+
+/* line 18, ../scss/components/_search.scss */
+.search-button {
+  border: 0;
+  background: transparent;
+  margin-left: -2.2em;
+}
+
+/* line 24, ../scss/components/_search.scss */
+#searchform {
+  text-align: center;
+}
+
+/* line 28, ../scss/components/_search.scss */
 #searchform-mobile {
   padding-top: 1em;
 }
 
-/* line 10, ../scss/components/_search.scss */
+/* line 32, ../scss/components/_search.scss */
 #searchform-top {
   position: absolute;
   right: .3em;
   top: .3em;
 }
-/* line 16, ../scss/components/_search.scss */
+/* line 38, ../scss/components/_search.scss */
 #searchform-top button {
   display: none;
 }
-/* line 20, ../scss/components/_search.scss */
+/* line 42, ../scss/components/_search.scss */
 #searchform-top .search-field {
-  background: #ededed url(../images/search.png) no-repeat 7px center;
+  background: #e9942f url(../images/search.png) no-repeat 7px center;
   background-size: 15px;
   padding: 4px 5px 4px 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #e9942f;
   -webkit-border-radius: 10em;
   -moz-border-radius: 10em;
   border-radius: 10em;
@@ -1122,20 +1128,18 @@ SEARCH BOX STYLES
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
-/* line 33, ../scss/components/_search.scss */
+/* line 55, ../scss/components/_search.scss */
 #searchform-top .search-field::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0);
 }
-/* line 37, ../scss/components/_search.scss */
+/* line 59, ../scss/components/_search.scss */
 #searchform-top .search-field:focus, #searchform-top .search-field:hover {
   background-color: #fefefe;
-  color: #565656;
   width: 250px;
   padding-left: 32px;
-  border-color: #6DCFF6;
-  box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+  border-color: #e9942f;
 }
-/* line 45, ../scss/components/_search.scss */
+/* line 65, ../scss/components/_search.scss */
 #searchform-top .search-field:focus::-webkit-input-placeholder, #searchform-top .search-field:hover::-webkit-input-placeholder {
   color: #565656;
 }
@@ -1143,29 +1147,34 @@ SEARCH BOX STYLES
 /**** LARGER MOBILE SCREENS *****/
 /**** TABLET AND UP ****/
 @media only screen and (min-width: 768px) {
-  /* line 64, ../scss/components/_search.scss */
+  /* line 84, ../scss/components/_search.scss */
   #searchform-top {
     position: relative;
   }
-  /* line 67, ../scss/components/_search.scss */
+  /* line 87, ../scss/components/_search.scss */
   #searchform-top button {
-    display: none;
+    display: inline;
+    margin-left: -2em;
+    border: 0;
+    background: transparent;
   }
-  /* line 71, ../scss/components/_search.scss */
+  /* line 94, ../scss/components/_search.scss */
   #searchform-top .search-field {
-    width: 50%;
+    background: #eee;
+    border: 1px solid #c0bdb7;
+    width: 80%;
     color: #565656;
-    padding: 5px;
-    padding-left: 32px;
+    padding: .2em .3em .2em .5em;
     font-size: .8em;
   }
-  /* line 78, ../scss/components/_search.scss */
+  /* line 102, ../scss/components/_search.scss */
   #searchform-top .search-field::-webkit-input-placeholder {
     color: #565656;
   }
-  /* line 82, ../scss/components/_search.scss */
+  /* line 106, ../scss/components/_search.scss */
   #searchform-top .search-field:hover, #searchform-top .search-field:focus {
-    width: 55%;
+    width: 80%;
+    padding-left: .5em;
   }
 }
 /**** DESKTOP AND UP ****/
@@ -1173,18 +1182,13 @@ SEARCH BOX STYLES
 CONTENT STYLES
 *********************/
 /* line 5, ../scss/components/_content.scss */
-#content {
-  padding-top: 4.2em;
-}
-
-/* line 9, ../scss/components/_content.scss */
 #main {
   margin-left: 2%;
   margin-right: 2%;
 }
 
 /* end .hentry */
-/* line 23, ../scss/components/_content.scss */
+/* line 19, ../scss/components/_content.scss */
 .single-title,
 .page-title {
   margin-bottom: 0;
@@ -1294,6 +1298,11 @@ CONTENT STYLES
 /**** TABLET AND UP ****/
 @media only screen and (min-width: 768px) {
   /* line 197, ../scss/components/_content.scss */
+  #content {
+    padding-top: 4.2em;
+  }
+
+  /* line 201, ../scss/components/_content.scss */
   #main {
     margin: 0;
   }
@@ -1344,7 +1353,12 @@ style a page via class
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 13, ../scss/components/_sidebars.scss */
+/* line 7, ../scss/components/_sidebars.scss */
+.widgettitle {
+  border-bottom: 2px solid #333333;
+}
+
+/* line 15, ../scss/components/_sidebars.scss */
 .widget ul li {
   /* deep nesting */
 }
@@ -1352,37 +1366,36 @@ SIDEBARS & ASIDES
 /**** LARGER MOBILE SCREENS *****/
 /**** TABLET AND UP ****/
 @media only screen and (min-width: 768px) {
-  /* line 39, ../scss/components/_sidebars.scss */
+  /* line 41, ../scss/components/_sidebars.scss */
   .sidebar {
     margin-top: 2.2em;
   }
 
-  /* line 43, ../scss/components/_sidebars.scss */
+  /* line 45, ../scss/components/_sidebars.scss */
   .widgettitle {
-    border-bottom: 1px solid #fefefe;
     margin-bottom: 0.75em;
   }
 
-  /* line 48, ../scss/components/_sidebars.scss */
+  /* line 49, ../scss/components/_sidebars.scss */
   .widget {
     margin: 1em 0;
     padding-left: 10px;
   }
-  /* line 53, ../scss/components/_sidebars.scss */
+  /* line 54, ../scss/components/_sidebars.scss */
   .widget ul li {
     margin-bottom: 0.75em;
     /* deep nesting */
   }
-  /* line 61, ../scss/components/_sidebars.scss */
+  /* line 62, ../scss/components/_sidebars.scss */
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
   }
-  /* line 68, ../scss/components/_sidebars.scss */
+  /* line 69, ../scss/components/_sidebars.scss */
   .widget ol {
     margin-top: 0;
   }
-  /* line 71, ../scss/components/_sidebars.scss */
+  /* line 72, ../scss/components/_sidebars.scss */
   .widget ol h4 {
     margin-top: 0;
   }
@@ -1409,33 +1422,33 @@ html, body {
   height: 100%;
 }
 
-/* line 11, ../scss/components/_footer.scss */
+/* line 12, ../scss/components/_footer.scss */
 #container {
   display: table;
   height: 100%;
   width: 100%;
 }
 
-/* line 16, ../scss/components/_footer.scss */
+/* line 18, ../scss/components/_footer.scss */
 .footer {
   display: table-row;
   height: 1px;
 }
 
-/* line 22, ../scss/components/_footer.scss */
+/* line 24, ../scss/components/_footer.scss */
 .footer {
   clear: both;
   color: #fefefe;
   background: #333333;
 }
 
-/* line 28, ../scss/components/_footer.scss */
-#footer-widgets {
+/* line 30, ../scss/components/_footer.scss */
+#inner-footer {
   background: #767268;
 }
 
 /* end .footer-links */
-/* line 43, ../scss/components/_footer.scss */
+/* line 45, ../scss/components/_footer.scss */
 .copyright {
   padding-left: 1%;
 }
@@ -1657,6 +1670,58 @@ COMMENT FORM STYLES
 /**** LARGER MOBILE SCREENS *****/
 /**** TABLET AND UP ****/
 /**** DESKTOP AND UP ****/
+/***********************
+LOGIN/REGISTER/PASSWORD
+***********************/
+/* line 5, ../scss/components/_forms.scss */
+input[type=TEXT], textarea {
+  border: 1px solid #c0bdb7;
+  border-radius: 6px;
+  padding: .2em .3em;
+}
+
+/* line 11, ../scss/components/_forms.scss */
+input[type=SUBMIT] {
+  border: 0;
+  background: #e9942f;
+  color: #fefefe;
+  border-radius: 6px;
+  padding: .5em 1em;
+  margin: 1em 0;
+}
+/* line 19, ../scss/components/_forms.scss */
+input[type=SUBMIT]:hover, input[type=SUBMIT]:focus {
+  background: #f8ba33;
+}
+
+/* line 24, ../scss/components/_forms.scss */
+fieldset {
+  border: 0;
+}
+
+/* line 28, ../scss/components/_forms.scss */
+#authentication {
+  margin: 0 20%;
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+/* line 33, ../scss/components/_forms.scss */
+#authentication h1 {
+  margin-bottom: 0;
+}
+/* line 37, ../scss/components/_forms.scss */
+#authentication input[type=TEXT], #authentication input[type=PASSWORD] {
+  border: 1px solid #c0bdb7;
+  border-radius: 6px;
+  padding: .2em .3em;
+  margin: 1em 0;
+}
+/* line 43, ../scss/components/_forms.scss */
+#authentication input[type=TEXT]:hover, #authentication input[type=TEXT]:focus, #authentication input[type=PASSWORD]:hover, #authentication input[type=PASSWORD]:focus {
+  border-color: #6DCFF6;
+  box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+}
+
 /************************
 FRONT PAGE STYLES 
 ************************/
@@ -1732,22 +1797,117 @@ SERVICES PAGE STYLES
 /***********************
 ARCHIVE STYLES 
 ***********************/
-/* line 5, ../scss/views/_archives.scss */
-.recent-archives {
-  width: 100%;
-  display: table-row;
+/* line 6, ../scss/views/_archives.scss */
+.recent-archives h3 {
+  margin-bottom: 0;
 }
-/* line 9, ../scss/views/_archives.scss */
-.recent-archives .fourcol:first-child {
-  margin-left: 0;
+/* line 10, ../scss/views/_archives.scss */
+.recent-archives .byline {
+  margin: 0;
+  font-size: .8em;
+}
+/* line 15, ../scss/views/_archives.scss */
+.recent-archives p {
+  margin-top: .5em;
+}
+/* line 19, ../scss/views/_archives.scss */
+.recent-archives p.meetings-link {
+  text-align: center;
 }
 
+/* line 24, ../scss/views/_archives.scss */
+.recent-meeting {
+  border-top: 1px solid #767268;
+}
+
+/* line 28, ../scss/views/_archives.scss */
+a.all-meetings {
+  background: #e9942f;
+  color: #fefefe;
+  text-decoration: none;
+  padding: .5em 1em;
+  border-radius: 6px;
+}
+/* line 35, ../scss/views/_archives.scss */
+a.all-meetings:hover, a.all-meetings:focus {
+  color: #fefefe;
+  background: #f8ba33;
+}
+
+/* line 41, ../scss/views/_archives.scss */
+#archive-documents {
+  margin-top: 2em;
+}
+/* line 44, ../scss/views/_archives.scss */
+#archive-documents p {
+  padding-left: 1em;
+}
+
+/************************
+  TABLET AND UP
+************************/
+@media only screen and (min-width: 768px) {
+  /* line 54, ../scss/views/_archives.scss */
+  .recent-archives {
+    width: 100%;
+    background: #f2ece5;
+    padding-bottom: 2em;
+  }
+  /* line 59, ../scss/views/_archives.scss */
+  .recent-archives .fourcol:first-child {
+    margin-left: 0;
+  }
+
+  /* line 65, ../scss/views/_archives.scss */
+  .recent-meeting {
+    border: 0;
+  }
+
+  /* line 69, ../scss/views/_archives.scss */
+  p.meetings-link {
+    float: right;
+  }
+}
 /***********************
 Stylesheet: Meetings
 ***********************/
 /*--------------------
 Meetings Archives
 ---------------------*/
+/**********************
+PROFILE PAGE STYLES 
+**********************/
+/*  Tabs */
+/* line 7, ../scss/views/_profile.scss */
+#profile-sections {
+  margin: 0 5%;
+}
+
+/* line 11, ../scss/views/_profile.scss */
+.tabs li {
+  display: inline;
+}
+/* line 14, ../scss/views/_profile.scss */
+.tabs li a {
+  text-decoration: none;
+  color: #333333;
+  padding: 1em .5em;
+  background: #c0bdb7;
+}
+/* line 20, ../scss/views/_profile.scss */
+.tabs li a.active {
+  border: 1px solid #c0bdb7;
+  border-bottom: 0;
+  background: #fefefe;
+}
+
+/* line 28, ../scss/views/_profile.scss */
+.tab {
+  border: 1px solid #c0bdb7;
+  margin-top: -.22em;
+  padding: 1em;
+}
+
 /* Import grid. This is the average size of large mobile or
 small desktop devices; at this point, we can start using columns
 and more resource-intensive styles */

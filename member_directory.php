@@ -42,6 +42,8 @@ Template Name: Member Directory
 
 						</div>
 
+					<?php get_sidebar();?>
+					
 				</div>
 
 			</div>

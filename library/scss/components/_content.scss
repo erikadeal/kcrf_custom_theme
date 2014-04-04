@@ -2,10 +2,6 @@
 CONTENT STYLES
 *********************/
 
-#content {
-	padding-top: 4.2em;
-}
-
 #main {
 	margin-left: 2%;
 	margin-right: 2%;
@@ -29,6 +25,10 @@ CONTENT STYLES
 .page-title {}
 
 .archive-title { }
+
+.section-title {
+	
+}
 
 /* want to style individual post classes? Booya! */
 .post-id {} /* post by id (i.e. post-3) */
@@ -193,6 +193,10 @@ dd {}
 /**** TABLET AND UP ****/
 
 @include breakpoint( tablet ){
+
+#content {
+	padding-top: 4.2em;
+}
 
 #main {
 	margin: 0;

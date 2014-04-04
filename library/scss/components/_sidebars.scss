@@ -4,7 +4,9 @@ SIDEBARS & ASIDES
 
 .sidebar {}
 
-	.widgettitle {}
+	.widgettitle {
+		border-bottom: 2px solid $dark-gray;
+	}
 
 	.widget {
 
@@ -41,7 +43,6 @@ SIDEBARS & ASIDES
 }
 
 	.widgettitle {
-		border-bottom: 1px solid $white;
 		margin-bottom: 0.75em;
 	}
 

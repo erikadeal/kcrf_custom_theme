@@ -2,7 +2,7 @@
 
 				<div id="inner-footer" class="clearfix">
 
-					<div id="footer-widgets" class="clearfix">
+					<div id="footer-widgets" class="wrap clearfix">
 
 				<!-- Left footer area -->
 						<div class="fourcol first clearfix">
@@ -60,9 +60,10 @@
 							<?php bones_footer_links(); ?>
 					</nav>
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 
 				</div>
+
+				<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 
 			</footer>
 

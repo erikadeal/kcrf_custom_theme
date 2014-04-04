@@ -288,4 +288,71 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
  add_action( 'init', 'custom_post_object_label' );
  add_action( 'admin_menu', 'custom_post_menu_label' );
 
+ //Add custom registration field
+ //1. Add a new form element
+add_action('register_form','kcrf_register_form');
+function kcrf_register_form (){
+    $organization = ( isset( $_POST['organization'] ) ) ? $_POST['organization']: '';
+    ?>
+    <p>
+        <label for="organization"><?php _e('Organization','mydomain') ?>:
+            <input type="text" name="organization" id="organization" class="input" value="<?php echo esc_attr(stripslashes($organization)); ?>" size="25" /></label>
+    </p>
+    <?php
+}
+
+//2. Add validation. In this case, we make sure organization is required.
+add_filter('registration_errors', 'kcrf_registration_errors', 10, 3);
+function kcrf_registration_errors ($errors, $sanitized_user_login, $user_email) {
+
+    if ( empty( $_POST['organization'] ) )
+        $errors->add( 'organization_error', __('<strong>ERROR</strong>: You must include an organization name.','mydomain') );
+
+    return $errors;
+}
+
+//3. Finally, save our extra registration user meta.
+add_action('user_register', 'kcrf_user_register');
+function kcrf_user_register ($user_id) {
+    if ( isset( $_POST['organization'] ) )
+        update_user_meta($user_id, 'organization', $_POST['organization']);
+}
+
+add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
+ 
+
+// Deregister admin styles
+function my_deregister_styles() {
+    wp_deregister_style( 'wp-admin' );
+}
+
+// Functionality for creating posts from the frontend
+
+function my_pre_save_post( $post_id )
+{
+    // check if this is to be a new post
+    if( $post_id != 'new' )
+    {
+        return $post_id;
+    }
+ 
+    // Create a new post
+    $post = array(
+        'post_status'  => 'draft' ,
+        'post_title'  => 'Title' ,
+        'post_type'  => 'post' ,
+    );  
+ 
+    // insert the post
+    $post_id = wp_insert_post( $post ); 
+ 
+    // update $_POST['return']
+    $_POST['return'] = add_query_arg( array('post_id' => $post_id), $_POST['return'] );    
+ 
+    // return the new ID
+    return $post_id;
+}
+ 
+add_filter('acf/pre_save_post' , 'my_pre_save_post' );
+
 ?>

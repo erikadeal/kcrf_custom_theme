@@ -8,12 +8,11 @@ Template Name: Meetings Archive
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap clearfix">
+				<div id="main" class="clearfix" role="main">
 
-					<div id="main" class="twelvecol first clearfix" role="main">
+					<?php while (have_posts()) : the_post(); ?>
 
-						<?php while (have_posts()) : the_post(); ?>
-
+						<div class="wrap clearfix">
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 								<header class="article-header">
@@ -23,12 +22,15 @@ Template Name: Meetings Archive
 								</header>
 
 							</article>
+						</div>
 
 							<?php endwhile; ?>
 
 				<!-- Recent archives -->
-						<h2>Recent Meetings</h2>
+						
 						<div class="recent-archives clearfix">
+
+							<div class="wrap clearfix">
 
 							<?php 
 
@@ -62,12 +64,13 @@ Template Name: Meetings Archive
 
 							<?php endwhile; ?>
 							<?php wp_reset_postdata();?>
-						<p class="all-meetings-link"><a href="<?php echo home_url();?>/meetings">See all meetings</a></p>
+						<p class="meetings-link"><a href="<?php echo home_url();?>/meetings" class="all-meetings">See all meetings</a></p>
 						</div>
+					</div>
 
 				<!-- Start archives by content type -->
 
-						<div id="archive-documents">
+						<div id="archive-documents" class="wrap clearfix">
 
 					<!-- Presentations documents -->
 
@@ -194,7 +197,5 @@ Template Name: Meetings Archive
 					</div>
 
 				</div>
-
-			</div>
 
 <?php get_footer(); ?>
