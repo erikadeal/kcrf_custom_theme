@@ -74,6 +74,8 @@ Template Name: Meetings Archive
 
 					<!-- Presentations documents -->
 
+						<div class="row clearfix">
+
 							<div class="sixcol first clearfix">
 
 								<h3 class="doc-cat-title">Presentations</h3>
@@ -82,13 +84,15 @@ Template Name: Meetings Archive
 										$args = array('post_type'=>'meetings');
 										$presentations = new WP_Query( $args );
 
+										echo '<ul class="meetings-cat">';
+
 										while ($presentations->have_posts()) : $presentations->the_post(); 
 											if( have_rows('presentations') ):
 										 
 										 	// loop through the rows of data
 										    while ( have_rows('presentations') ) : the_row(); ?>
 										 
-										        <p><a href="<?php the_sub_field('upload_file');?>"><?php the_sub_field('title');?></a></p>
+										        <li><a href="<?php the_sub_field('upload_file');?>"><?php the_sub_field('title');?></a></li>
 										 
 										   <?php endwhile;
 										 
@@ -96,10 +100,17 @@ Template Name: Meetings Archive
 											 
 											    continue;
 											 
-											endif; ?>
+											endif; 
 
-										<?php endwhile; ?>
-										<?php wp_reset_postdata();?>
+										endwhile;
+
+										echo '</ul>';
+
+										?>
+
+									<?php wp_reset_postdata();?>
+
+									<p class="button showall">Show All</p>	
 
 							</div> 
 
@@ -112,13 +123,15 @@ Template Name: Meetings Archive
 									$args = array('post_type'=>'meetings');
 									$presentations = new WP_Query( $args );
 
+									echo '<ul class="meetings-cat">';
+
 									while ($presentations->have_posts()) : $presentations->the_post(); 
 										if( have_rows('statistics') ):
 									 
 									 	// loop through the rows of data
 									    while ( have_rows('statistics') ) : the_row(); ?>
 									 
-									        <p><a href="<?php the_sub_field('upload_file');?>"><?php the_sub_field('title');?></a></p>
+									        <li><a href="<?php the_sub_field('upload_file');?>"><?php the_sub_field('title');?></a></li>
 									 
 									   <?php endwhile;
 									 
@@ -126,12 +139,21 @@ Template Name: Meetings Archive
 										 
 										    continue;
 										 
-										endif; ?>
+										endif; 
 
-									<?php endwhile; ?>
+									endwhile; 
+
+									echo '</ul>';
+
+									?>
 								<?php wp_reset_postdata();?>
 
+								<p class="button showall">Show All</p>	
+
 							</div>
+						</div>
+
+						<div class="row clearfix">
 					<!-- Flyers and handouts -->
 							<div class="sixcol first clearfix">
 
@@ -141,13 +163,15 @@ Template Name: Meetings Archive
 									$args = array('post_type'=>'meetings');
 									$presentations = new WP_Query( $args );
 
+									echo '<ul class="meetings-cat">';
+
 									while ($presentations->have_posts()) : $presentations->the_post(); 
 										if( have_rows('flyers_and_handouts') ):
 									 
 									 	// loop through the rows of data
 									    while ( have_rows('flyers_and_handouts') ) : the_row(); ?>
 									 
-									        <p><a href="<?php the_sub_field('upload_file');?>"><?php the_sub_field('title');?></a></p>
+									        <li><a href="<?php the_sub_field('upload_file');?>"><?php the_sub_field('title');?></a></li>
 									 
 									   <?php endwhile;
 									 
@@ -155,10 +179,16 @@ Template Name: Meetings Archive
 										 
 										    continue;
 										 
-										endif; ?>
+										endif; 
 
-									<?php endwhile; ?>
+									endwhile; 
+
+									echo '</ul>';
+
+									?>
 								<?php wp_reset_postdata();?>
+
+								<p class="button showall">Show All</p>	
 
 							</div>
 
@@ -171,13 +201,15 @@ Template Name: Meetings Archive
 							$args = array('post_type'=>'meetings');
 							$presentations = new WP_Query( $args );
 
+							echo '<ul class="meetings-cat">';
+
 							while ($presentations->have_posts()) : $presentations->the_post(); 
 								if( have_rows('minutes_and_agendas') ):
 							 
 							 	// loop through the rows of data
 							    while ( have_rows('minutes_and_agendas') ) : the_row(); ?>
 							 
-							        <p><a href="<?php the_sub_field('upload_file');?>"><?php the_sub_field('title');?></a></p>
+							        <li><a href="<?php the_sub_field('upload_file');?>"><?php the_sub_field('title');?></a></li>
 							 
 							   <?php endwhile;
 							 
@@ -185,10 +217,18 @@ Template Name: Meetings Archive
 								 
 								    continue;
 								 
-								endif; ?>
+								endif; 
 
-							<?php endwhile; ?>
-						<?php wp_reset_postdata();?>		
+								endwhile; 
+
+								echo '</ul>';
+
+								?>
+						<?php wp_reset_postdata();?>	
+
+						<p class="button showall">Show All</p>	
+
+					</div>
 
 					</div>
 						

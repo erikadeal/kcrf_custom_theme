@@ -116,6 +116,16 @@ jQuery(document).ready(function($) {
 	      e.preventDefault();
 	    });
 	  });
+
+	/* Archives page category toggles */
+
+	$('ul.meetings-cat').each(function() {
+	  $(this).children().slice(3).hide(); 
+	});
+
+	$('p.showall').click(function(){
+		$(this).prev('ul.meetings-cat').children().slice(3).slideToggle();
+	});
  
 }); /* end of as page load scripts */
 
