@@ -8,6 +8,8 @@ Post format for meetings
 
 			<div id="content">
 
+				<div id="inner-content" class="wrap clearfix">
+
 						<div id="main" role="main" class="clearfix">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -30,12 +32,15 @@ Post format for meetings
 								</section>
 							</article>
 
-							<div class="documents fourcol last clearfix">
+							<div class="fourcol last clearfix sidebar-box">
+
+								<h4 class="widgettitle">Meeting Documents</h4>
+
 								<!-- Presentations -->
 									<?php 
 										if( have_rows('presentations') ): ?>
 
-										<h3>Presentation documents</h3>
+										<h4 class="box-title-gray">Presentation documents</h4>
 										 
 										 <?php
 										   while ( have_rows('presentations') ) : the_row(); ?>
@@ -54,7 +59,7 @@ Post format for meetings
 								<?php 
 										if( have_rows('statistics') ): ?>
 
-										<h3>Statistics and Data</h3>
+										<h4 class="box-title-gray">Statistics and Data</h4>
 										 
 										 <?php
 										   while ( have_rows('statistics') ) : the_row(); ?>
@@ -74,7 +79,7 @@ Post format for meetings
 								<?php 
 										if( have_rows('flyers_and_handouts') ): ?>
 
-										<h3>Flyers and Handouts</h3>
+										<h4 class="box-title-gray">Flyers and Handouts</h4>
 										 
 										 <?php
 										   while ( have_rows('flyers_and_handouts') ) : the_row(); ?>
@@ -94,7 +99,7 @@ Post format for meetings
 								<?php 
 										if( have_rows('minutes_and_agendas') ): ?>
 
-										<h3>Minutes and Agendas</h3>
+										<h4 class="box-title-gray">Minutes and Agendas</h4>
 										 
 										 <?php
 										   while ( have_rows('minutes_and_agendas') ) : the_row(); ?>
@@ -110,9 +115,9 @@ Post format for meetings
 										endif; 
 									?>
 
-							</div>
-
 							<?php endwhile; ?>
+
+							</div>
 
 							<?php else : ?>
 
@@ -131,7 +136,7 @@ Post format for meetings
 							<?php endif; ?>
 
 						</div>
-
+					</div>
 			</div>
 
 <?php get_footer(); ?>

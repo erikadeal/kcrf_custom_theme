@@ -51,24 +51,24 @@
 						    </ul>
 						</div>
 
-					<div class="sidebar fourcol last clearfix contact-box" role="complimentary">
+					<div class="sidebar fourcol last clearfix sidebar-box" role="complimentary">
 
 						<h4 class="widgettitle">Contact Details</h4>
 
-						<h4 class="profile-section-title">Contact Person</h4>
+						<h4 class="box-title">Contact Person</h4>
 				        <p><?php echo $curauth->first_name; ?> <?php echo $curauth->last_name; ?></p>
 
-				        <h4 class="profile-section-title">Email</h4>
+				        <h4 class="box-title">Email</h4>
 				        <p><?php echo $curauth->user_email; ?></p>
 
-				        <h4 class="profile-section-title">Phone</h4>
+				        <h4 class="box-title">Phone</h4>
 				        <p><?php echo $curauth->phone; ?></p>
 
-				        <h4 class="profile-section-title">Address</h4>
+				        <h4 class="box-title">Address</h4>
 				        <p><?php echo $curauth->address_line_1; ?></p>
 				        <p><?php echo $curauth->address_line_2; ?></p>
 
-				        <h4 class="profile-section-title">Website</h4>
+				        <h4 class="box-title">Website</h4>
 						<p><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></p>
 
 						</div>

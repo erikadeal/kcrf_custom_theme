@@ -1193,8 +1193,8 @@ CONTENT STYLES
 *********************/
 /* line 5, ../scss/components/_content.scss */
 #main {
-  margin-left: 2%;
-  margin-right: 2%;
+  margin: 2% 0;
+  padding-bottom: 3em;
 }
 
 /* end .hentry */
@@ -1378,39 +1378,72 @@ SIDEBARS & ASIDES
   /* deep nesting */
 }
 
+/* line 32, ../scss/components/_sidebars.scss */
+.box-title {
+  color: #e9942f;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 1em;
+}
+
+/* line 39, ../scss/components/_sidebars.scss */
+.box-title-gray {
+  color: #767268;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 1em;
+}
+
+/* line 46, ../scss/components/_sidebars.scss */
+.sidebar-box {
+  background: #f2ece5;
+  padding: 1em;
+  min-height: 300px;
+}
+
+/* line 52, ../scss/components/_sidebars.scss */
+.sidebar-box p {
+  margin: .1em 0;
+}
+
+/* line 56, ../scss/components/_sidebars.scss */
+.sidebar-box .widgettitle {
+  margin-top: 0;
+}
+
 /**** LARGER MOBILE SCREENS *****/
 /**** TABLET AND UP ****/
 @media only screen and (min-width: 768px) {
-  /* line 41, ../scss/components/_sidebars.scss */
+  /* line 69, ../scss/components/_sidebars.scss */
   .sidebar {
     margin-top: 2.2em;
   }
 
-  /* line 45, ../scss/components/_sidebars.scss */
+  /* line 73, ../scss/components/_sidebars.scss */
   .widgettitle {
     margin-bottom: 0.75em;
   }
 
-  /* line 49, ../scss/components/_sidebars.scss */
+  /* line 77, ../scss/components/_sidebars.scss */
   .widget {
     margin: 1em 0;
     padding-left: 10px;
   }
-  /* line 54, ../scss/components/_sidebars.scss */
+  /* line 82, ../scss/components/_sidebars.scss */
   .widget ul li {
     margin-bottom: 0.75em;
     /* deep nesting */
   }
-  /* line 62, ../scss/components/_sidebars.scss */
+  /* line 90, ../scss/components/_sidebars.scss */
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
   }
-  /* line 69, ../scss/components/_sidebars.scss */
+  /* line 97, ../scss/components/_sidebars.scss */
   .widget ol {
     margin-top: 0;
   }
-  /* line 72, ../scss/components/_sidebars.scss */
+  /* line 100, ../scss/components/_sidebars.scss */
   .widget ol h4 {
     margin-top: 0;
   }
@@ -1898,62 +1931,33 @@ PROFILE PAGE STYLES
 **********************/
 /*  Tabs */
 /* line 7, ../scss/views/_profile.scss */
-.profile {
-  padding-bottom: 2em;
-}
-
-/* line 11, ../scss/views/_profile.scss */
 #profile-sections {
   margin: 0 5%;
 }
 
-/* line 15, ../scss/views/_profile.scss */
+/* line 11, ../scss/views/_profile.scss */
 .tabs li {
   display: inline;
 }
-/* line 18, ../scss/views/_profile.scss */
+/* line 14, ../scss/views/_profile.scss */
 .tabs li a {
   text-decoration: none;
   color: #333333;
   padding: 1em .5em;
   background: #c0bdb7;
 }
-/* line 24, ../scss/views/_profile.scss */
+/* line 20, ../scss/views/_profile.scss */
 .tabs li a.active {
   border: 1px solid #c0bdb7;
   border-bottom: 0;
   background: #fefefe;
 }
 
-/* line 32, ../scss/views/_profile.scss */
+/* line 28, ../scss/views/_profile.scss */
 .tab {
   border: 1px solid #c0bdb7;
   margin-top: -.22em;
   padding: 1em;
-}
-
-/* line 38, ../scss/views/_profile.scss */
-.profile-section-title {
-  color: #e9942f;
-  text-transform: uppercase;
-  margin: 0;
-  margin-top: 1em;
-}
-
-/* line 45, ../scss/views/_profile.scss */
-.contact-box {
-  background: #f2ece5;
-  padding: 1em;
-}
-
-/* line 50, ../scss/views/_profile.scss */
-.contact-box p {
-  margin: .1em 0;
-}
-
-/* line 54, ../scss/views/_profile.scss */
-.contact-box .widgettitle {
-  margin-top: 0;
 }
 
 /***********************
