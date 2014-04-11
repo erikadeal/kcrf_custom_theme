@@ -34,6 +34,14 @@ $purple:			#9b59b6;
 $link-color:        $brand-color;
 $link-hover:        darken($link-color, 9%);
 
+.brand-color {
+	color: $brand-color;
+}
+
+.accent-color {
+	color: $accent-color
+}
+
 /*
 Here's a great tutorial on how to
 use color variables properly:

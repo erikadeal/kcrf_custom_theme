@@ -477,6 +477,16 @@ COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
+/* line 37, ../scss/base/_colors.scss */
+.brand-color {
+  color: #e9942f;
+}
+
+/* line 41, ../scss/base/_colors.scss */
+.accent-color {
+  color: #f8ba33;
+}
+
 /*
 Here's a great tutorial on how to
 use color variables properly:
@@ -1209,8 +1219,13 @@ CONTENT STYLES
   color: #767268;
 }
 
+/* line 50, ../scss/components/_content.scss */
+.entry-title {
+  margin-bottom: 0;
+}
+
 /* entry content */
-/* line 51, ../scss/components/_content.scss */
+/* line 55, ../scss/components/_content.scss */
 .entry-content {
   /*
   image alignment on a screen this size may be
@@ -1219,25 +1234,25 @@ CONTENT STYLES
   but it's up to you. Feel free to change it up.
   */
 }
-/* line 86, ../scss/components/_content.scss */
+/* line 90, ../scss/components/_content.scss */
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-/* line 93, ../scss/components/_content.scss */
+/* line 97, ../scss/components/_content.scss */
 .entry-content img {
   margin: 0 0 1.5em 0;
   max-width: 100%;
   height: auto;
 }
-/* line 109, ../scss/components/_content.scss */
+/* line 113, ../scss/components/_content.scss */
 .entry-content video, .entry-content object {
   max-width: 100%;
   height: auto;
 }
-/* line 114, ../scss/components/_content.scss */
+/* line 118, ../scss/components/_content.scss */
 .entry-content pre {
   background: #eee;
   border: 1px solid #cecece;
@@ -1245,20 +1260,20 @@ CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 122, ../scss/components/_content.scss */
+/* line 126, ../scss/components/_content.scss */
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 128, ../scss/components/_content.scss */
+/* line 132, ../scss/components/_content.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 134, ../scss/components/_content.scss */
+/* line 138, ../scss/components/_content.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;
@@ -1271,23 +1286,23 @@ CONTENT STYLES
 /* gallery caption styles */
 /**** LARGER MOBILE SCREENS *****/
 @media only screen and (min-width: 481px) {
-  /* line 170, ../scss/components/_content.scss */
+  /* line 174, ../scss/components/_content.scss */
   .entry-content {
     /* at this larger size, we can start to align images */
   }
-  /* line 173, ../scss/components/_content.scss */
+  /* line 177, ../scss/components/_content.scss */
   .entry-content .alignleft, .entry-content img.alignleft {
     margin-right: 1.5em;
     display: inline;
     float: left;
   }
-  /* line 178, ../scss/components/_content.scss */
+  /* line 182, ../scss/components/_content.scss */
   .entry-content .alignright, .entry-content img.alignright {
     margin-left: 1.5em;
     display: inline;
     float: right;
   }
-  /* line 183, ../scss/components/_content.scss */
+  /* line 187, ../scss/components/_content.scss */
   .entry-content .aligncenter, .entry-content img.aligncenter {
     margin-right: auto;
     margin-left: auto;
@@ -1297,12 +1312,12 @@ CONTENT STYLES
 }
 /**** TABLET AND UP ****/
 @media only screen and (min-width: 768px) {
-  /* line 197, ../scss/components/_content.scss */
+  /* line 201, ../scss/components/_content.scss */
   #content {
     padding-top: 4.2em;
   }
 
-  /* line 201, ../scss/components/_content.scss */
+  /* line 205, ../scss/components/_content.scss */
   #main {
     margin: 0;
   }
@@ -1883,33 +1898,70 @@ PROFILE PAGE STYLES
 **********************/
 /*  Tabs */
 /* line 7, ../scss/views/_profile.scss */
+.profile {
+  padding-bottom: 2em;
+}
+
+/* line 11, ../scss/views/_profile.scss */
 #profile-sections {
   margin: 0 5%;
 }
 
-/* line 11, ../scss/views/_profile.scss */
+/* line 15, ../scss/views/_profile.scss */
 .tabs li {
   display: inline;
 }
-/* line 14, ../scss/views/_profile.scss */
+/* line 18, ../scss/views/_profile.scss */
 .tabs li a {
   text-decoration: none;
   color: #333333;
   padding: 1em .5em;
   background: #c0bdb7;
 }
-/* line 20, ../scss/views/_profile.scss */
+/* line 24, ../scss/views/_profile.scss */
 .tabs li a.active {
   border: 1px solid #c0bdb7;
   border-bottom: 0;
   background: #fefefe;
 }
 
-/* line 28, ../scss/views/_profile.scss */
+/* line 32, ../scss/views/_profile.scss */
 .tab {
   border: 1px solid #c0bdb7;
   margin-top: -.22em;
   padding: 1em;
+}
+
+/* line 38, ../scss/views/_profile.scss */
+.profile-section-title {
+  color: #e9942f;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 1em;
+}
+
+/* line 45, ../scss/views/_profile.scss */
+.contact-box {
+  background: #f2ece5;
+  padding: 1em;
+}
+
+/* line 50, ../scss/views/_profile.scss */
+.contact-box p {
+  margin: .1em 0;
+}
+
+/* line 54, ../scss/views/_profile.scss */
+.contact-box .widgettitle {
+  margin-top: 0;
+}
+
+/***********************
+Member Directory Styles
+***********************/
+/* line 5, ../scss/views/_members.scss */
+.participant-details {
+  padding-left: 2em;
 }
 
 /* Import grid. This is the average size of large mobile or

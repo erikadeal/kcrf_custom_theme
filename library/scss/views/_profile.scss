@@ -4,6 +4,10 @@ PROFILE PAGE STYLES
 
 /*  Tabs */
 
+.profile {
+	padding-bottom: 2em;
+}
+
 #profile-sections {
 	margin: 0 5%;
 }
@@ -29,4 +33,24 @@ PROFILE PAGE STYLES
 	border: 1px solid lighten($light-gray, 30%);
 	margin-top: -.22em;
 	padding: 1em;
+}
+
+.profile-section-title {
+	color: $brand-color;
+	text-transform: uppercase;
+	margin: 0;
+	margin-top: 1em;
+}
+
+.contact-box {
+	background: $beige;
+	padding: 1em;
+}
+
+.contact-box p {
+	margin: .1em 0;
+}
+
+.contact-box .widgettitle {
+	margin-top: 0;
 }

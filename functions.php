@@ -317,22 +317,6 @@ function myplugin_user_register ($user_id) {
         update_user_meta($user_id, 'first_name', $_POST['first_name']);
 }
 
-//Add extra column to members table on admin end
-
-add_filter('manage_users_columns', 'add_organization_column');
-function add_organization_column($columns) {
-    $columns['organization'] = 'Organization';
-    return $columns;
-}
- 
-add_action('manage_users_custom_column',  'show_organization_column_content', 10, 3);
-function show_organization_column_content($value, $column_name, $user_id) {
-    $user = get_userdata( $user_id );
-	if ( 'organization' == $column_name )
-		return get_user_meta( $user_id, 'organization', true );
-    return $value;
-}
-
 add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
  
 

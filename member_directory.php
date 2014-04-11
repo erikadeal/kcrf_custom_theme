@@ -40,6 +40,26 @@ Template Name: Member Directory
 							    }
 							?>
 
+							<h3>Other Participants</h3>
+
+					<!-- Start participant loop -->
+							<?php
+							    $blogusers = get_users('role=forum_participant');
+							    foreach ($blogusers as $user) {
+
+							    	if ($user->organization_name ) {
+							        	echo '<p>' . $user->organization_name . '</p>';
+							        	echo '<p class="participant-details"><strong>Email: </strong>' . $user->user_email . '</p>';
+							        	echo '<p class="participant-details"><strong>Phone: </strong>' . $user->phone. '</p>';
+							        } 
+							        else {
+							        	echo '<p>' . $user->first_name . ' ' . $user->last_name . '</p>';
+							        	echo '<p class="participant-details"><strong>Email: </strong>' . $user->user_email . '</p>';
+							        	echo '<p  class="participant-details"><strong>Phone: </strong>' . $user->phone. '</p>';
+							        }
+							    }
+							?>
+
 						</div>
 
 					<div class="fourcol last clearfix">

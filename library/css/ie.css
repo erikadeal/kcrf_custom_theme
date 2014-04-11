@@ -22,6 +22,16 @@ COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
+/* line 37, ../scss/base/_colors.scss */
+.brand-color {
+  color: #e9942f;
+}
+
+/* line 41, ../scss/base/_colors.scss */
+.accent-color {
+  color: #f8ba33;
+}
+
 /*
 Here's a great tutorial on how to
 use color variables properly:
