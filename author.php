@@ -14,7 +14,16 @@
 						    <div class="org-info">
 						        <p><strong>Website:</strong> <a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></p>
 						        <p><strong>Contact:</strong> <a href="<?php echo $curauth->user_email; ?>"><?php echo $curauth->first_name; ?> <?php echo $curauth->last_name; ?></a></p>
-						        <p><strong>About:</strong></p>
+						        <p><strong>Services:</strong></p>
+						        <p>
+							        <?php 
+							        	$array = $curauth->member_services;
+							        	echo implode(', ', $array);
+							        ?>
+						        </p>
+						        <p><strong>Additional Services:</strong></p>
+						        <p><?php echo $curauth->additional_services; ?></p>
+						        <p><strong>About <?php echo $curauth->organization_name; ?>:</strong></p>
 						        <p><?php echo $curauth->user_description; ?></p>
 						    </div>
 

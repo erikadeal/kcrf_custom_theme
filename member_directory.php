@@ -42,7 +42,10 @@ Template Name: Member Directory
 
 						</div>
 
-					<?php get_sidebar();?>
+					<div class="fourcol last clearfix">
+						<h4 class="widgettitle">Join the Forum</h4>
+						<p>Information about dues and sign-up here</p>
+					</div>
 					
 				</div>
 

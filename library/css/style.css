@@ -1446,9 +1446,13 @@ html, body {
 #inner-footer {
   background: #767268;
 }
+/* line 33, ../scss/components/_footer.scss */
+#inner-footer .widgettitle {
+  border-color: #fefefe;
+}
 
 /* end .footer-links */
-/* line 45, ../scss/components/_footer.scss */
+/* line 49, ../scss/components/_footer.scss */
 .copyright {
   padding-left: 1%;
 }

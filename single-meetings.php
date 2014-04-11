@@ -8,9 +8,7 @@ Post format for meetings
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap clearfix">
-
-						<div id="main" role="main">
+						<div id="main" role="main" class="clearfix">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -133,8 +131,6 @@ Post format for meetings
 							<?php endif; ?>
 
 						</div>
-
-				</div>
 
 			</div>
 

@@ -16,36 +16,37 @@ get_header(); ?>
 
 						<div class="logged_in">
 							<h3>Welcome, <?php echo $user_identity; ?></h3>
-							<a href="<?php echo wp_logout_url('index.php'); ?>">Log out</a>
-						</div>
+							<div class="userinfo threecol first clearfix">
 
-						<div id="profile-sections" class="clearfix">
-							<nav role="navigation">
-								<ul class="tabs">
-									<li><a href="#profile">My Profile</a></li>
-									<li><a href="#news">Add News Post</a></li>
-									<li><a href="#events">Add an Event</a></li>
-								</ul>
-							</nav>
+								<?php global $userdata; get_currentuserinfo(); echo get_avatar($userdata->ID, 60); ?>
 
-							<div id="profile" class="tab">
-								<?php
-								global $current_user;
-								$options = array(
-									'post_id'  => 'user_' .$current_user->ID, // post id to get field groups from and save data to
-								);
-
-								acf_form( $options ); ?>
+								<p>
+									<?php if (current_user_can('manage_options')) { 
+										echo '<a class="button" href="' . admin_url() . '">' . __('Admin') . '</a>'; } else { 
+										echo '<a class="button" href="' . admin_url() . 'profile.php">' . __('Edit Profile') . '</a>'; } ?>
+								</p>
+								<p><a class="button" href="<?php echo admin_url();?>admin.php?page=wp-cal-add">Share an Event</a></p>
+								<p><a class="button" href="<?php echo admin_url();?>post-new.php">Add a News Post</a></p>
+								<p><a class="button" href="<?php echo wp_logout_url('index.php'); ?>">Log out</a></p>
 							</div>
-
-							<div id="news" class="tab">
-
-							<p>This tab will contain a form for creating a news post.</p>
- 
-							</div>
-
-							<div id="events" class="tab">
-								<p>This is the third tab</p>
+							<div class="profile ninecol last clearfix">
+								<h3>My Profile</h3>
+								<p><strong>Organization: </strong><?php echo $userdata->organization_name; ?></p>
+								<p><strong>Date Founded: </strong><?php echo $userdata->date_founded; ?></p>
+								<p><strong>Contact Person: </strong><?php echo $userdata->first_name; ?> <?php echo $userdata->last_name; ?></p>
+								<p><strong>Email: </strong><?php echo $userdata->user_email; ?></p>
+								<p><strong>Phone: </strong><?php echo $userdata->phone; ?></p>
+								<p><strong>Address: </strong><?php echo $userdata->address_line_1; ?><br/><?php echo $userdata->address_line_2;?></p>
+								<p><strong>Description: </strong><?php echo $userdata->user_description; ?></p>
+								<p><strong>Services:</strong></p>
+						        <p>
+							        <?php 
+							        	$array = $userdata->member_services;
+							        	echo implode(', ', $array);
+							        ?>
+						        </p>
+						        <p><strong>Additional Services:</strong></p>
+						        <p><?php echo $userdata->additional_services; ?></p>
 							</div>
 					</div>
 

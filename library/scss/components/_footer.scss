@@ -29,6 +29,10 @@ html, body {
 
 #inner-footer {
 	background: $light-gray;
+
+	.widgettitle {
+		border-color: $white;
+	}
 }
 
 	.footer-links {
