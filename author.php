@@ -2,20 +2,20 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap clearfix">
+				<div id="inner-content" class="profile wrap clearfix">
 
-						<div id="main" class="profile eightcol first clearfix" role="main">
+						<div id="main" class="eightcol first clearfix" role="main">
 
 						    <?php
 						    $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
 						    ?>
 
-						    <h2><?php echo $curauth->organization_name; ?></h2>
+						    <h2 class="profile-title"><?php echo $curauth->organization_name; ?></h2>
 						    <div class="org-info">
-						    	<h4 class="profile-section-title">About <?php echo $curauth->organization_name; ?></h4>
+						    	<h4 class="box-title">About <?php echo $curauth->organization_name; ?></h4>
 						        <p><?php echo $curauth->user_description; ?></p>
 
-						        <h4 class="profile-section-title">Services</h4>
+						        <h4 class="box-title">Services</h4>
 						        <p>
 							        <?php 
 							        	$array = $curauth->member_services;
@@ -24,12 +24,12 @@
 						        </p>
 
 						        <?php if($curauth->additional_services){ ?>
-							        <h4 class="profile-section-title">Additional Services</h4>
+							        <h4 class="box-title">Additional Services</h4>
 							        <p><?php echo $curauth->additional_services; ?></p>
 							   	<?php }?>
 						    </div>
 
-						    <h4 class="profile-section-title">Recent News &amp; Events</h4>
+						    <h4 class="box-title">Recent News &amp; Events</h4>
 
 						    <ul>
 						<!-- The Loop -->

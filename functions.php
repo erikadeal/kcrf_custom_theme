@@ -325,5 +325,31 @@ function my_deregister_styles() {
     wp_deregister_style( 'wp-admin' );
 }
 
+//Remove unneeded profile fields
+add_filter('user_contactmethods','hide_profile_fields',10,1);
+
+function hide_profile_fields( $contactmethods ) {
+	unset($contactmethods['aim']);
+	unset($contactmethods['jabber']);
+	unset($contactmethods['yim']);
+	return $contactmethods;
+}
+
+//Remove personal options
+function hide_personal_options(){
+	echo '<script type="text/javascript">jQuery(document).ready(function($) { $("form#your-profile > h3:first").hide(); $("form#your-profile > table:first").hide(); $("form#your-profile").show(); });</script>';
+}
+add_action('admin_head','hide_personal_options');
+
+//Remove extra admin bar links and change link name for home
+
+function remove_admin_bar_links() {
+	global $wp_admin_bar;
+	$wp_admin_bar->remove_menu('wp-logo');
+	$wp_admin_bar->remove_menu('updates');
+	$wp_admin_bar->remove_menu('comments');
+}
+
+add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
 
 ?>

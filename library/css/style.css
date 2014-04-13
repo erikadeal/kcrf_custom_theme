@@ -1193,7 +1193,7 @@ CONTENT STYLES
 *********************/
 /* line 5, ../scss/components/_content.scss */
 #main {
-  margin: 2% 0;
+  margin: 2%;
   padding-bottom: 3em;
 }
 
@@ -1202,6 +1202,12 @@ CONTENT STYLES
 .single-title,
 .page-title {
   margin-bottom: 0;
+}
+
+/* line 23, ../scss/components/_content.scss */
+.meeting-title {
+  border-bottom: 2px solid #f2ece5;
+  font-weight: bold;
 }
 
 /* want to style individual post classes? Booya! */
@@ -1214,18 +1220,18 @@ CONTENT STYLES
 /* style by category (i.e. category-videos) */
 /* style by tag (i.e. tag-news) */
 /* post meta */
-/* line 44, ../scss/components/_content.scss */
+/* line 49, ../scss/components/_content.scss */
 .byline {
   color: #767268;
 }
 
-/* line 50, ../scss/components/_content.scss */
+/* line 55, ../scss/components/_content.scss */
 .entry-title {
   margin-bottom: 0;
 }
 
 /* entry content */
-/* line 55, ../scss/components/_content.scss */
+/* line 60, ../scss/components/_content.scss */
 .entry-content {
   /*
   image alignment on a screen this size may be
@@ -1234,25 +1240,25 @@ CONTENT STYLES
   but it's up to you. Feel free to change it up.
   */
 }
-/* line 90, ../scss/components/_content.scss */
+/* line 95, ../scss/components/_content.scss */
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-/* line 97, ../scss/components/_content.scss */
+/* line 102, ../scss/components/_content.scss */
 .entry-content img {
   margin: 0 0 1.5em 0;
   max-width: 100%;
   height: auto;
 }
-/* line 113, ../scss/components/_content.scss */
+/* line 118, ../scss/components/_content.scss */
 .entry-content video, .entry-content object {
   max-width: 100%;
   height: auto;
 }
-/* line 118, ../scss/components/_content.scss */
+/* line 123, ../scss/components/_content.scss */
 .entry-content pre {
   background: #eee;
   border: 1px solid #cecece;
@@ -1260,20 +1266,20 @@ CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 126, ../scss/components/_content.scss */
+/* line 131, ../scss/components/_content.scss */
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 132, ../scss/components/_content.scss */
+/* line 137, ../scss/components/_content.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 138, ../scss/components/_content.scss */
+/* line 143, ../scss/components/_content.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;
@@ -1286,23 +1292,23 @@ CONTENT STYLES
 /* gallery caption styles */
 /**** LARGER MOBILE SCREENS *****/
 @media only screen and (min-width: 481px) {
-  /* line 174, ../scss/components/_content.scss */
+  /* line 179, ../scss/components/_content.scss */
   .entry-content {
     /* at this larger size, we can start to align images */
   }
-  /* line 177, ../scss/components/_content.scss */
+  /* line 182, ../scss/components/_content.scss */
   .entry-content .alignleft, .entry-content img.alignleft {
     margin-right: 1.5em;
     display: inline;
     float: left;
   }
-  /* line 182, ../scss/components/_content.scss */
+  /* line 187, ../scss/components/_content.scss */
   .entry-content .alignright, .entry-content img.alignright {
     margin-left: 1.5em;
     display: inline;
     float: right;
   }
-  /* line 187, ../scss/components/_content.scss */
+  /* line 192, ../scss/components/_content.scss */
   .entry-content .aligncenter, .entry-content img.aligncenter {
     margin-right: auto;
     margin-left: auto;
@@ -1312,12 +1318,12 @@ CONTENT STYLES
 }
 /**** TABLET AND UP ****/
 @media only screen and (min-width: 768px) {
-  /* line 201, ../scss/components/_content.scss */
+  /* line 206, ../scss/components/_content.scss */
   #content {
     padding-top: 4.2em;
   }
 
-  /* line 205, ../scss/components/_content.scss */
+  /* line 210, ../scss/components/_content.scss */
   #main {
     margin: 0;
   }
@@ -1420,30 +1426,35 @@ SIDEBARS & ASIDES
   }
 
   /* line 73, ../scss/components/_sidebars.scss */
+  .sidebar-box {
+    margin-top: 3.95em;
+  }
+
+  /* line 77, ../scss/components/_sidebars.scss */
   .widgettitle {
     margin-bottom: 0.75em;
   }
 
-  /* line 77, ../scss/components/_sidebars.scss */
+  /* line 81, ../scss/components/_sidebars.scss */
   .widget {
     margin: 1em 0;
     padding-left: 10px;
   }
-  /* line 82, ../scss/components/_sidebars.scss */
+  /* line 86, ../scss/components/_sidebars.scss */
   .widget ul li {
     margin-bottom: 0.75em;
     /* deep nesting */
   }
-  /* line 90, ../scss/components/_sidebars.scss */
+  /* line 94, ../scss/components/_sidebars.scss */
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
   }
-  /* line 97, ../scss/components/_sidebars.scss */
+  /* line 101, ../scss/components/_sidebars.scss */
   .widget ol {
     margin-top: 0;
   }
-  /* line 100, ../scss/components/_sidebars.scss */
+  /* line 104, ../scss/components/_sidebars.scss */
   .widget ol h4 {
     margin-top: 0;
   }
@@ -1493,20 +1504,27 @@ html, body {
 /* line 30, ../scss/components/_footer.scss */
 #inner-footer {
   background: #767268;
+  padding: 2%;
 }
-/* line 33, ../scss/components/_footer.scss */
+/* line 34, ../scss/components/_footer.scss */
 #inner-footer .widgettitle {
   border-color: #fefefe;
 }
 
 /* end .footer-links */
-/* line 49, ../scss/components/_footer.scss */
+/* line 50, ../scss/components/_footer.scss */
 .copyright {
   padding-left: 1%;
 }
 
 /**** LARGER MOBILE SCREENS *****/
 /**** TABLET AND UP ****/
+@media only screen and (min-width: 768px) {
+  /* line 65, ../scss/components/_footer.scss */
+  #inner-footer {
+    padding: 0;
+  }
+}
 /**** DESKTOP AND UP ****/
 /******************************************************************
 COMMENT STYLES
@@ -1930,36 +1948,18 @@ Meetings Archives
 PROFILE PAGE STYLES 
 **********************/
 /*  Tabs */
-/* line 7, ../scss/views/_profile.scss */
-#profile-sections {
-  margin: 0 5%;
+/* line 9, ../scss/views/_profile.scss */
+.profile .profile-title {
+  border-bottom: 2px solid #f2ece5;
+  font-weight: bold;
 }
 
-/* line 11, ../scss/views/_profile.scss */
-.tabs li {
-  display: inline;
+@media only screen and (min-width: 768px) {
+  /* line 19, ../scss/views/_profile.scss */
+  .profile .sidebar-box {
+    margin-top: 3.95em;
+  }
 }
-/* line 14, ../scss/views/_profile.scss */
-.tabs li a {
-  text-decoration: none;
-  color: #333333;
-  padding: 1em .5em;
-  background: #c0bdb7;
-}
-/* line 20, ../scss/views/_profile.scss */
-.tabs li a.active {
-  border: 1px solid #c0bdb7;
-  border-bottom: 0;
-  background: #fefefe;
-}
-
-/* line 28, ../scss/views/_profile.scss */
-.tab {
-  border: 1px solid #c0bdb7;
-  margin-top: -.22em;
-  padding: 1em;
-}
-
 /***********************
 Member Directory Styles
 ***********************/

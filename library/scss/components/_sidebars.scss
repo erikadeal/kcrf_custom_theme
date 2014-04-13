@@ -67,8 +67,12 @@ SIDEBARS & ASIDES
 
 @include breakpoint( tablet ){
 	.sidebar {
-	margin-top: 2.2em;
-}
+		margin-top: 2.2em;
+	}
+
+	.sidebar-box {
+		margin-top: 3.95em;
+	}
 
 	.widgettitle {
 		margin-bottom: 0.75em;

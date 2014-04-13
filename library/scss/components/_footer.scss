@@ -29,6 +29,7 @@ html, body {
 
 #inner-footer {
 	background: $light-gray;
+	padding: 2%;
 
 	.widgettitle {
 		border-color: $white;
@@ -60,6 +61,10 @@ html, body {
 /**** TABLET AND UP ****/
 
 @include breakpoint( tablet ){
+
+	#inner-footer {
+		padding: 0;
+	}
 	
 }
 
