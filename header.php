@@ -58,12 +58,15 @@
 
 					<div class="twelvecol wrap top-bar clearfix">
 						<ul class="tencol first clearfix secondary-nav">
-							<li><a href="index.php">Contact</a></li>
-							<?php global $user_ID, $user_identity; get_currentuserinfo(); if (!$user_ID) { ?>
+							<li><a href="<?php echo home_url();?>/contact">Contact</a></li>
+							<?php global $user_ID, $user_identity; get_currentuserinfo(); 
+							if (!$user_ID) { ?>
 							<li><a href="<?php echo home_url();?>/login">Login/Register</a></li>
-							<?php } else { // if user is logged in ?>
+							<?php } 
+							else { // if user is logged in ?>
 							<li><a href="<?php echo home_url();?>/profile">My Profile</a></li>
 							<?php } ?>
+							<li><a href="<?php echo home_url();?>">Home</a></li>
 						</ul>
 						<form id="searchform-top" class="search-form twocol last clearfix" action="<?php echo home_url(); ?>" method="get" role="search">
 							<input id="s" class="search-field" type="search" placeholder="Search" name="s" value="">
@@ -74,14 +77,23 @@
 					</div>
 				</div>
 
-					<a id="menu-link">&#8801;</a>
+				<a id="menu-link">&#8801;</a>
 
 				<div id="menu">
 					<nav role="navigation">
+						<ul class="nav mobile-nav">
+							<li><a href="<?php echo home_url();?>">Home</a></li>
+						</ul>
 						<?php bones_main_nav(); ?>
 						<ul class="nav mobile-nav">
-							<li><a href="index.php">Contact</a></li>
-							<li><a href="index.php">Member Login</a></li>
+							<li><a href="<?php echo home_url();?>/contact">Contact</a></li>
+							<?php global $user_ID, $user_identity; get_currentuserinfo(); 
+							if (!$user_ID) { ?>
+							<li><a href="<?php echo home_url();?>/login">Login/Register</a></li>
+							<?php } 
+							else { // if user is logged in ?>
+							<li><a href="<?php echo home_url();?>/profile">My Profile</a></li>
+							<?php } ?>
 						</ul>
 					</nav>
 				</div>

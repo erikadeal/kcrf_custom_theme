@@ -6,6 +6,8 @@
 
 						<div id="main" class="eightcol first clearfix" role="main">
 
+							<h1 class="page-title">Updates &amp; Events</h1>
+
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
@@ -63,7 +65,7 @@
 
 						</div>
 
-						<?php get_sidebar(); ?>
+						<?php get_sidebar('news'); ?>
 
 				</div>
 

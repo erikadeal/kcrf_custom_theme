@@ -851,15 +851,12 @@ Basic nav styling
 /* line 9, ../scss/components/_navigation.scss */
 .nav {
   border-bottom: 0;
+  margin: 0;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 12, ../scss/components/_navigation.scss */
-.nav ul {
-  margin: 0;
-}
-/* line 16, ../scss/components/_navigation.scss */
+/* line 13, ../scss/components/_navigation.scss */
 .nav li {
   /*
   so you really have to rethink your dropdowns for mobile.
@@ -869,7 +866,7 @@ Basic nav styling
   http://www.alistapart.com/articles/organizing-mobile/
   */
 }
-/* line 18, ../scss/components/_navigation.scss */
+/* line 15, ../scss/components/_navigation.scss */
 .nav li a {
   display: block;
   text-decoration: none;
@@ -883,16 +880,16 @@ Basic nav styling
   keep this file as small as possible!
   */
 }
-/* line 31, ../scss/components/_navigation.scss */
+/* line 28, ../scss/components/_navigation.scss */
 .nav li a:hover, .nav li a:focus {
   color: #e9942f;
 }
-/* line 54, ../scss/components/_navigation.scss */
+/* line 51, ../scss/components/_navigation.scss */
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding-left: 30px;
 }
-/* line 79, ../scss/components/_navigation.scss */
+/* line 76, ../scss/components/_navigation.scss */
 .nav li.current-menu-item a,
 .nav li.current_page_item a,
 .nav li.current-page-ancestor a {
@@ -901,29 +898,29 @@ Basic nav styling
 
 /* end .nav */
 /* Secondary top nav */
-/* line 89, ../scss/components/_navigation.scss */
+/* line 86, ../scss/components/_navigation.scss */
 .secondary-nav {
   display: none;
 }
 
-/* line 93, ../scss/components/_navigation.scss */
+/* line 90, ../scss/components/_navigation.scss */
 ul.mobile-nav {
   margin-top: 0;
 }
 
 /* Flyout nav */
-/* line 99, ../scss/components/_navigation.scss */
+/* line 96, ../scss/components/_navigation.scss */
 #container {
   position: relative;
   left: 0;
   transition: all 0.5s ease 0s;
 }
-/* line 104, ../scss/components/_navigation.scss */
+/* line 101, ../scss/components/_navigation.scss */
 #container.active {
   left: 16em;
 }
 
-/* line 109, ../scss/components/_navigation.scss */
+/* line 106, ../scss/components/_navigation.scss */
 #menu-link {
   position: absolute;
   display: block;
@@ -933,14 +930,14 @@ ul.mobile-nav {
   margin-top: -1.4em;
 }
 
-/* line 118, ../scss/components/_navigation.scss */
+/* line 115, ../scss/components/_navigation.scss */
 #menu {
   clear: both;
   overflow: hidden;
   background: #333;
 }
 
-/* line 124, ../scss/components/_navigation.scss */
+/* line 121, ../scss/components/_navigation.scss */
 .js #menu {
   width: 16em;
   height: 100%;
@@ -952,7 +949,7 @@ ul.mobile-nav {
 /**** LARGER MOBILE SCREENS *****/
 /**** TABLET AND UP ****/
 @media only screen and (min-width: 768px) {
-  /* line 142, ../scss/components/_navigation.scss */
+  /* line 139, ../scss/components/_navigation.scss */
   .nav {
     border: 0;
     margin: 0;
@@ -962,7 +959,7 @@ ul.mobile-nav {
     /* highlight current page */
     /* end current highlighters */
   }
-  /* line 148, ../scss/components/_navigation.scss */
+  /* line 145, ../scss/components/_navigation.scss */
   .nav li {
     float: left;
     position: relative;
@@ -971,19 +968,19 @@ ul.mobile-nav {
     */
     /* showing sub-menus */
   }
-  /* line 152, ../scss/components/_navigation.scss */
+  /* line 149, ../scss/components/_navigation.scss */
   .nav li a {
     border-bottom: 0;
     color: #fefefe;
     padding: .8em 1em;
     text-transform: uppercase;
   }
-  /* line 158, ../scss/components/_navigation.scss */
+  /* line 155, ../scss/components/_navigation.scss */
   .nav li a:hover, .nav li a:focus {
     background: #f8ba33;
     color: #fefefe;
   }
-  /* line 171, ../scss/components/_navigation.scss */
+  /* line 168, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu,
   .nav li ul.children {
     margin-top: 0;
@@ -995,7 +992,7 @@ ul.mobile-nav {
     z-index: 8999;
     /* highlight sub-menu current page */
   }
-  /* line 180, ../scss/components/_navigation.scss */
+  /* line 177, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu li,
   .nav li ul.children li {
     /*
@@ -1004,7 +1001,7 @@ ul.mobile-nav {
     for usability. k, bai.
     */
   }
-  /* line 182, ../scss/components/_navigation.scss */
+  /* line 179, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu li a,
   .nav li ul.children li a {
     padding-left: 10px;
@@ -1013,12 +1010,12 @@ ul.mobile-nav {
     width: 180px;
     border-bottom: 1px solid #ccc;
   }
-  /* line 199, ../scss/components/_navigation.scss */
+  /* line 196, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu li:last-child a,
   .nav li ul.children li:last-child a {
     border-bottom: 0;
   }
-  /* line 221, ../scss/components/_navigation.scss */
+  /* line 218, ../scss/components/_navigation.scss */
   .nav li:hover ul {
     top: auto;
     overflow: visible;
@@ -1027,12 +1024,12 @@ ul.mobile-nav {
 
   /* end .nav */
   /* Secondary top nav */
-  /* line 240, ../scss/components/_navigation.scss */
+  /* line 237, ../scss/components/_navigation.scss */
   .secondary-nav {
     display: block;
     margin: 0;
   }
-  /* line 244, ../scss/components/_navigation.scss */
+  /* line 241, ../scss/components/_navigation.scss */
   .secondary-nav li {
     display: inline;
     padding: .8em;
@@ -1040,39 +1037,39 @@ ul.mobile-nav {
     float: right;
   }
 
-  /* line 252, ../scss/components/_navigation.scss */
+  /* line 249, ../scss/components/_navigation.scss */
   .mobile-nav {
     display: none;
   }
 
-  /* line 256, ../scss/components/_navigation.scss */
+  /* line 253, ../scss/components/_navigation.scss */
   .top-bar.tencol, .top-bar.twocol {
     margin-left: 0;
   }
 
   /* Larger device menu */
-  /* line 262, ../scss/components/_navigation.scss */
+  /* line 259, ../scss/components/_navigation.scss */
   #container {
     position: relative;
     left: 0;
   }
-  /* line 266, ../scss/components/_navigation.scss */
+  /* line 263, ../scss/components/_navigation.scss */
   #container.active {
     left: 0;
   }
 
-  /* line 271, ../scss/components/_navigation.scss */
+  /* line 268, ../scss/components/_navigation.scss */
   #menu-link {
     display: none;
   }
 
-  /* line 275, ../scss/components/_navigation.scss */
+  /* line 272, ../scss/components/_navigation.scss */
   #menu {
     clear: both;
     background: #e9942f;
   }
 
-  /* line 280, ../scss/components/_navigation.scss */
+  /* line 277, ../scss/components/_navigation.scss */
   .js #menu {
     max-width: none;
     position: static;
@@ -1126,10 +1123,10 @@ input[type=SEARCH]:hover, input[type=SEARCH]:focus {
 }
 /* line 42, ../scss/components/_search.scss */
 #searchform-top .search-field {
-  background: #e9942f url(../images/search.png) no-repeat 7px center;
+  background: #eeeeee url(../images/search.png) no-repeat 7px center;
   background-size: 15px;
   padding: 4px 5px 4px 5px;
-  border: 1px solid #e9942f;
+  border: 1px solid #c0bdb7;
   -webkit-border-radius: 10em;
   -moz-border-radius: 10em;
   border-radius: 10em;
@@ -1171,17 +1168,16 @@ input[type=SEARCH]:hover, input[type=SEARCH]:focus {
   /* line 94, ../scss/components/_search.scss */
   #searchform-top .search-field {
     background: #eee;
-    border: 1px solid #c0bdb7;
     width: 80%;
     color: #565656;
     padding: .2em .3em .2em .5em;
     font-size: .8em;
   }
-  /* line 102, ../scss/components/_search.scss */
+  /* line 101, ../scss/components/_search.scss */
   #searchform-top .search-field::-webkit-input-placeholder {
     color: #565656;
   }
-  /* line 106, ../scss/components/_search.scss */
+  /* line 105, ../scss/components/_search.scss */
   #searchform-top .search-field:hover, #searchform-top .search-field:focus {
     width: 80%;
     padding-left: .5em;
@@ -1194,17 +1190,21 @@ CONTENT STYLES
 /* line 5, ../scss/components/_content.scss */
 #main {
   margin: 2%;
+}
+
+/* line 9, ../scss/components/_content.scss */
+#inner-content {
   padding-bottom: 3em;
 }
 
 /* end .hentry */
-/* line 19, ../scss/components/_content.scss */
+/* line 22, ../scss/components/_content.scss */
 .single-title,
 .page-title {
   margin-bottom: 0;
 }
 
-/* line 23, ../scss/components/_content.scss */
+/* line 26, ../scss/components/_content.scss */
 .meeting-title {
   border-bottom: 2px solid #f2ece5;
   font-weight: bold;
@@ -1220,18 +1220,18 @@ CONTENT STYLES
 /* style by category (i.e. category-videos) */
 /* style by tag (i.e. tag-news) */
 /* post meta */
-/* line 49, ../scss/components/_content.scss */
+/* line 52, ../scss/components/_content.scss */
 .byline {
   color: #767268;
 }
 
-/* line 55, ../scss/components/_content.scss */
+/* line 58, ../scss/components/_content.scss */
 .entry-title {
   margin-bottom: 0;
 }
 
 /* entry content */
-/* line 60, ../scss/components/_content.scss */
+/* line 63, ../scss/components/_content.scss */
 .entry-content {
   /*
   image alignment on a screen this size may be
@@ -1240,25 +1240,25 @@ CONTENT STYLES
   but it's up to you. Feel free to change it up.
   */
 }
-/* line 95, ../scss/components/_content.scss */
+/* line 98, ../scss/components/_content.scss */
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-/* line 102, ../scss/components/_content.scss */
+/* line 105, ../scss/components/_content.scss */
 .entry-content img {
   margin: 0 0 1.5em 0;
   max-width: 100%;
   height: auto;
 }
-/* line 118, ../scss/components/_content.scss */
+/* line 121, ../scss/components/_content.scss */
 .entry-content video, .entry-content object {
   max-width: 100%;
   height: auto;
 }
-/* line 123, ../scss/components/_content.scss */
+/* line 126, ../scss/components/_content.scss */
 .entry-content pre {
   background: #eee;
   border: 1px solid #cecece;
@@ -1266,20 +1266,20 @@ CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 131, ../scss/components/_content.scss */
+/* line 134, ../scss/components/_content.scss */
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 137, ../scss/components/_content.scss */
+/* line 140, ../scss/components/_content.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 143, ../scss/components/_content.scss */
+/* line 146, ../scss/components/_content.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;
@@ -1292,23 +1292,23 @@ CONTENT STYLES
 /* gallery caption styles */
 /**** LARGER MOBILE SCREENS *****/
 @media only screen and (min-width: 481px) {
-  /* line 179, ../scss/components/_content.scss */
+  /* line 182, ../scss/components/_content.scss */
   .entry-content {
     /* at this larger size, we can start to align images */
   }
-  /* line 182, ../scss/components/_content.scss */
+  /* line 185, ../scss/components/_content.scss */
   .entry-content .alignleft, .entry-content img.alignleft {
     margin-right: 1.5em;
     display: inline;
     float: left;
   }
-  /* line 187, ../scss/components/_content.scss */
+  /* line 190, ../scss/components/_content.scss */
   .entry-content .alignright, .entry-content img.alignright {
     margin-left: 1.5em;
     display: inline;
     float: right;
   }
-  /* line 192, ../scss/components/_content.scss */
+  /* line 195, ../scss/components/_content.scss */
   .entry-content .aligncenter, .entry-content img.aligncenter {
     margin-right: auto;
     margin-left: auto;
@@ -1318,12 +1318,12 @@ CONTENT STYLES
 }
 /**** TABLET AND UP ****/
 @media only screen and (min-width: 768px) {
-  /* line 206, ../scss/components/_content.scss */
+  /* line 209, ../scss/components/_content.scss */
   #content {
     padding-top: 4.2em;
   }
 
-  /* line 210, ../scss/components/_content.scss */
+  /* line 213, ../scss/components/_content.scss */
   #main {
     margin: 0;
   }
@@ -1404,15 +1404,14 @@ SIDEBARS & ASIDES
 .sidebar-box {
   background: #f2ece5;
   padding: 1em;
-  min-height: 300px;
 }
 
-/* line 52, ../scss/components/_sidebars.scss */
+/* line 51, ../scss/components/_sidebars.scss */
 .sidebar-box p {
   margin: .1em 0;
 }
 
-/* line 56, ../scss/components/_sidebars.scss */
+/* line 55, ../scss/components/_sidebars.scss */
 .sidebar-box .widgettitle {
   margin-top: 0;
 }
@@ -1420,41 +1419,41 @@ SIDEBARS & ASIDES
 /**** LARGER MOBILE SCREENS *****/
 /**** TABLET AND UP ****/
 @media only screen and (min-width: 768px) {
-  /* line 69, ../scss/components/_sidebars.scss */
+  /* line 68, ../scss/components/_sidebars.scss */
   .sidebar {
     margin-top: 2.2em;
   }
 
-  /* line 73, ../scss/components/_sidebars.scss */
+  /* line 72, ../scss/components/_sidebars.scss */
   .sidebar-box {
     margin-top: 3.95em;
   }
 
-  /* line 77, ../scss/components/_sidebars.scss */
+  /* line 76, ../scss/components/_sidebars.scss */
   .widgettitle {
     margin-bottom: 0.75em;
   }
 
-  /* line 81, ../scss/components/_sidebars.scss */
+  /* line 80, ../scss/components/_sidebars.scss */
   .widget {
     margin: 1em 0;
     padding-left: 10px;
   }
-  /* line 86, ../scss/components/_sidebars.scss */
+  /* line 85, ../scss/components/_sidebars.scss */
   .widget ul li {
     margin-bottom: 0.75em;
     /* deep nesting */
   }
-  /* line 94, ../scss/components/_sidebars.scss */
+  /* line 93, ../scss/components/_sidebars.scss */
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
   }
-  /* line 101, ../scss/components/_sidebars.scss */
+  /* line 100, ../scss/components/_sidebars.scss */
   .widget ol {
     margin-top: 0;
   }
-  /* line 104, ../scss/components/_sidebars.scss */
+  /* line 103, ../scss/components/_sidebars.scss */
   .widget ol h4 {
     margin-top: 0;
   }

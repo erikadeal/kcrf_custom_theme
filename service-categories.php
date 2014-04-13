@@ -48,6 +48,7 @@ Template Name: Services Page
 								<?php
 									$field_key = "field_53025fd551115";
 									$field = get_field_object($field_key);
+									$i = 0;
 
 									if( $field )
 									{
@@ -55,6 +56,14 @@ Template Name: Services Page
 									        {
 									        	$id = strtolower($v);
 												$id = str_replace(' ', '_', $id);
+												
+												if($i % 3 == 0) {
+													echo '<div class="row clearfix">';
+												}
+
+												elseif($i == 0) {
+													echo 'div class="row clearfix">';
+												}
 
 									        	echo '<div id="'. $id .'" class="fourcol clearfix">';
 									            echo '<h2 class="cat-title">' . $v . '</h2>';
@@ -86,6 +95,12 @@ Template Name: Services Page
 													}
 
 									           echo '</div>';
+
+									           if(($i+1) % 3 == 0) {
+													echo '</div>';
+												}
+
+									           $i++;
 									        }
 									}
 								?>

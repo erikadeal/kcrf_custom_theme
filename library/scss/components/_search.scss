@@ -40,10 +40,10 @@ input[type=SEARCH] {
 	}
 
 	.search-field {
-		background: $brand-color url(../images/search.png) no-repeat 7px center;
+		background: #eee url(../images/search.png) no-repeat 7px center;
 		background-size: 15px;
 		padding: 4px 5px 4px 5px;
-		border: 1px solid $brand-color;
+		border: 1px solid lighten($light-gray, 30%);
 		-webkit-border-radius: 10em;
 		-moz-border-radius: 10em;
 		border-radius: 10em;
@@ -93,7 +93,6 @@ input[type=SEARCH] {
 
 		.search-field {
 			background: #eee;
-			border: 1px solid lighten($light-gray, 30%);
 			width: 80%;
 			color: #565656;
 			padding: .2em .3em .2em .5em;
