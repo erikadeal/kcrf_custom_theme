@@ -22,7 +22,7 @@
 
 						    ?>
 
-						    <h2 class="profile-title">
+						    <h1 class="page-title">
 						    <?php 
 						    	if($organization){
 						    		echo $organization; 
@@ -30,7 +30,7 @@
 						    	else {
 						    		echo $name; 
 						    	}?>
-						    </h2>
+						    </h1>
 
 						    <div class="org-info">
 						    	<?php if($about){ ?>
@@ -63,7 +63,7 @@
 						        <li>
 						            <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link: <?php the_title(); ?>">
 						            <?php the_title(); ?></a>,
-						            <?php the_time('d M Y'); ?> in <?php the_category('&');?>
+						            <?php the_time('M d Y'); ?>
 						        </li>
 
 						    <?php endwhile; else: ?>

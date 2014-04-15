@@ -13,7 +13,7 @@ Template Name: Static Front Page
 				<!-- Banner image -->
 
 					<div id="banner">
-						<img src="<?php echo home_url(); ?>/wp-content/themes/kcrf_custom_theme/library/images/example_photo.jpg">
+						<img src="<?php echo home_url(); ?>/wp-content/themes/kcrf_custom_theme/library/images/IRC_Family.jpg">
 						<p id="banner-message">Supporting service providers and refugees in King County and Puget Sound</p>
 					</div>
 

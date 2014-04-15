@@ -4,20 +4,12 @@ PROFILE PAGE STYLES
 
 /*  Tabs */
 
-.profile {
-
-	.profile-title {
-		border-bottom: 2px solid $beige;
-		font-weight: bold;
-	}
-}
-
 @include breakpoint( tablet ) {
 
 .profile {
 
 	.sidebar-box {
-		margin-top: 3.95em;
+		margin-top: 5em;
 	}
 }
 }

@@ -2,6 +2,17 @@
 Member Directory Styles
 ***********************/
 
-.participant-details {
-	padding-left: 2em;
+.participant-name {
+	color: $brand-color;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.contact-info {
+	display: none;
+	transition: .2s ease-in-out;
+}
+
+.contact-info.show-info {
+	display: block;
 }

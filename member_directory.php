@@ -40,29 +40,36 @@ Template Name: Member Directory
 							    }
 							?>
 
-							<h3>Other Participants</h3>
+							<h3>Participants</h3>
 
 					<!-- Start participant loop -->
 							<?php
 							    $blogusers = get_users('role=forum_participant');
-							    foreach ($blogusers as $user) {
+							    foreach ($blogusers as $user) { ?>
 
+							    <div class="participant">
+
+							    <?php 
 							    	if ($user->organization_name ) {
-							        	echo '<p>' . $user->organization_name . '</p>';
-							        	echo '<p class="participant-details"><strong>Email: </strong>' . $user->user_email . '</p>';
-							        	echo '<p class="participant-details"><strong>Phone: </strong>' . $user->phone. '</p>';
+							        	echo '<p class="participant-name">' . $user->organization_name . '</p>';
 							        } 
 							        else {
-							        	echo '<p>' . $user->first_name . ' ' . $user->last_name . '</p>';
-							        	echo '<p class="participant-details"><strong>Email: </strong>' . $user->user_email . '</p>';
-							        	echo '<p  class="participant-details"><strong>Phone: </strong>' . $user->phone. '</p>';
+							        	echo '<p class="participant-name">' . $user->first_name . ' ' . $user->last_name . '</p>';
 							        }
-							    }
-							?>
+
+							        echo '<div class="contact-info">';
+							        echo '<p><strong>Email: </strong>' . $user->user_email . '</p>';
+							        echo '<p><strong>Phone: </strong>' . $user->phone. '</p>';
+							        echo '</div>';
+
+							        ?>
+
+							        </div>
+							    <?php } ?>
 
 						</div>
 
-					<div class="fourcol last clearfix">
+					<div class="sidebar fourcol last clearfix">
 						<h4 class="widgettitle">Join the Forum</h4>
 						<p>Information about dues and sign-up here</p>
 					</div>

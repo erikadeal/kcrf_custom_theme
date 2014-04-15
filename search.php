@@ -51,11 +51,8 @@
 											<h1><?php _e( 'Sorry, No Results.', 'bonestheme' ); ?></h1>
 										</header>
 										<section class="entry-content">
-											<p><?php _e( 'Try your search again.', 'bonestheme' ); ?></p>
+											<p><?php _e( 'Looking for something specific? Try the navigation options above.', 'bonestheme' ); ?></p>
 										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the search.php template.', 'bonestheme' ); ?></p>
-										</footer>
 									</article>
 
 							<?php endif; ?>

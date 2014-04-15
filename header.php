@@ -53,7 +53,7 @@
 
 					<h1 id="logo" class="h1">
 						<a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a>
-						<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo home_url();?>/wp-content/themes/kcrf_custom_theme/library/images/logo4.png"></a>
+						<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo home_url();?>/wp-content/themes/kcrf_custom_theme/library/images/revised_logo.png"></a>
 					</h1>
 
 					<div class="twelvecol wrap top-bar clearfix">

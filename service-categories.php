@@ -68,6 +68,63 @@ Template Name: Services Page
 									        	echo '<div id="'. $id .'" class="fourcol clearfix">';
 									            echo '<h2 class="cat-title">' . $v . '</h2>';
 
+									           	//Category examples
+
+												if($v == 'Adult Education'){
+									           		echo '<p class="small"><strong>Examples: </strong>External Diploma Program (GED), Life Skills Classes, Computer Literacy, Digital Literacy</p>';
+									           	}
+									           	elseif ($v == 'Children & Youth Services') {
+									           		echo '<p class="small"><strong>Examples: </strong>Early Childhood Education, Youth Programs, School Registration Assistance</p>';
+									           	}
+									           	elseif ($v == 'Citizenship & Naturalization Services') {
+									           		echo '<p class="small"><strong>Examples: </strong>Immigration, Citizen Exam Preparation</p>';
+									           	}
+									           	elseif ($v == 'Disability Services') {
+									           		echo '<p class="small"><strong>Examples: </strong>Transportation, Mobility Assistance, Long Term Care</p>';
+									           	}
+									           	elseif ($v == 'Emergency Preparedness') {
+									           		echo '<p class="small"><strong>Examples: </strong>Disaster Education and Preparation</p>';
+									           	}
+									           	elseif ($v == 'Employment Services') {
+									           		echo '<p class="small"><strong>Examples: </strong>Employment Assistance, Job Placement, Job Skills & Training, Comprehensive Employment Services</p>';
+									           	}
+									           	elseif ($v == 'Environmental Health') {
+									           		echo '<p class="small"><strong>Examples: </strong>Environmental Services</p>';
+									           	}
+									           	elseif ($v == 'ESL Classes') {
+									           		echo '<p class="small"><strong>Examples: </strong>English Classes</p>';
+									           	}
+									           	elseif ($v == 'Family Reconnection Services') {
+									           		echo '<p class="small"><strong>Examples: </strong>Family Tracing</p>';
+									           	}
+									           	elseif ($v == 'Financial Empowerment') {
+									           		echo '<p class="small"><strong>Examples: </strong>Banking & Financing, Small Business Support, Financial Literacy</p>';
+									           	}
+									            elseif ($v == 'Housing Assistance') {
+									           		echo '<p class="small"><strong>Examples: </strong>Emergency Housing, Affordable Housing Services</p>';
+									           	}
+									            elseif ($v == 'Interpretation Services') {
+									           		echo '<p class="small"><strong>Examples: </strong>Multi-Language Services</p>';
+									           	}
+									           	elseif ($v == 'Housing Assistance') {
+									           		echo '<p class="small"><strong>Examples: </strong>Emergency Housing, Affordable Housing Services</p>';
+									           	}
+									          	elseif ($v == 'Medical Assistance') {
+									           		echo '<p class="small"><strong>Examples: </strong>Healthcare, Clinics, Emergency Health Services</p>';
+									           	}
+									           	elseif ($v == 'Mental Health Services') {
+									           		echo '<p class="small"><strong>Examples: </strong>Behavioral Health, Counseling, Emergency Mental Health Services</p>';
+									           	}
+									            elseif ($v == 'Refugee Resettlement') {
+									           		echo '<p class="small"><strong>Examples: </strong>VOLAG, MAA</p>';
+									           	}
+									           	elseif ($v == 'Safety') {
+									           		echo '<p class="small"><strong>Examples: </strong>Domestic & Relationship Violence, Sexual Assault, Anti-Human Trafficking</p>';
+									           	}
+									           	elseif ($v == 'Senior Services') {
+									           		echo '<p class="small"><strong>Examples: </strong>Long Term Care, Mobility Assistance</p>';
+									           	}
+
 									            $args = array(
 														'role' => 'forum_member',
 														'meta_query' => array(
@@ -78,23 +135,17 @@ Template Name: Services Page
 															)
 														);
 
-													$user_query = new WP_User_Query( $args );
-													// User Loop
+												$user_query = new WP_User_Query( $args );
+												// User Loop
 
-													foreach ( $user_query->results as $user ) 
-														{
+												foreach ( $user_query->results as $user ) 
+													{
 														echo '<div class="member-excerpt"><p><a href="' . home_url() . '/?author=' . $user->ID . '">' . $user->organization_name . '</a></p>';
-
-														//if ($user->user_url){
-														//	echo '<p>Website: <a href="' . $user->user_url . '">' . $user->user_url . '</a></p>';
-														//}
-
-														//echo '<p>Contact: <a href="mailto:' . $user->user_email . '">' . $user->first_name . '&nbsp;' . $user->last_name . '</a></p>';
 
 														echo '</div>';
 													}
 
-									           echo '</div>';
+									           	echo '</div>';
 
 									           if(($i+1) % 3 == 0) {
 													echo '</div>';
@@ -102,7 +153,10 @@ Template Name: Services Page
 
 									           $i++;
 									        }
+
+									      echo '</div>';
 									}
+
 								?>
 
 							</div>

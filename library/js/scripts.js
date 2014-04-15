@@ -126,6 +126,12 @@ jQuery(document).ready(function($) {
 	$('p.showall').click(function(){
 		$(this).prev('ul.meetings-cat').children().slice(3).slideToggle();
 	});
+
+	/* Participant contact detail toggle */
+
+	$('p.participant-name').click(function(){
+		$(this).next('div.contact-info').toggleClass('show-info');
+	});
  
 }); /* end of as page load scripts */
 
