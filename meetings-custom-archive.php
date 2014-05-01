@@ -110,8 +110,6 @@ Template Name: Meetings Archive
 
 									<?php wp_reset_postdata();?>
 
-									<p class="button showall">Show All</p>	
-
 							</div> 
 
 					<!-- Statistics documents -->
@@ -147,8 +145,6 @@ Template Name: Meetings Archive
 
 									?>
 								<?php wp_reset_postdata();?>
-
-								<p class="button showall">Show All</p>	
 
 							</div>
 						</div>
@@ -188,8 +184,6 @@ Template Name: Meetings Archive
 									?>
 								<?php wp_reset_postdata();?>
 
-								<p class="button showall">Show All</p>	
-
 							</div>
 
 					<!-- Minutes and agendas -->
@@ -224,9 +218,7 @@ Template Name: Meetings Archive
 								echo '</ul>';
 
 								?>
-						<?php wp_reset_postdata();?>	
-
-						<p class="button showall">Show All</p>	
+						<?php wp_reset_postdata();?>		
 
 					</div>
 

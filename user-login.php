@@ -17,6 +17,8 @@ Template Name: Login Page
 						<div id="authentication">
 
 							<h1>Log in</h1>
+
+							<p><a href="<?php echo home_url();?>/register">Don't have an account yet?</a>  |  <a href="<?php echo home_url();?>/password">Forgot your password or username?</a>
 							
 							<form method="post" action="<?php bloginfo('url') ?>/wp-login.php" class="wp-user-form">
 								<div class="username">
@@ -39,8 +41,6 @@ Template Name: Login Page
 									<input type="hidden" name="user-cookie" value="1" />
 								</div>
 							</form>
-
-							<p><a href="<?php echo home_url();?>/register">Don't have an account yet?</a>  |  <a href="<?php echo home_url();?>/password">Forgot your password or username?</a>
 						</div>
 
 

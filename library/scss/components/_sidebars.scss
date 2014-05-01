@@ -2,7 +2,9 @@
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
+.sidebar {
+	margin: 0 2%;
+}
 
 	.widgettitle {
 		border-bottom: 2px solid $dark-gray;
@@ -66,11 +68,20 @@ SIDEBARS & ASIDES
 
 @include breakpoint( tablet ){
 	.sidebar {
-		margin-top: 3.2em;
+		margin: 0;
+		margin-top: 1.9em;
 	}
 
 	.sidebar-box {
 		margin-top: 5em;
+	}
+
+	.profile .sidebar-box {
+		margin-top: -2px;
+	}
+
+	.meeting .sidebar-box{
+		margin-top: 3.95em;
 	}
 
 	.widgettitle {

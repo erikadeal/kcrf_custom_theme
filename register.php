@@ -18,6 +18,8 @@ Template Name: Registration Page
 
 							<h1>Register</h1>
 
+							<p><a href="<?php echo home_url();?>/login">Already have an account?</a>  |  <a href="<?php echo home_url();?>/password">Forgot your password or username?</a>
+
 							<p>If you come to meetings and want to share your contact and service information with other members,
 							feel free to register for an account on the website. If you are not sure about your membership status
 							or want to learn more about becoming a member, please visit our <a href="<?php echo home_url();?>/members">Members page</a>.</p>
@@ -41,8 +43,6 @@ Template Name: Registration Page
 									<input type="hidden" name="user-cookie" value="1" />
 								</div>
 							</form>
-
-							<p><a href="<?php echo home_url();?>/login">Already have an account?</a>  |  <a href="<?php echo home_url();?>/password">Forgot your password or username?</a>
 						</div>
 
 

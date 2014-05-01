@@ -8,14 +8,37 @@ Template Name: Static Front Page
 
 			<div id="home-content">
 
+			<!-- Banner image -->
+
+			<div id="banner">
+
+				<?php 
+					$image = get_field('banner_image');
+					if( !empty($image) ): ?>
+
+					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+
+				<?php endif; ?>
+
+			<!-- Image caption -->
+				<?php
+					$caption = get_field('image_caption');
+					if( !empty($caption) ): ?>
+
+					<p id="banner-message"><?php echo $caption; ?></p>
+				<?php endif; ?>
+
+			<!-- Image credit -->
+				<?php
+					$credit = get_field('image_credit');
+					if( !empty($credit) ): ?>
+
+					<p id="image-credit">Image credit: <?php echo $credit; ?></p>
+				<?php endif; ?>
+
+			</div>
+
 				<div id="inner-content" class="wrap clearfix">
-
-				<!-- Banner image -->
-
-					<div id="banner">
-						<img src="<?php echo home_url(); ?>/wp-content/themes/kcrf_custom_theme/library/images/IRC_Family.jpg">
-						<p id="banner-message">Supporting service providers and refugees in King County and Puget Sound</p>
-					</div>
 
 						<div id="main" role="main">
 
@@ -23,7 +46,7 @@ Template Name: Static Front Page
 
 							<div class="widgets-row">
 
-								<div class="fourcol first clearfix">
+								<div id="home1" class="home-widget fourcol first clearfix">
 									<h2 class="widget-header">Upcoming Events</h2>
 
 										<?php if ( is_active_sidebar( 'home_1' ) ) : ?>
@@ -41,8 +64,8 @@ Template Name: Static Front Page
 										<?php endif; ?>
 								</div>
 
-								<div class="fourcol clearfix">
-									<h2 class="widget-header">Find a provider</h2>
+								<div id="home2" class="home-widget fourcol clearfix">
+									<h2 class="widget-header">Meetings</h2>
 
 										<?php if ( is_active_sidebar( 'home_2' ) ) : ?>
 
@@ -59,7 +82,7 @@ Template Name: Static Front Page
 										<?php endif; ?>
 								</div>
 
-								<div class="fourcol last clearfix">
+								<div id="home3" class="home-widget fourcol last clearfix">
 									<h2 class="widget-header">Become a member</h2>
 
 										<?php if ( is_active_sidebar( 'home_3' ) ) : ?>

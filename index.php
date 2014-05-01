@@ -65,7 +65,7 @@
 
 						</div>
 
-						<?php get_sidebar('news'); ?>
+						<?php get_sidebar('updates'); ?>
 
 				</div>
 

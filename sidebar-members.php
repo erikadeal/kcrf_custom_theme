@@ -1,8 +1,8 @@
-				<div id="news_sidebar" class="sidebar fourcol last clearfix" role="complementary">
+				<div id="news_sidebar" class="sidebar fourcol last sidebar-box clearfix" role="complementary">
 
-					<?php if ( is_active_sidebar( 'news_sidebar' ) ) : ?>
+					<?php if ( is_active_sidebar( 'members_sidebar' ) ) : ?>
 
-						<?php dynamic_sidebar( 'news_sidebar' ); ?>
+						<?php dynamic_sidebar( 'members_sidebar' ); ?>
 
 					<?php else : ?>
 

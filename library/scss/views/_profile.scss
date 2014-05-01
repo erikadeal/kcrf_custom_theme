@@ -2,14 +2,6 @@
 PROFILE PAGE STYLES 
 **********************/
 
-/*  Tabs */
-
-@include breakpoint( tablet ) {
-
-.profile {
-
-	.sidebar-box {
-		margin-top: 5em;
-	}
-}
+.org-logo {
+	max-width: 200px;
 }

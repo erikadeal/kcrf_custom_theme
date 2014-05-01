@@ -517,23 +517,23 @@ TYPOGRAPHY
 use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
-/* line 33, ../scss/base/_typography.scss */
+/* line 34, ../scss/base/_typography.scss */
 span.amp {
   font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
   font-style: italic;
 }
 
-/* line 39, ../scss/base/_typography.scss */
+/* line 40, ../scss/base/_typography.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 40, ../scss/base/_typography.scss */
+/* line 41, ../scss/base/_typography.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 41, ../scss/base/_typography.scss */
+/* line 42, ../scss/base/_typography.scss */
 .text-right {
   text-align: right;
 }
@@ -541,7 +541,7 @@ span.amp {
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
-/* line 48, ../scss/base/_typography.scss */
+/* line 49, ../scss/base/_typography.scss */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
@@ -552,42 +552,47 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   */
   /* removing text decoration from all headline links */
 }
-/* line 58, ../scss/base/_typography.scss */
+/* line 59, ../scss/base/_typography.scss */
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none;
 }
 
-/* line 63, ../scss/base/_typography.scss */
+/* line 64, ../scss/base/_typography.scss */
 h1, .h1 {
   font-size: 2.5em;
   line-height: 1.333em;
 }
 
-/* line 68, ../scss/base/_typography.scss */
+/* line 69, ../scss/base/_typography.scss */
 h2, .h2 {
   font-size: 1.75em;
   line-height: 1.4em;
   margin-bottom: 0.375em;
 }
 
-/* line 74, ../scss/base/_typography.scss */
+/* line 75, ../scss/base/_typography.scss */
 h3, .h3 {
   font-size: 1.25em;
   margin: .5em 0;
 }
 
-/* line 79, ../scss/base/_typography.scss */
+/* line 80, ../scss/base/_typography.scss */
 h4, .h4 {
   font-size: 1.1em;
   font-weight: 700;
 }
 
-/* line 84, ../scss/base/_typography.scss */
+/* line 85, ../scss/base/_typography.scss */
 h5, .h5 {
   font-size: 0.846em;
   line-height: 2.09em;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+/* line 92, ../scss/base/_typography.scss */
+.sub-list {
+  padding-top: 1.5em;
 }
 
 /******************************************************************
@@ -977,17 +982,18 @@ ul.mobile-nav {
   }
   /* line 149, ../scss/components/_navigation.scss */
   .nav li a {
+    font-size: .9em;
     border-bottom: 0;
     color: #fefefe;
-    padding: .8em 1em;
+    padding: .8em .5em;
     text-transform: uppercase;
   }
-  /* line 155, ../scss/components/_navigation.scss */
+  /* line 156, ../scss/components/_navigation.scss */
   .nav li a:hover, .nav li a:focus {
     background: #f8ba33;
     color: #fefefe;
   }
-  /* line 168, ../scss/components/_navigation.scss */
+  /* line 169, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu,
   .nav li ul.children {
     margin-top: 0;
@@ -999,7 +1005,7 @@ ul.mobile-nav {
     z-index: 8999;
     /* highlight sub-menu current page */
   }
-  /* line 177, ../scss/components/_navigation.scss */
+  /* line 178, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu li,
   .nav li ul.children li {
     /*
@@ -1008,7 +1014,7 @@ ul.mobile-nav {
     for usability. k, bai.
     */
   }
-  /* line 179, ../scss/components/_navigation.scss */
+  /* line 180, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu li a,
   .nav li ul.children li a {
     padding-left: 10px;
@@ -1017,12 +1023,12 @@ ul.mobile-nav {
     width: 180px;
     border-bottom: 1px solid #ccc;
   }
-  /* line 196, ../scss/components/_navigation.scss */
+  /* line 197, ../scss/components/_navigation.scss */
   .nav li ul.sub-menu li:last-child a,
   .nav li ul.children li:last-child a {
     border-bottom: 0;
   }
-  /* line 218, ../scss/components/_navigation.scss */
+  /* line 219, ../scss/components/_navigation.scss */
   .nav li:hover ul {
     top: auto;
     overflow: visible;
@@ -1031,12 +1037,12 @@ ul.mobile-nav {
 
   /* end .nav */
   /* Secondary top nav */
-  /* line 237, ../scss/components/_navigation.scss */
+  /* line 238, ../scss/components/_navigation.scss */
   .secondary-nav {
     display: block;
     margin: 0;
   }
-  /* line 241, ../scss/components/_navigation.scss */
+  /* line 242, ../scss/components/_navigation.scss */
   .secondary-nav li {
     display: inline;
     padding: .8em;
@@ -1044,39 +1050,40 @@ ul.mobile-nav {
     float: right;
   }
 
-  /* line 249, ../scss/components/_navigation.scss */
+  /* line 250, ../scss/components/_navigation.scss */
   .mobile-nav {
     display: none;
   }
 
-  /* line 253, ../scss/components/_navigation.scss */
+  /* line 254, ../scss/components/_navigation.scss */
   .top-bar.tencol, .top-bar.twocol {
     margin-left: 0;
+    margin-top: .2em;
   }
 
   /* Larger device menu */
-  /* line 259, ../scss/components/_navigation.scss */
+  /* line 261, ../scss/components/_navigation.scss */
   #container {
     position: relative;
     left: 0;
   }
-  /* line 263, ../scss/components/_navigation.scss */
+  /* line 265, ../scss/components/_navigation.scss */
   #container.active {
     left: 0;
   }
 
-  /* line 268, ../scss/components/_navigation.scss */
+  /* line 270, ../scss/components/_navigation.scss */
   #menu-link {
     display: none;
   }
 
-  /* line 272, ../scss/components/_navigation.scss */
+  /* line 274, ../scss/components/_navigation.scss */
   #menu {
     clear: both;
     background: #e9942f;
   }
 
-  /* line 277, ../scss/components/_navigation.scss */
+  /* line 279, ../scss/components/_navigation.scss */
   .js #menu {
     max-width: none;
     position: static;
@@ -1084,6 +1091,13 @@ ul.mobile-nav {
   }
 }
 /**** DESKTOP AND UP ****/
+@media only screen and (min-width: 1140px) {
+  /* line 293, ../scss/components/_navigation.scss */
+  .nav li a {
+    font-size: 1em;
+    padding: .8em 1em;
+  }
+}
 /*********************
 SEARCH BOX STYLES
 *********************/
@@ -1122,7 +1136,7 @@ input[type=SEARCH]:hover, input[type=SEARCH]:focus {
 #searchform-top {
   position: absolute;
   right: .3em;
-  top: .3em;
+  top: .45em;
 }
 /* line 38, ../scss/components/_search.scss */
 #searchform-top button {
@@ -1152,8 +1166,9 @@ input[type=SEARCH]:hover, input[type=SEARCH]:focus {
   width: 250px;
   padding-left: 32px;
   border-color: #e9942f;
+  color: #565656;
 }
-/* line 65, ../scss/components/_search.scss */
+/* line 66, ../scss/components/_search.scss */
 #searchform-top .search-field:focus::-webkit-input-placeholder, #searchform-top .search-field:hover::-webkit-input-placeholder {
   color: #565656;
 }
@@ -1161,18 +1176,18 @@ input[type=SEARCH]:hover, input[type=SEARCH]:focus {
 /**** LARGER MOBILE SCREENS *****/
 /**** TABLET AND UP ****/
 @media only screen and (min-width: 768px) {
-  /* line 84, ../scss/components/_search.scss */
+  /* line 85, ../scss/components/_search.scss */
   #searchform-top {
     position: relative;
   }
-  /* line 87, ../scss/components/_search.scss */
+  /* line 88, ../scss/components/_search.scss */
   #searchform-top button {
     display: inline;
     margin-left: -2em;
     border: 0;
     background: transparent;
   }
-  /* line 94, ../scss/components/_search.scss */
+  /* line 95, ../scss/components/_search.scss */
   #searchform-top .search-field {
     background: #eee;
     width: 80%;
@@ -1180,11 +1195,11 @@ input[type=SEARCH]:hover, input[type=SEARCH]:focus {
     padding: .2em .3em .2em .5em;
     font-size: .8em;
   }
-  /* line 101, ../scss/components/_search.scss */
+  /* line 102, ../scss/components/_search.scss */
   #searchform-top .search-field::-webkit-input-placeholder {
     color: #565656;
   }
-  /* line 105, ../scss/components/_search.scss */
+  /* line 106, ../scss/components/_search.scss */
   #searchform-top .search-field:hover, #searchform-top .search-field:focus {
     width: 80%;
     padding-left: .5em;
@@ -1205,18 +1220,29 @@ CONTENT STYLES
 }
 
 /* end .hentry */
-/* line 22, ../scss/components/_content.scss */
+/* line 23, ../scss/components/_content.scss */
 .single-title,
-.page-title {
+.page-title,
+.profile-title {
   margin-bottom: 0;
   border-bottom: 2px solid #f2ece5;
   font-weight: bold;
 }
 
-/* line 28, ../scss/components/_content.scss */
+/* line 29, ../scss/components/_content.scss */
 .meeting-title {
   border-bottom: 2px solid #f2ece5;
   font-weight: bold;
+}
+
+/* line 36, ../scss/components/_content.scss */
+.page-title {
+  text-transform: uppercase;
+}
+
+/* line 40, ../scss/components/_content.scss */
+.archive-title {
+  text-transform: uppercase;
 }
 
 /* want to style individual post classes? Booya! */
@@ -1229,18 +1255,19 @@ CONTENT STYLES
 /* style by category (i.e. category-videos) */
 /* style by tag (i.e. tag-news) */
 /* post meta */
-/* line 54, ../scss/components/_content.scss */
+/* line 59, ../scss/components/_content.scss */
 .byline {
-  color: #767268;
+  color: #a8a59c;
+  font-size: .8em;
 }
 
-/* line 60, ../scss/components/_content.scss */
+/* line 66, ../scss/components/_content.scss */
 .entry-title {
   margin-bottom: 0;
 }
 
 /* entry content */
-/* line 65, ../scss/components/_content.scss */
+/* line 71, ../scss/components/_content.scss */
 .entry-content {
   /*
   image alignment on a screen this size may be
@@ -1249,25 +1276,25 @@ CONTENT STYLES
   but it's up to you. Feel free to change it up.
   */
 }
-/* line 100, ../scss/components/_content.scss */
+/* line 106, ../scss/components/_content.scss */
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-/* line 107, ../scss/components/_content.scss */
+/* line 113, ../scss/components/_content.scss */
 .entry-content img {
   margin: 0 0 1.5em 0;
   max-width: 100%;
   height: auto;
 }
-/* line 123, ../scss/components/_content.scss */
+/* line 129, ../scss/components/_content.scss */
 .entry-content video, .entry-content object {
   max-width: 100%;
   height: auto;
 }
-/* line 128, ../scss/components/_content.scss */
+/* line 134, ../scss/components/_content.scss */
 .entry-content pre {
   background: #eee;
   border: 1px solid #cecece;
@@ -1275,20 +1302,20 @@ CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 136, ../scss/components/_content.scss */
+/* line 142, ../scss/components/_content.scss */
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 142, ../scss/components/_content.scss */
+/* line 148, ../scss/components/_content.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 148, ../scss/components/_content.scss */
+/* line 154, ../scss/components/_content.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;
@@ -1301,23 +1328,23 @@ CONTENT STYLES
 /* gallery caption styles */
 /**** LARGER MOBILE SCREENS *****/
 @media only screen and (min-width: 481px) {
-  /* line 184, ../scss/components/_content.scss */
+  /* line 190, ../scss/components/_content.scss */
   .entry-content {
     /* at this larger size, we can start to align images */
   }
-  /* line 187, ../scss/components/_content.scss */
+  /* line 193, ../scss/components/_content.scss */
   .entry-content .alignleft, .entry-content img.alignleft {
     margin-right: 1.5em;
     display: inline;
     float: left;
   }
-  /* line 192, ../scss/components/_content.scss */
+  /* line 198, ../scss/components/_content.scss */
   .entry-content .alignright, .entry-content img.alignright {
     margin-left: 1.5em;
     display: inline;
     float: right;
   }
-  /* line 197, ../scss/components/_content.scss */
+  /* line 203, ../scss/components/_content.scss */
   .entry-content .aligncenter, .entry-content img.aligncenter {
     margin-right: auto;
     margin-left: auto;
@@ -1327,12 +1354,12 @@ CONTENT STYLES
 }
 /**** TABLET AND UP ****/
 @media only screen and (min-width: 768px) {
-  /* line 211, ../scss/components/_content.scss */
+  /* line 217, ../scss/components/_content.scss */
   #content {
     padding-top: 4.2em;
   }
 
-  /* line 215, ../scss/components/_content.scss */
+  /* line 221, ../scss/components/_content.scss */
   #main {
     margin: 0;
   }
@@ -1383,17 +1410,22 @@ style a page via class
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 7, ../scss/components/_sidebars.scss */
+/* line 5, ../scss/components/_sidebars.scss */
+.sidebar {
+  margin: 0 2%;
+}
+
+/* line 9, ../scss/components/_sidebars.scss */
 .widgettitle {
   border-bottom: 2px solid #333333;
 }
 
-/* line 15, ../scss/components/_sidebars.scss */
+/* line 17, ../scss/components/_sidebars.scss */
 .widget ul li {
   /* deep nesting */
 }
 
-/* line 32, ../scss/components/_sidebars.scss */
+/* line 34, ../scss/components/_sidebars.scss */
 .box-title {
   color: #e9942f;
   text-transform: uppercase;
@@ -1401,7 +1433,7 @@ SIDEBARS & ASIDES
   margin-top: 1em;
 }
 
-/* line 39, ../scss/components/_sidebars.scss */
+/* line 41, ../scss/components/_sidebars.scss */
 .box-title-gray {
   color: #767268;
   text-transform: uppercase;
@@ -1409,18 +1441,18 @@ SIDEBARS & ASIDES
   margin-top: 1em;
 }
 
-/* line 46, ../scss/components/_sidebars.scss */
+/* line 48, ../scss/components/_sidebars.scss */
 .sidebar-box {
   background: #f2ece5;
   padding: 1em;
 }
 
-/* line 51, ../scss/components/_sidebars.scss */
+/* line 53, ../scss/components/_sidebars.scss */
 .sidebar-box p {
   margin: .1em 0;
 }
 
-/* line 55, ../scss/components/_sidebars.scss */
+/* line 57, ../scss/components/_sidebars.scss */
 .sidebar-box .widgettitle {
   margin-top: 0;
 }
@@ -1428,41 +1460,52 @@ SIDEBARS & ASIDES
 /**** LARGER MOBILE SCREENS *****/
 /**** TABLET AND UP ****/
 @media only screen and (min-width: 768px) {
-  /* line 68, ../scss/components/_sidebars.scss */
+  /* line 70, ../scss/components/_sidebars.scss */
   .sidebar {
-    margin-top: 3.2em;
+    margin: 0;
+    margin-top: 1.9em;
   }
 
-  /* line 72, ../scss/components/_sidebars.scss */
+  /* line 75, ../scss/components/_sidebars.scss */
   .sidebar-box {
     margin-top: 5em;
   }
 
-  /* line 76, ../scss/components/_sidebars.scss */
+  /* line 79, ../scss/components/_sidebars.scss */
+  .profile .sidebar-box {
+    margin-top: -2px;
+  }
+
+  /* line 83, ../scss/components/_sidebars.scss */
+  .meeting .sidebar-box {
+    margin-top: 3.95em;
+  }
+
+  /* line 87, ../scss/components/_sidebars.scss */
   .widgettitle {
     margin-bottom: 0.75em;
   }
 
-  /* line 80, ../scss/components/_sidebars.scss */
+  /* line 91, ../scss/components/_sidebars.scss */
   .widget {
     margin: 1em 0;
     padding-left: 10px;
   }
-  /* line 85, ../scss/components/_sidebars.scss */
+  /* line 96, ../scss/components/_sidebars.scss */
   .widget ul li {
     margin-bottom: 0.75em;
     /* deep nesting */
   }
-  /* line 93, ../scss/components/_sidebars.scss */
+  /* line 104, ../scss/components/_sidebars.scss */
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
   }
-  /* line 100, ../scss/components/_sidebars.scss */
+  /* line 111, ../scss/components/_sidebars.scss */
   .widget ol {
     margin-top: 0;
   }
-  /* line 103, ../scss/components/_sidebars.scss */
+  /* line 114, ../scss/components/_sidebars.scss */
   .widget ol h4 {
     margin-top: 0;
   }
@@ -1819,10 +1862,9 @@ FRONT PAGE STYLES
 }
 /* line 15, ../scss/views/_frontpage.scss */
 #banner #banner-message {
-  position: absolute;
-  bottom: -.5em;
-  right: 0;
-  width: 250px;
+  margin: 0;
+  margin-top: -1em;
+  width: 100%;
   font-style: italic;
   font-size: .8em;
   text-align: right;
@@ -1830,27 +1872,67 @@ FRONT PAGE STYLES
   background: rgba(51, 51, 51, 0.65);
   padding: 1em;
 }
+/* line 28, ../scss/views/_frontpage.scss */
+#banner #image-credit {
+  text-align: left;
+  margin: 0;
+  padding: .5em;
+  font-size: .8em;
+}
 
-/* line 31, ../scss/views/_frontpage.scss */
+/* line 37, ../scss/views/_frontpage.scss */
 .widgets-row .widget-header {
-  background: #767268;
+  background: #e9942f;
   text-align: center;
   color: #fefefe;
-  font-size: 1em;
+  font-size: 1.25em;
   text-transform: uppercase;
   padding: .3em 0;
+}
+
+/* line 47, ../scss/views/_frontpage.scss */
+.tribe-events-widget-link a {
+  background: #e9942f;
+  color: #fefefe;
+  font-weight: normal;
+  padding: .3em .5em;
+}
+/* line 53, ../scss/views/_frontpage.scss */
+.tribe-events-widget-link a:hover {
+  background: #f8ba33;
+  color: #fefefe;
 }
 
 /**** LARGER MOBILE SCREENS *****/
 /**** TABLET AND UP ****/
 @media only screen and (min-width: 768px) {
-  /* line 53, ../scss/views/_frontpage.scss */
+  /* line 71, ../scss/views/_frontpage.scss */
   #banner #banner-message {
     position: absolute;
-    bottom: 15%;
-    width: 380px;
+    right: 0;
+    bottom: 20%;
+    width: 600px;
     font-style: italic;
-    font-size: 1.2em;
+    font-size: 1.6em;
+  }
+  /* line 80, ../scss/views/_frontpage.scss */
+  #banner #image-credit {
+    position: absolute;
+    bottom: .6em;
+    color: #fefefe;
+    background: rgba(51, 51, 51, 0.65);
+  }
+
+  /* line 88, ../scss/views/_frontpage.scss */
+  .home-widget {
+    height: 300px;
+    margin-top: 1em;
+    background: #f2ece5;
+  }
+
+  /* line 94, ../scss/views/_frontpage.scss */
+  .widget-header {
+    margin-top: 0;
   }
 }
 /**** DESKTOP AND UP ****/
@@ -1858,18 +1940,352 @@ FRONT PAGE STYLES
 SERVICES PAGE STYLES 
 ************************/
 /* line 7, ../scss/views/_services.scss */
+.categories-grid .threecol {
+  margin: 0 1% 0 0;
+  min-height: 100px;
+}
+/* line 12, ../scss/views/_services.scss */
 .categories-grid .fourcol {
   margin: 0 1% 0 0;
   min-height: 100px;
 }
 
-/* line 13, ../scss/views/_services.scss */
+/* line 18, ../scss/views/_services.scss */
 .cat-title {
-  background: #767268;
+  background: #e9942f;
   color: #fefefe;
-  font-size: 1.2em;
-  padding: .2em;
+  height: 60px;
+  line-height: 60px;
   text-align: center;
+}
+
+/* line 26, ../scss/views/_services.scss */
+.cat-title p {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  padding: 0 2em;
+  margin: 0;
+}
+
+/* line 34, ../scss/views/_services.scss */
+.service-details {
+  background-color: #f2ece5;
+  margin: 0 0 1em 0;
+  padding: 1em;
+}
+
+/* line 40, ../scss/views/_services.scss */
+p.examples {
+  margin-top: 0;
+}
+
+/* line 52, ../scss/views/_services.scss */
+#adult_education {
+  position: relative;
+}
+/* line 55, ../scss/views/_services.scss */
+#adult_education .title:before {
+  content: "\f040";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 61, ../scss/views/_services.scss */
+#children_and_youth_services {
+  position: relative;
+}
+/* line 64, ../scss/views/_services.scss */
+#children_and_youth_services .title:before {
+  content: "\f005";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 70, ../scss/views/_services.scss */
+#citizenship_and_naturalization_services {
+  position: relative;
+}
+/* line 73, ../scss/views/_services.scss */
+#citizenship_and_naturalization_services .title:before {
+  content: "\f024";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 79, ../scss/views/_services.scss */
+#disability_services {
+  position: relative;
+}
+/* line 82, ../scss/views/_services.scss */
+#disability_services .title:before {
+  content: "\f193";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 88, ../scss/views/_services.scss */
+#emergency_preparedness {
+  position: relative;
+}
+/* line 91, ../scss/views/_services.scss */
+#emergency_preparedness .title:before {
+  content: "\f06d";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 97, ../scss/views/_services.scss */
+#employment_services {
+  position: relative;
+}
+/* line 100, ../scss/views/_services.scss */
+#employment_services .title:before {
+  content: "\f0b1";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 106, ../scss/views/_services.scss */
+#environmental_health {
+  position: relative;
+}
+/* line 109, ../scss/views/_services.scss */
+#environmental_health .title:before {
+  content: "\f06c";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 115, ../scss/views/_services.scss */
+#esl_classes {
+  position: relative;
+}
+/* line 118, ../scss/views/_services.scss */
+#esl_classes .title:before {
+  content: "\f075";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 124, ../scss/views/_services.scss */
+#family_reconnection_services {
+  position: relative;
+}
+/* line 127, ../scss/views/_services.scss */
+#family_reconnection_services .title:before {
+  content: "\f0c1";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 133, ../scss/views/_services.scss */
+#family_services {
+  position: relative;
+}
+/* line 136, ../scss/views/_services.scss */
+#family_services .title:before {
+  content: "\f0c0";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 142, ../scss/views/_services.scss */
+#financial_empowerment {
+  position: relative;
+}
+/* line 145, ../scss/views/_services.scss */
+#financial_empowerment .title:before {
+  content: "\f0d6";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 151, ../scss/views/_services.scss */
+#food_banks {
+  position: relative;
+}
+/* line 154, ../scss/views/_services.scss */
+#food_banks .title:before {
+  content: "\f0f5";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 160, ../scss/views/_services.scss */
+#grants_and_funding {
+  position: relative;
+}
+/* line 163, ../scss/views/_services.scss */
+#grants_and_funding .title:before {
+  content: "\f15b";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 169, ../scss/views/_services.scss */
+#housing_assistance {
+  position: relative;
+}
+/* line 172, ../scss/views/_services.scss */
+#housing_assistance .title:before {
+  content: "\f015";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 178, ../scss/views/_services.scss */
+#interpretation_services {
+  position: relative;
+}
+/* line 181, ../scss/views/_services.scss */
+#interpretation_services .title:before {
+  content: "\f086";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 187, ../scss/views/_services.scss */
+#legal_services {
+  position: relative;
+}
+/* line 190, ../scss/views/_services.scss */
+#legal_services .title:before {
+  content: "\f0e3";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 196, ../scss/views/_services.scss */
+#medical_assistance {
+  position: relative;
+}
+/* line 199, ../scss/views/_services.scss */
+#medical_assistance .title:before {
+  content: "\f0fa";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 205, ../scss/views/_services.scss */
+#mental_health_services {
+  position: relative;
+}
+/* line 208, ../scss/views/_services.scss */
+#mental_health_services .title:before {
+  content: "\f004";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 214, ../scss/views/_services.scss */
+#multicultural_services {
+  position: relative;
+}
+/* line 217, ../scss/views/_services.scss */
+#multicultural_services .title:before {
+  content: "\f0ac";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 223, ../scss/views/_services.scss */
+#refugee_resettlement {
+  position: relative;
+}
+/* line 226, ../scss/views/_services.scss */
+#refugee_resettlement .title:before {
+  content: "\f072";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 232, ../scss/views/_services.scss */
+#safety {
+  position: relative;
+}
+/* line 235, ../scss/views/_services.scss */
+#safety .title:before {
+  content: "\f134";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
+}
+
+/* line 241, ../scss/views/_services.scss */
+#senior_services {
+  position: relative;
+}
+/* line 244, ../scss/views/_services.scss */
+#senior_services .title:before {
+  content: "\f007";
+  font-family: "FontAwesome";
+  position: absolute;
+  speak: none;
+  margin-left: -1.5em;
+  margin-top: 0;
 }
 
 /***********************
@@ -1955,13 +2371,11 @@ a.all-meetings:hover, a.all-meetings:focus {
 /**********************
 PROFILE PAGE STYLES 
 **********************/
-/*  Tabs */
-@media only screen and (min-width: 768px) {
-  /* line 11, ../scss/views/_profile.scss */
-  .profile .sidebar-box {
-    margin-top: 5em;
-  }
+/* line 5, ../scss/views/_profile.scss */
+.org-logo {
+  max-width: 200px;
 }
+
 /***********************
 Member Directory Styles
 ***********************/

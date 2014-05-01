@@ -147,9 +147,10 @@ ul.mobile-nav {
 		position: relative;
 
 		a {
+			font-size: .9em;
 			border-bottom: 0;
 			color: $white;
-			padding: .8em 1em;
+			padding: .8em .5em;
 			text-transform: uppercase;
 
 			&:hover, &:focus {
@@ -252,6 +253,7 @@ ul.mobile-nav {
 
 .top-bar.tencol, .top-bar.twocol {
 	margin-left: 0;
+	margin-top: .2em;
 } 
 
 /* Larger device menu */
@@ -286,5 +288,13 @@ ul.mobile-nav {
 
 @include breakpoint( laptop ){
 
+	.nav {
+		li {
+			a {
+				font-size: 1em;
+				padding: .8em 1em;
+			}
+		}
+	}
 
 }

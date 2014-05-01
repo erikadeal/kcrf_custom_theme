@@ -33,7 +33,7 @@ input[type=SEARCH] {
 
 	position: absolute;
 	right: .3em;
-	top: .3em;
+	top: .45em;
 
 	button {
 		display: none;
@@ -61,6 +61,7 @@ input[type=SEARCH] {
 			width: 250px;
 			padding-left: 32px;
 			border-color: $brand-color;
+			color: #565656;
 
 			&::-webkit-input-placeholder {
 				color: #565656;

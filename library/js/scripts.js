@@ -119,19 +119,41 @@ jQuery(document).ready(function($) {
 
 	/* Archives page category toggles */
 
-	$('ul.meetings-cat').each(function() {
-	  $(this).children().slice(3).hide(); 
+	$('ul.meetings-cat').each(function () {
+
+	  if ($(this).children().length > 3) {     //<--  use $(this) instead of $('ul[id^=list]')
+
+	    $(this).children('li:gt(2)').hide();
+	    $(this).after('<p class="button showall">Show All</p>');
+	  }
+	});
+	$('p.showall').click(function (e) {
+	  e.preventDefault();
+	  $(this).prev('ul.meetings-cat').children('li:gt(2)').toggle('slow');
 	});
 
-	$('p.showall').click(function(){
-		$(this).prev('ul.meetings-cat').children().slice(3).slideToggle();
-	});
 
 	/* Participant contact detail toggle */
 
 	$('p.participant-name').click(function(){
 		$(this).next('div.contact-info').toggleClass('show-info');
 	});
+
+	/* Service category toggles */
+
+	$('ul.members').each(function () {
+
+	  if ($(this).children().length > 3) {     //<--  use $(this) instead of $('ul[id^=list]')
+
+	    $(this).children('li:gt(2)').hide();
+	    $(this).after('<p class="button showmembers">Show All</p>');
+	  }
+	});
+	$('p.showmembers').click(function (e) {
+	  e.preventDefault();
+	  $(this).prev('ul.members').children('li:gt(2)').toggle('slow');
+	});
+
  
 }); /* end of as page load scripts */
 

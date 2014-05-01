@@ -1,31 +1,14 @@
 <?php
 /*
-Author: Eddie Machado
-URL: htp://themble.com/bones/
-
-This is where you can drop your custom functions or
-just edit things like thumbnail sizes, header images,
-sidebars, comments, ect.
+Author: Erika Deal
+URL: http://erikadeal.com
 */
 
 /************* INCLUDE NEEDED FILES ***************/
 
-/*
-1. library/bones.php
-	- head cleanup (remove rsd, uri links, junk css, ect)
-	- enqueueing scripts & styles
-	- theme support functions
-	- custom menu output & fallbacks
-	- related post function
-	- page-navi function
-	- removing <p> from around images
-	- customizing the post excerpt
-	- custom google+ integration
-	- adding custom fields to user profiles
-*/
 require_once( 'library/bones.php' ); // if you remove this, bones will break
 
-//require_once( 'library/custom-extensions/metaboxes/advanced-custom-fields/acf.php' ); 
+require_once( 'library/admin.php' );
 
 
 /************* THUMBNAIL SIZE OPTIONS *************/
@@ -43,14 +26,6 @@ function bones_custom_image_sizes( $sizes ) {
     ) );
 }
 
-/*
-The function above adds the ability to use the dropdown menu to select 
-the new images sizes you have just created from within the media manager 
-when you add media to your content blocks. If you add more image sizes, 
-duplicate one of the lines in the array and name it according to your 
-new image size.
-*/
-
 /************* ACTIVE SIDEBARS ********************/
 
 // Sidebars & Widgetizes Areas
@@ -66,9 +41,19 @@ function bones_register_sidebars() {
 	));
 
 	register_sidebar(array(
-		'id' => 'news_sidebar',
-		'name' => __( 'News Sidebar', 'bonestheme' ),
-		'description' => __( 'The news archive sidebar.', 'bonestheme' ),
+		'id' => 'updates_sidebar',
+		'name' => __( 'Updates Sidebar', 'bonestheme' ),
+		'description' => __( 'The Updates page sidebar.', 'bonestheme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
+		'id' => 'members_sidebar',
+		'name' => __( 'Members Page Sidebar', 'bonestheme' ),
+		'description' => __( 'The Members Page sidebar.', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -135,31 +120,6 @@ function bones_register_sidebars() {
 		'after_title' => '</h4>',
 	));
 
-
-	/*
-	to add more sidebars or widgetized areas, just copy
-	and edit the above sidebar code. In order to call
-	your new sidebar just use the following code:
-
-	Just change the name to whatever your new
-	sidebar's id is, for example:
-
-	register_sidebar(array(
-		'id' => 'sidebar2',
-		'name' => __( 'Sidebar 2', 'bonestheme' ),
-		'description' => __( 'The second (secondary) sidebar.', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
-
-	To call the sidebar in your template, you can just copy
-	the sidebar.php file and rename it to your sidebar's name.
-	So using the above example, it would be:
-	sidebar-sidebar2.php
-
-	*/
 } // don't remove this bracket!
 
 /************* COMMENT LAYOUT *********************/
@@ -217,30 +177,72 @@ function bones_wpsearch($form) {
 	return $form;
 } // don't remove this bracket!
 
-/*-------------------------------------------------
-   INCLUDE OPTIONS FRAMEWORK
-__________________________________________________*/
-/*
- * Helper function to return the theme option value. If no value has been saved, it returns $default.
- * Needed because options are saved as serialized strings.
- *
- * This code allows the theme to work without errors if the Options Framework plugin has been disabled.
- */
-if ( !function_exists( 'of_get_option' ) ) {
-function of_get_option($name, $default = false) {
-	$optionsframework_settings = get_option('optionsframework');
-	// Gets the unique option id
-	$option_name = $optionsframework_settings['id'];
-	if ( get_option($option_name) ) {
-		$options = get_option($option_name);
-	}
-	if ( isset($options[$name]) ) {
-		return $options[$name];
-	} else {
-		return $default;
-	}
+
+/*********** FRONT PAGE BANNER IMAGE *************/
+
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_banner-image',
+		'title' => 'Banner image',
+		'fields' => array (
+			array (
+				'key' => 'field_535e955d9539f',
+				'label' => 'Banner image',
+				'name' => 'banner_image',
+				'type' => 'image',
+				'save_format' => 'object',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_535e95a4953a0',
+				'label' => 'Image Credit',
+				'name' => 'image_credit',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_535e95be953a1',
+				'label' => 'Image Caption',
+				'name' => 'image_caption',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'front-page.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
 }
-}
+
+
+/******** OTHER CUSTOMIZATIONS ***************/
 
 //Custom excerpt lenth
 function custom_excerpt_length( $length ) {
@@ -248,108 +250,6 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-//Move to plugin
-  function custom_post_menu_label() {
-     global $menu;
-     global $submenu;
-     $menu[5][0] = 'News';
-     $submenu['edit.php'][5][0] = 'News';
-     $submenu['edit.php'][10][0] = 'Add News';         
-  }
-
- //Change Posts labels in other admin area
-  function custom_post_object_label() {
-    global $wp_post_types;
-    $labels = &$wp_post_types['post']->labels;
-    $labels->name = 'News';
-    $labels->singular_name = 'News';
-    $labels->add_new = 'Add News';
-    $labels->add_new_item = 'Add News';
-    $labels->edit_item = 'Edit News';
-    $labels->new_item = 'News';
-    $labels->view_item = 'View News';
-    $labels->search_items = 'Search News';
-    $labels->not_found = 'No results on News';
-    $labels->not_found_in_trash = 'No News in Trash';
-    $labels->name_admin_bar = 'Add News';       
-
-   }
-
- add_action( 'init', 'custom_post_object_label' );
- add_action( 'admin_menu', 'custom_post_menu_label' );
-
-//1. Add a new form element...
-add_action('register_form','myplugin_register_form');
-function myplugin_register_form (){
-    $first_name = ( isset( $_POST['first_name'] ) ) ? $_POST['first_name']: '';
-    $last_name = ( isset( $_POST['last_name'] ) ) ? $_POST['last_name']: '';
-    $organization_name = ( isset( $_POST['organization_name'] ) ) ? $_POST['organization_name']: '';
-    ?>
-    <p>
-     <label for="first_name"><?php _e('First Name:','mydomain') ?></label>
-     <input type="text" name="first_name" id="first_name" class="input" value="<?php echo esc_attr(stripslashes($first_name)); ?>" size="25" /></input>
-    </p>
-    <p>
-     <label for="last_name"><?php _e('Last Name:','mydomain') ?></label>
-     <input type="text" name="last_name" id="last_name" class="input" value="<?php echo esc_attr(stripslashes($last_name)); ?>" size="25" /></input>
-    </p>
-    <p>
-     <label for="organization"><?php _e('Organization:','mydomain') ?></label>
-     <input type="text" name="organization_name" id="organization" class="input" value="<?php echo esc_attr(stripslashes($organization_name)); ?>" size="25" /></input>
-    </p>
-    <?php
-}
-
-//2. Add validation. In this case, we make sure first_name is required.
-add_filter('registration_errors', 'myplugin_registration_errors', 10, 3);
-function myplugin_registration_errors ($errors, $sanitized_user_login, $user_email) {
-
-    if ( empty( $_POST['first_name'] ) )
-        $errors->add( 'first_name_error', __('<strong>ERROR</strong>: You must include a first name.','mydomain') );
-
-    return $errors;
-}
-
-//3. Finally, save our extra registration user meta.
-add_action('user_register', 'myplugin_user_register');
-function myplugin_user_register ($user_id) {
-    if ( isset( $_POST['first_name'] ) )
-        update_user_meta($user_id, 'first_name', $_POST['first_name']);
-}
-
 add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
- 
-
-// Deregister admin styles
-function my_deregister_styles() {
-    wp_deregister_style( 'wp-admin' );
-}
-
-//Remove unneeded profile fields
-add_filter('user_contactmethods','hide_profile_fields',10,1);
-
-function hide_profile_fields( $contactmethods ) {
-	unset($contactmethods['aim']);
-	unset($contactmethods['jabber']);
-	unset($contactmethods['yim']);
-	return $contactmethods;
-}
-
-//Remove personal options
-function hide_personal_options(){
-	echo '<script type="text/javascript">jQuery(document).ready(function($) { $("form#your-profile > h3:first").hide(); $("form#your-profile > table:first").hide(); $("form#your-profile").show(); });</script>';
-}
-add_action('admin_head','hide_personal_options');
-
-//Remove extra admin bar links and change link name for home
-
-function remove_admin_bar_links() {
-	global $wp_admin_bar;
-	$wp_admin_bar->remove_menu('wp-logo');
-	$wp_admin_bar->remove_menu('updates');
-	$wp_admin_bar->remove_menu('comments');
-}
-
-add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
 
 ?>

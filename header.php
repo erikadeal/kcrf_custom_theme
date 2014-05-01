@@ -53,12 +53,16 @@
 
 					<h1 id="logo" class="h1">
 						<a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a>
-						<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo home_url();?>/wp-content/themes/kcrf_custom_theme/library/images/revised_logo.png"></a>
+						<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo home_url();?>/wp-content/themes/kcrf_custom_theme/library/images/rf_logo.png"></a>
 					</h1>
 
 					<div class="twelvecol wrap top-bar clearfix">
 						<ul class="tencol first clearfix secondary-nav">
 							<li><a href="<?php echo home_url();?>/contact">Contact</a></li>
+							<?php global $user_ID, $user_identity; get_currentuserinfo(); 
+							if(current_user_can('manage_options')) { ?>
+							<li><a href="<?php echo home_url(); ?>/admin-documentation">Admin Documentation</a></li>
+							<?php } ?>
 							<?php global $user_ID, $user_identity; get_currentuserinfo(); 
 							if (!$user_ID) { ?>
 							<li><a href="<?php echo home_url();?>/login">Login/Register</a></li>

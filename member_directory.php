@@ -36,11 +36,12 @@ Template Name: Member Directory
 							<?php
 							    $blogusers = get_users('role=forum_member');
 							    foreach ($blogusers as $user) {
-							        echo '<p><a href="' . home_url() . '/?author=' . $user->ID . '">' . $user->organization_name . '</a></p>';
+							    	$url = get_author_posts_url( $user->ID, $user->user_nicename );
+							        echo '<p><a href="' . $url . '">' . $user->organization_name . '</a></p>';
 							    }
 							?>
 
-							<h3>Participants</h3>
+							<h3 class="sub-list">Participants</h3>
 
 					<!-- Start participant loop -->
 							<?php
@@ -58,8 +59,20 @@ Template Name: Member Directory
 							        }
 
 							        echo '<div class="contact-info">';
+							        if($user->organization){
+							        	echo '<p><strong>Organization: </strong>' . $user->organization. '</p>';
+							    	}
+
 							        echo '<p><strong>Email: </strong>' . $user->user_email . '</p>';
-							        echo '<p><strong>Phone: </strong>' . $user->phone. '</p>';
+
+							        if($user->phone){
+							        	echo '<p><strong>Phone: </strong>' . $user->phone. '</p>';
+							    	}
+
+							    	if($user->user_url){
+							        	echo '<p><strong>Website: </strong>' . $user->user_url. '</p>';
+							    	}
+							    	
 							        echo '</div>';
 
 							        ?>
@@ -69,10 +82,7 @@ Template Name: Member Directory
 
 						</div>
 
-					<div class="sidebar fourcol last clearfix">
-						<h4 class="widgettitle">Join the Forum</h4>
-						<p>Information about dues and sign-up here</p>
-					</div>
+					<?php get_sidebar('members'); ?>
 					
 				</div>
 

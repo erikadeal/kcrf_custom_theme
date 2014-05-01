@@ -10,7 +10,7 @@ Post format for meetings
 
 				<div id="inner-content" class="wrap clearfix">
 
-						<div id="main" role="main" class="clearfix">
+						<div id="main" role="main" class="meeting clearfix">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

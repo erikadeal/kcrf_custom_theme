@@ -19,7 +19,8 @@ CONTENT STYLES
 } /* end .hentry */
 
 .single-title,
-.page-title {
+.page-title,
+.profile-title {
 	margin-bottom: 0;
 	border-bottom: 2px solid $beige;
 	font-weight: bold;
@@ -32,9 +33,13 @@ CONTENT STYLES
 
 .single-title {}
 
-.page-title {}
+.page-title {
+	text-transform: uppercase;
+}
 
-.archive-title { }
+.archive-title { 
+	text-transform: uppercase;
+}
 
 .section-title {
 	
@@ -52,7 +57,8 @@ CONTENT STYLES
 
 /* post meta */
 .byline {
-color: $light-gray;
+color: lighten($light-gray, 20%);
+font-size: .8em;
 
 time {}
 }

@@ -4,6 +4,11 @@ SERVICES PAGE STYLES
 
 .categories-grid {
 
+	.threecol {
+		margin: 0 1% 0 0;
+		min-height: 100px;
+	}
+
 	.fourcol {
 		margin: 0 1% 0 0;
 		min-height: 100px;
@@ -11,9 +16,233 @@ SERVICES PAGE STYLES
 }
 
 .cat-title {
-	background: $light-gray;
+	background: $brand-color;
 	color: $white;
-	font-size: 1.2em;
-	padding: .2em;
+	height: 60px;
+	line-height: 60px;
 	text-align: center;
+}
+
+.cat-title p {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+	padding: 0 2em;
+	margin: 0;
+}
+
+.service-details {
+	background-color: $beige;
+	margin: 0 0 1em 0;
+	padding: 1em;
+}
+
+p.examples {
+	margin-top: 0;
+}
+
+@mixin icon-placement {
+	font-family: "FontAwesome";
+	position: absolute;
+	speak: none;
+	margin-left: -1.5em;
+	margin-top: 0;
+}
+
+#adult_education {
+	position: relative;
+
+	.title:before{
+		content: "\f040";
+		@include icon-placement;
+	}
+}
+
+#children_and_youth_services {
+	position: relative;
+
+	.title:before{
+		content: "\f005";
+		@include icon-placement;
+	}
+}
+
+#citizenship_and_naturalization_services {
+	position: relative;
+
+	.title:before{
+		content: "\f024";
+		@include icon-placement;
+	}
+}
+
+#disability_services {
+	position: relative;
+
+	.title:before{
+		content: "\f193";
+		@include icon-placement;
+	}
+}
+
+#emergency_preparedness {
+	position: relative;
+
+	.title:before{
+		content: "\f06d";
+		@include icon-placement;
+	}
+}
+
+#employment_services {
+	position: relative;
+
+	.title:before{
+		content: "\f0b1";
+		@include icon-placement;
+	}
+}
+
+#environmental_health {
+	position: relative;
+
+	.title:before{
+		content: "\f06c";
+		@include icon-placement;
+	}
+}
+
+#esl_classes {
+	position: relative;
+
+	.title:before{
+		content: "\f075";
+		@include icon-placement;
+	}
+}
+
+#family_reconnection_services {
+	position: relative;
+
+	.title:before{
+		content: "\f0c1";
+		@include icon-placement;
+	}
+}
+
+#family_services {
+	position: relative;
+
+	.title:before{
+		content: "\f0c0";
+		@include icon-placement;
+	}
+}
+
+#financial_empowerment {
+	position: relative;
+
+	.title:before{
+		content: "\f0d6";
+		@include icon-placement;
+	}
+}
+
+#food_banks {
+	position: relative;
+
+	.title:before{
+		content: "\f0f5";
+		@include icon-placement;
+	}
+}
+
+#grants_and_funding {
+	position: relative;
+
+	.title:before{
+		content: "\f15b";
+		@include icon-placement;
+	}
+}
+
+#housing_assistance {
+	position: relative;
+
+	.title:before{
+		content: "\f015";
+		@include icon-placement;
+	}
+}
+
+#interpretation_services {
+	position: relative;
+
+	.title:before{
+		content: "\f086";
+		@include icon-placement;
+	}
+}
+
+#legal_services {
+	position: relative;
+
+	.title:before{
+		content: "\f0e3";
+		@include icon-placement;
+	}
+}
+
+#medical_assistance {
+	position: relative;
+
+	.title:before{
+		content: "\f0fa";
+		@include icon-placement;
+	}
+}
+
+#mental_health_services {
+	position: relative;
+
+	.title:before{
+		content: "\f004";
+		@include icon-placement;
+	}
+}
+
+#multicultural_services {
+	position: relative;
+
+	.title:before{
+		content: "\f0ac";
+		@include icon-placement;
+	}
+}
+
+#refugee_resettlement {
+	position: relative;
+
+	.title:before{
+		content: "\f072";
+		@include icon-placement;
+	}
+}
+
+#safety {
+	position: relative;
+
+	.title:before{
+		content: "\f134";
+		@include icon-placement;
+	}
+}
+
+#senior_services {
+	position: relative;
+
+	.title:before{
+		content: "\f007";
+		@include icon-placement;
+	}
 }

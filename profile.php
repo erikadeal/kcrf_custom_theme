@@ -2,9 +2,8 @@
 /*
 Template Name: Profile
 */
-acf_form_head();
-wp_deregister_style('wp-admin-css');
-get_header(); ?>
+?>
+<?php get_header(); ?>
 
 			<div id="content">
 
@@ -22,11 +21,16 @@ get_header(); ?>
 
 								<p>
 									<?php if (current_user_can('manage_options')) { 
-										echo '<a class="button" href="' . admin_url() . '">' . __('Admin') . '</a>'; } else { 
-										echo '<a class="button" href="' . admin_url() . 'profile.php">' . __('Edit Profile') . '</a>'; } ?>
+										echo '<a class="button" href="' . admin_url() . '">' . __('Admin') . '</a>'; 
+										echo '<p><a class="button" href="' . home_url() . 'admin-documentation">' . __('Admin Documentation') . '</a></p>';
+										} 
+
+										else { 
+											echo '<a class="button" href="' . admin_url() . 'profile.php">' . __('Edit Profile') . '</a>';  
+										} ?>
 								</p>
 								<p><a class="button" href="<?php echo admin_url();?>admin.php?page=wp-cal-add">Share an Event</a></p>
-								<p><a class="button" href="<?php echo admin_url();?>post-new.php">Add a News Post</a></p>
+								<p><a class="button" href="<?php echo admin_url();?>post-new.php">Add an Update</a></p>
 								<p><a class="button" href="<?php echo wp_logout_url('index.php'); ?>">Log out</a></p>
 							</div>
 							<div class="profile ninecol last clearfix">
