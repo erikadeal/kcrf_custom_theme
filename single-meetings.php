@@ -48,10 +48,6 @@ Post format for meetings
 										        <p><a href="<?php the_sub_field('upload_file');?>"><?php the_sub_field('title');?></a></p>
 										 
 										   <?php endwhile;
-										 
-											else :
-											 
-											    continue;
 											 
 										endif; 
 									?>
@@ -67,10 +63,6 @@ Post format for meetings
 										        <p><a href="<?php the_sub_field('upload_file');?>"><?php the_sub_field('title');?></a></p>
 										 
 										   <?php endwhile;
-										 
-											else :
-											 
-											    continue;
 											 
 										endif; 
 									?>
@@ -87,10 +79,6 @@ Post format for meetings
 										        <p><a href="<?php the_sub_field('upload_file');?>"><?php the_sub_field('title');?></a></p>
 										 
 										   <?php endwhile;
-										 
-											else :
-											 
-											    continue;
 											 
 										endif; 
 									?>
@@ -107,10 +95,6 @@ Post format for meetings
 										        <p><a href="<?php the_sub_field('upload_file');?>"><?php the_sub_field('title');?></a></p>
 										 
 										   <?php endwhile;
-										 
-											else :
-											 
-											    continue;
 											 
 										endif; 
 									?>

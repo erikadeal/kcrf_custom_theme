@@ -46,28 +46,38 @@ Template Name: Services Page
 							<div class="categories-grid">
 
 								<?php
+									//Get 'Service Areas' field by key using Advanced Custom Fields
+
 									$field_key = "field_53025fd551115";
 									$field = get_field_object($field_key);
+
+									//Start counter to enable grid layout
 									$i = 0;
 
 									if( $field )
 									{
 									   foreach( $field['choices'] as $k => $v )
 									        {
+									        	//Convert field options to lower case
 									        	$id = strtolower($v);
+									        	//Replace strings and special characters
 												$id = str_replace(' ', '_', $id);
 												$id = str_replace('&', 'and', $id);
 												
+												//Create a row div every 3 categories
 												if($i % 3 == 0) {
 													echo '<div class="row clearfix">';
 												}
 
+												//Div for first row
 												elseif($i == 0) {
 													echo 'div class="row clearfix">';
 												}
 
+												//Div for category with id for category name
 									        	echo '<div id="'. $id .'" class="fourcol clearfix">';
 
+									        	//Category title based on value of category field
 									            echo '<div class="cat-title"><p class="title">' . $v . '</p></div>';
 									           
 
@@ -130,6 +140,7 @@ Template Name: Services Page
 									           		echo '<p class="small examples"><strong>Examples: </strong>Long Term Care, Mobility Assistance</p>';
 									           	}
 
+									           	//Retrieve members who checked the current service category
 									            $args = array(
 														'role' => 'forum_member',
 														'meta_query' => array(
@@ -141,21 +152,23 @@ Template Name: Services Page
 														);
 
 												$user_query = new WP_User_Query( $args );
-												// User Loop
+												// Show users who checked that box
 
 												echo '<ul class="members">';
 
 												foreach ( $user_query->results as $user ) 
 													{
-														echo '<li><a href="' . home_url() . '/?author=' . $user->ID . '">' . $user->organization_name . '</a></li>';
+														echo '<li><a href="' . home_url() . '/?author=' . $user->ID . '">' . $user->organization . '</a></li>';
 													}
 
 									           	echo '</ul></div></div>';
 
+									           //Close row div after third category
 									           if(($i+1) % 3 == 0) {
 													echo '</div>';
 												}
 
+											   //Increase counter
 									           $i++;
 									        }
 

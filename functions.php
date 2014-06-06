@@ -66,8 +66,8 @@ function bones_register_sidebars() {
 		'description' => __( 'The first home page widget.', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h2 class="widget-header">',
+		'after_title' => '</h2>',
 	));
 
 	register_sidebar(array(
@@ -76,8 +76,8 @@ function bones_register_sidebars() {
 		'description' => __( 'The second home page widget.', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h2 class="widget-header">',
+		'after_title' => '</h2>',
 	));
 
 	register_sidebar(array(
@@ -86,8 +86,8 @@ function bones_register_sidebars() {
 		'description' => __( 'The third home page widget.', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h2 class="widget-header">',
+		'after_title' => '</h2>',
 	));
 
 	register_sidebar(array(
@@ -241,6 +241,78 @@ if(function_exists("register_field_group"))
 	));
 }
 
+/******* CUSTOM PAGE TEMPLATE FIELDS *********/
+
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_custom-page-fields',
+		'title' => 'Custom Page Fields',
+		'fields' => array (
+			array (
+				'key' => 'field_5367faa0a14b1',
+				'label' => 'Sidebar Area 1 Title',
+				'name' => 'sidebar_area_1_title',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5367facca14b2',
+				'label' => 'Sidebar Area 1 Text',
+				'name' => 'sidebar_area_1_text',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+			array (
+				'key' => 'field_5367fadaa14b3',
+				'label' => 'Sidebar Area 2 Title',
+				'name' => 'sidebar_area_2_title',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5367fae7a14b4',
+				'label' => 'Sidebar Area 2 Text',
+				'name' => 'sidebar_area_2_text',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'custom-page.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
 
 /******** OTHER CUSTOMIZATIONS ***************/
 
@@ -251,5 +323,14 @@ function custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
+
+//Rewrite author URL base
+add_action('init', 'author_base');
+function author_base() {
+    global $wp_rewrite;
+    $author_slug = 'member'; // change slug name
+    $wp_rewrite->author_base = $author_slug;
+    $wp_rewrite->flush_rules();
+}
 
 ?>

@@ -45,7 +45,6 @@ CONTENT STYLES
 	
 }
 
-/* want to style individual post classes? Booya! */
 .post-id {} /* post by id (i.e. post-3) */
 .post {} /* general post style */
 .page {} /* general article on a page style */
@@ -76,6 +75,8 @@ time {}
 	ul, ol, table, dl {}
 
 	ul, ol {
+
+	list-style-type: disc;
 
 	li {}
 
@@ -189,7 +190,6 @@ dd {}
 @include breakpoint( palm ) {
 	.entry-content {
 
-	/* at this larger size, we can start to align images */
 	.alignleft, img.alignleft { 
 		margin-right: 1.5em; 
 		display: inline; 

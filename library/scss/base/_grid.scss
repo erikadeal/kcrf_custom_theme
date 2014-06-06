@@ -1,9 +1,5 @@
 /******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Grid Stylesheet
-
+GRID STYLESHEET
 ******************************************************************/
 
 .onecol    { width: 5.801104972%;  }       /* grid_1  */
@@ -19,7 +15,7 @@ Stylesheet: Grid Stylesheet
 .elevencol { width: 91.436464082%; }       /* grid_11 */
 .twelvecol { width: 99.999999993%; }       /* grid_12 */
 
-// layout & column defaults
+/* layout & column defaults */
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
   position: relative;
   float: left;

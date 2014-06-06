@@ -41,6 +41,14 @@ p.examples {
 	margin-top: 0;
 }
 
+ul.members {
+	list-style-type: none;
+
+	li {
+		padding-bottom: .5em;
+	}
+}
+
 @mixin icon-placement {
 	font-family: "FontAwesome";
 	position: absolute;

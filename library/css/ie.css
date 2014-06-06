@@ -19,54 +19,34 @@ import the mixins file so SASS can understand the variables.
 /* import colors */
 /*********************
 COLORS
-Need help w/ choosing your colors? Try this site out:
-http://0to255.com/
 *********************/
-/* line 37, ../scss/base/_colors.scss */
+/* line 23, ../scss/base/_colors.scss */
 .brand-color {
   color: #e9942f;
 }
 
-/* line 41, ../scss/base/_colors.scss */
+/* line 27, ../scss/base/_colors.scss */
 .accent-color {
   color: #f8ba33;
 }
 
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/
 /* import mixins */
 /******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Mixins & Constants Stylesheet
-
-This is where you can take advantage of Sass' great features:
-Mixins & Constants. I won't go in-depth on how they work exactly,
-there are a few articles below that will help do that. What I will
-tell you is that this will help speed up simple changes like
-changing a color or adding CSS3 techniques gradients.
-
-A WORD OF WARNING: It's very easy to overdo it here. Be careful and
-remember less is more.
-
+MIXINS & CONSTANTS
 ******************************************************************/
 /*********************
 CLEARFIXIN'
 *********************/
-/* line 23, ../scss/base/_mixins.scss */
+/* line 10, ../scss/base/_mixins.scss */
 .clearfix {
   zoom: 1;
 }
-/* line 25, ../scss/base/_mixins.scss */
+/* line 12, ../scss/base/_mixins.scss */
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
-/* line 26, ../scss/base/_mixins.scss */
+/* line 13, ../scss/base/_mixins.scss */
 .clearfix:after {
   clear: both;
 }
@@ -74,14 +54,14 @@ CLEARFIXIN'
 /*********************
 TOOLS
 *********************/
-/* line 34, ../scss/base/_mixins.scss */
+/* line 21, ../scss/base/_mixins.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 41, ../scss/base/_mixins.scss */
+/* line 28, ../scss/base/_mixins.scss */
 .image-replacement {
   text-indent: 100%;
   white-space: nowrap;
@@ -91,32 +71,32 @@ TOOLS
 /********************
 ALERTS
 ********************/
-/* line 52, ../scss/base/_mixins.scss */
+/* line 39, ../scss/base/_mixins.scss */
 .alert-help, .alert-info, .alert-error, .alert-success {
   margin: 10px;
   padding: 5px 18px;
   border: 1px solid;
 }
 
-/* line 58, ../scss/base/_mixins.scss */
+/* line 45, ../scss/base/_mixins.scss */
 .alert-help {
   border-color: #e8dc59;
   background: #ebe16f;
 }
 
-/* line 64, ../scss/base/_mixins.scss */
+/* line 51, ../scss/base/_mixins.scss */
 .alert-info {
   border-color: #bfe4f4;
   background: #d5edf8;
 }
 
-/* line 70, ../scss/base/_mixins.scss */
+/* line 57, ../scss/base/_mixins.scss */
 .alert-error {
   border-color: #f8cdce;
   background: #fbe3e4;
 }
 
-/* line 76, ../scss/base/_mixins.scss */
+/* line 63, ../scss/base/_mixins.scss */
 .alert-success {
   border-color: #deeaae;
   background: #e6efc2;
@@ -144,7 +124,7 @@ BOX SIZING
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
 /* 
-you can call the larger styles if you want, but there's really no need 
+Navigation and grid
 */
 /******************************************************************
 ADDITIONAL IE FIXES

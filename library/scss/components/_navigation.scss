@@ -9,6 +9,7 @@ Basic nav styling
 .nav {
 	border-bottom: 0;
 	margin: 0;
+	list-style-type: none;
 
 	li {
 
@@ -19,12 +20,6 @@ Basic nav styling
 			border-bottom: 1px solid $light-gray;
 			color: $white;
 
-			/*
-			remember this is for mobile ONLY, so there's no need
-			to even declare hover styles here, you can do it in
-			the style.scss file where it's relevant. We want to
-			keep this file as small as possible!
-			*/
 			&:hover, &:focus {
 
 				color: $link-color;
@@ -36,13 +31,6 @@ Basic nav styling
 
 		&:last-child {}
 
-		/*
-		so you really have to rethink your dropdowns for mobile.
-		you don't want to have it expand too much because the
-		screen is so small. How you manage your menu should
-		depend on the project. Here's some great info on it:
-		http://www.alistapart.com/articles/organizing-mobile/
-		*/
 		ul.sub-menu,
 		ul.children {
 
@@ -150,7 +138,7 @@ ul.mobile-nav {
 			font-size: .9em;
 			border-bottom: 0;
 			color: $white;
-			padding: .8em .5em;
+			padding: .8em .7em;
 			text-transform: uppercase;
 
 			&:hover, &:focus {
@@ -199,12 +187,6 @@ ul.mobile-nav {
 					}
 				}
 
-				/*
-				if you need to go deeper, go nuts
-				just remember deeper menus suck
-				for usability. k, bai.
-				*/
-				ul {}
 			}
 
 			/* highlight sub-menu current page */
@@ -238,6 +220,7 @@ ul.mobile-nav {
 .secondary-nav {
 	display: block;
 	margin: 0;
+	list-style-type: none;
 
 	li {
 		display: inline;
@@ -292,7 +275,7 @@ ul.mobile-nav {
 		li {
 			a {
 				font-size: 1em;
-				padding: .8em 1em;
+				padding: 1em;
 			}
 		}
 	}

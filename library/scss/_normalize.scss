@@ -440,3 +440,9 @@ dd {
 .commentlist {
         list-style: none;
 }
+
+.textwidget ul,
+.textwidget ol {
+  list-style: disc;
+  margin-left: .5em;
+}

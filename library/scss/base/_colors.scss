@@ -1,7 +1,5 @@
 /*********************
 COLORS
-Need help w/ choosing your colors? Try this site out:
-http://0to255.com/
 *********************/
 
 $alert-yellow:      #ebe16f;
@@ -18,21 +16,9 @@ $beige:				#F2ECE5;
 $brand-color:		#E9942F;
 $accent-color:		#F8BA33;
 
-$red:				#c0392b;
-$pink:				#e74c3c;
-$orange:			#e67e22;
-$pumpkin:			#d35400;
-$yellow:			#f1c40f;
-$mustard:			#f39c12;
-$light-green:		#1abc9c;
-$dark-green:		#16a085;
-$blue:				#2980b9;
-$dark-blue:			#34495e;
-$purple:			#9b59b6;
-
 
 $link-color:        $brand-color;
-$link-hover:        darken($link-color, 9%);
+$link-hover:        $accent-color;
 
 .brand-color {
 	color: $brand-color;
@@ -41,9 +27,3 @@ $link-hover:        darken($link-color, 9%);
 .accent-color {
 	color: $accent-color
 }
-
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/

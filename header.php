@@ -11,14 +11,32 @@
 		<?php // Google Chrome Frame for IE ?>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title><?php wp_title(''); ?></title>
+		<title>
+		<?php 
+		//Check if current page is a member profile page
+		if( is_author()) {
+			$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+			
+			//Display member organization name or individual name
+			if($curauth->organization_name) {
+				echo $curauth->organization_name;
+			}
+			else {
+				wp_title('');
+			}
+		}
+		//Display page title if not an author page
+		else { 
+			wp_title(''); 
+		} ?>
+		</title>
 
 		<?php // mobile meta (hooray!) ?>
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-		<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
+		<?php // icons & favicons ?>
 		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
 		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 		<!--[if IE]>
@@ -40,6 +58,7 @@
 		<?php // Icon fonts and web fonts ?>
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="<?php echo home_url() . '/wp-content/themes/kcrf_custom_theme/library/includes/Respond-master/src/respond.js'; ?>"></script>
 
 	</head>
 
@@ -56,6 +75,7 @@
 						<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo home_url();?>/wp-content/themes/kcrf_custom_theme/library/images/rf_logo.png"></a>
 					</h1>
 
+			<!-- Top bar links and search -->
 					<div class="twelvecol wrap top-bar clearfix">
 						<ul class="tencol first clearfix secondary-nav">
 							<li><a href="<?php echo home_url();?>/contact">Contact</a></li>
@@ -65,7 +85,7 @@
 							<?php } ?>
 							<?php global $user_ID, $user_identity; get_currentuserinfo(); 
 							if (!$user_ID) { ?>
-							<li><a href="<?php echo home_url();?>/login">Login/Register</a></li>
+							<li><a href="<?php echo home_url();?>/login">Login</a>/<a href="<?php echo home_url();?>/register">Register</a></li>
 							<?php } 
 							else { // if user is logged in ?>
 							<li><a href="<?php echo home_url();?>/profile">My Profile</a></li>
@@ -81,7 +101,11 @@
 					</div>
 				</div>
 
+		<!-- Mobile menu link -->
+
 				<a id="menu-link">&#8801;</a>
+
+		<!-- Main navigation -->
 
 				<div id="menu">
 					<nav role="navigation">
@@ -93,7 +117,7 @@
 							<li><a href="<?php echo home_url();?>/contact">Contact</a></li>
 							<?php global $user_ID, $user_identity; get_currentuserinfo(); 
 							if (!$user_ID) { ?>
-							<li><a href="<?php echo home_url();?>/login">Login/Register</a></li>
+							<li><a href="<?php echo home_url();?>/login">Login</a>/<a href="<?php echo home_url();?>/register">Register</a></li>
 							<?php } 
 							else { // if user is logged in ?>
 							<li><a href="<?php echo home_url();?>/profile">My Profile</a></li>

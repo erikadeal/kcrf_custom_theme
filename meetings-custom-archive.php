@@ -34,12 +34,16 @@ Template Name: Meetings Archive
 
 							<?php 
 
+							//Parameters for getting first three meetings
 							$args = array('post_type'=>'meetings', 'posts_per_page'=>3);
+
+							//Query meetings
 							$meetings = new WP_Query( $args );
 
 							while ($meetings->have_posts()) : $meetings->the_post(); 
 							?>
 
+						<!-- Single meeting displayed as one of three columns -->
 							<div class="recent-meeting fourcol clearfix">
 
 								<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
@@ -81,15 +85,19 @@ Template Name: Meetings Archive
 								<h3 class="doc-cat-title">Presentations</h3>
 
 									<?php 
+
+										//Query meetings
 										$args = array('post_type'=>'meetings');
 										$presentations = new WP_Query( $args );
 
 										echo '<ul class="meetings-cat">';
 
 										while ($presentations->have_posts()) : $presentations->the_post(); 
+
+											//Check for repeater field
 											if( have_rows('presentations') ):
 										 
-										 	// loop through the rows of data
+										 	// loop through uploaded files
 										    while ( have_rows('presentations') ) : the_row(); ?>
 										 
 										        <li><a href="<?php the_sub_field('upload_file');?>"><?php the_sub_field('title');?></a></li>

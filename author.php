@@ -9,9 +9,9 @@
 						    <?php
 						    $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
 
-						    //Variables
+						    //Get organization information as variables
 						    $id = 'user_' . $curauth->ID;
-						    $organization = $curauth->organization_name;
+						    $organization = $curauth->organization;
 						    $name = $curauth->first_name . " " . $curauth->last_name;
 						    $email = $curauth->user_email;
 						    $phone = $curauth->phone;
@@ -28,9 +28,11 @@
 						    <h1 class="profile-title eightcol first clearfix">
 
 						    <?php 
+						    	//Check if member is an organization
 						    	if($organization){
 						    		echo $organization; 
 						    	}
+						    	//Return member name if they are an individual member
 						    	else {
 						    		echo $name; 
 						    	}?>
@@ -43,7 +45,7 @@
 					    		<h4 class="box-title">About <?php echo $organization; ?></h4>
 
 					    		<?php if($date){ ?>
-									<p><strong>Date Founded:</strong> <?php echo $date; ?></p>
+									<p><strong>Date Founded:</strong> <?php echo $date; ?></p> 
 								<?php }?>
 
 					       		<p><?php echo $about; ?></p>
@@ -67,7 +69,7 @@
 							<h4 class="box-title">Recent News &amp; Events</h4>
 
 						    <ul>
-						<!-- The Loop -->
+						<!-- Show any updates posted by member -->
 
 						    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						        <li>
@@ -81,15 +83,18 @@
 
 						    <?php endif; ?>
 
-						<!-- End Loop -->
+						<!-- End posts loop -->
 
 						    </ul>
 						    </div>
+
+						<!-- Contact details sidebar -->
 
 						    <div class="sidebar fourcol last clearfix sidebar-box" role="complimentary">
 
 								<h4 class="widgettitle">Contact Details</h4>
 
+						<!-- Primary contact information -->
 								<?php if($organization) { ?>
 									<h4 class="box-title">Name</h4>
 							        <p><?php echo $name; ?></p>
@@ -122,6 +127,8 @@
 
 							</div>
 
+						<!-- Show organization logo if uploaded -->
+						
 							<div class="sidebar fourcol last clearfix">
 						    	<?php if( !empty($logo)) { ?>
 							     	<img src="<?php echo $logo['url']; ?>" class="org-logo">

@@ -6,106 +6,117 @@ Template Name: Static Front Page
 
 <?php get_header(); ?>
 
-			<div id="home-content">
+	<div id="home-content">
 
-			<!-- Banner image -->
+		<!-- Banner image -->
 
-			<div id="banner">
+		<div id="banner">
 
-				<?php 
-					$image = get_field('banner_image');
-					if( !empty($image) ): ?>
+			<?php 
 
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+				//Get banner image
+				$image = get_field('banner_image');
 
-				<?php endif; ?>
+				//If uploaded, display
+				if( !empty($image) ): ?>
 
-			<!-- Image caption -->
-				<?php
-					$caption = get_field('image_caption');
-					if( !empty($caption) ): ?>
+				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
 
-					<p id="banner-message"><?php echo $caption; ?></p>
-				<?php endif; ?>
+			<?php endif; ?>
 
-			<!-- Image credit -->
-				<?php
-					$credit = get_field('image_credit');
-					if( !empty($credit) ): ?>
+		<!-- Image caption -->
+			<?php
+				$caption = get_field('image_caption');
+				if( !empty($caption) ): ?>
 
-					<p id="image-credit">Image credit: <?php echo $credit; ?></p>
-				<?php endif; ?>
+				<p id="banner-message"><?php echo $caption; ?></p>
 
-			</div>
+			<?php endif; ?>
 
-				<div id="inner-content" class="wrap clearfix">
+		<!-- Image credit -->
+			<?php
+				$credit = get_field('image_credit');
+				if( !empty($credit) ): ?>
 
-						<div id="main" role="main">
+				<p id="image-credit">Image credit: <?php echo $credit; ?></p>
 
-				<!-- Start front page widgets -->
+			<?php endif; ?>
 
-							<div class="widgets-row">
+		</div>
 
-								<div id="home1" class="home-widget fourcol first clearfix">
-									<h2 class="widget-header">Upcoming Events</h2>
+		<div id="inner-content" class="wrap clearfix">
 
-										<?php if ( is_active_sidebar( 'home_1' ) ) : ?>
+			<div id="main" role="main">
 
-											<?php dynamic_sidebar( 'home_1' ); ?>
+		<!-- Start front page widgets -->
 
-										<?php else : ?>
+					<div class="widgets-row">
 
-											<?php // This content shows up if there are no widgets defined in the backend. ?>
+					<!-- First column -->
 
-											<div class="alert alert-help">
-												<p><?php _e( 'Please activate some Widgets.', 'bonestheme' );  ?></p>
-											</div>
+						<div id="home1" class="home-widget fourcol first clearfix">
 
-										<?php endif; ?>
+						<!-- Check whether wigdets are defined in the backend-->
+
+							<?php if ( is_active_sidebar( 'home_1' ) ) : ?>
+
+								<?php dynamic_sidebar( 'home_1' ); ?>
+
+							<?php else : ?>
+
+								<?php // This shows up if there are no widgets defined in the backend. ?>
+
+								<div class="alert alert-help">
+									<p><?php _e( 'Please activate some Widgets.', 'bonestheme' );  ?></p>
 								</div>
 
-								<div id="home2" class="home-widget fourcol clearfix">
-									<h2 class="widget-header">Meetings</h2>
-
-										<?php if ( is_active_sidebar( 'home_2' ) ) : ?>
-
-											<?php dynamic_sidebar( 'home_2' ); ?>
-
-										<?php else : ?>
-
-											<?php // This content shows up if there are no widgets defined in the backend. ?>
-
-											<div class="alert alert-help">
-												<p><?php _e( 'Please activate some Widgets.', 'bonestheme' );  ?></p>
-											</div>
-
-										<?php endif; ?>
-								</div>
-
-								<div id="home3" class="home-widget fourcol last clearfix">
-									<h2 class="widget-header">Become a member</h2>
-
-										<?php if ( is_active_sidebar( 'home_3' ) ) : ?>
-
-											<?php dynamic_sidebar( 'home_3' ); ?>
-
-										<?php else : ?>
-
-											<?php // This content shows up if there are no widgets defined in the backend. ?>
-
-											<div class="alert alert-help">
-												<p><?php _e( 'Please activate some Widgets.', 'bonestheme' );  ?></p>
-											</div>
-
-										<?php endif; ?>
-								</div>
-
-							</div>
-
+							<?php endif; ?>
 						</div>
 
-				</div>
+					<!-- Second column -->
 
-			</div>
+						<div id="home2" class="home-widget fourcol clearfix">
+
+								<?php if ( is_active_sidebar( 'home_2' ) ) : ?>
+
+									<?php dynamic_sidebar( 'home_2' ); ?>
+
+								<?php else : ?>
+
+									<?php // This content shows up if there are no widgets defined in the backend. ?>
+
+									<div class="alert alert-help">
+										<p><?php _e( 'Please activate some Widgets.', 'bonestheme' );  ?></p>
+									</div>
+
+								<?php endif; ?>
+						</div>
+
+					<!-- Third column -->
+
+						<div id="home3" class="home-widget fourcol last clearfix">
+
+							<?php if ( is_active_sidebar( 'home_3' ) ) : ?>
+
+								<?php dynamic_sidebar( 'home_3' ); ?>
+
+							<?php else : ?>
+
+								<?php // This content shows up if there are no widgets defined in the backend. ?>
+
+								<div class="alert alert-help">
+									<p><?php _e( 'Please activate some Widgets.', 'bonestheme' );  ?></p>
+								</div>
+
+							<?php endif; ?>
+						</div>
+
+					</div> <!-- End row of widgets -->
+
+				</div> <!-- End main content -->
+
+		</div> <!-- End #inner-content -->
+
+	</div> <!-- End #home-content -->
 
 <?php get_footer(); ?>

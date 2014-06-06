@@ -86,12 +86,17 @@ FRONT PAGE STYLES
 	}
 
 	.home-widget {
-		height: 300px;
+		min-height: 250px;
 		margin-top: 1em;
 		background: $beige;
 	}
 
 	.widget-header {
+		margin-top: 0;
+		margin-left: -10px;
+	}
+
+	.widget {
 		margin-top: 0;
 	}
 
